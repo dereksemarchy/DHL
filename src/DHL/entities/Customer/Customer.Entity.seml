@@ -1,0 +1,131 @@
+_package: DHL.entities.Customer
+_type: Entity
+_name: Customer
+label: Customer
+pluralLabel: Customer
+entityType: FUZZY_MATCHED
+physicalTableName: CUSTOMER
+iconUrl: images://mdi/person-box.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _name: CustomerID
+    _type: EntityAttribute
+    label: Customer ID
+    physicalName: CUSTOMER_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _name: CustomerNumber
+    _type: EntityAttribute
+    label: Customer Number
+    physicalName: CUSTOMER_NUMBER
+    dataType: String
+    length: 50
+    description: Customer Number
+    documentation: Customer number used internally by the system
+    searchable: true
+  - _name: InternalId
+    _type: EntityAttribute
+    label: Internal ID
+    physicalName: INTERNAL_ID
+    dataType: LongInteger
+    precision: 38
+    description: Internal customer identifier
+    documentation: Internal system identifier for the customer
+    searchable: true
+  - _name: Name
+    _type: EntityAttribute
+    label: Customer Name
+    physicalName: NAME
+    dataType: String
+    length: 500
+    description: Customer name
+    documentation: Full legal or business name of the customer
+    searchable: true
+  - _name: Address
+    _type: EntityAttribute
+    label: Address
+    physicalName: ADDRESS
+    dataType: String
+    length: 500
+    description: Customer address
+    documentation: Street address of the customer location
+    searchable: true
+  - _name: HouseNumber
+    _type: EntityAttribute
+    label: House Number
+    physicalName: HOUSE_NUMBER
+    dataType: String
+    length: 50
+    description: House number
+    documentation: House or building number of the customer address
+    searchable: true
+  - _name: PostalCode
+    _type: EntityAttribute
+    label: Postal Code
+    physicalName: POSTAL_CODE
+    dataType: String
+    length: 20
+    description: Postal code
+    documentation: Postal or ZIP code of the customer address
+    searchable: true
+  - _name: City
+    _type: EntityAttribute
+    label: City
+    physicalName: CITY
+    dataType: String
+    length: 200
+    description: City
+    documentation: City or municipality of the customer address
+    searchable: true
+  - _name: Country
+    _type: EntityAttribute
+    label: Country
+    physicalName: COUNTRY
+    dataType: String
+    length: 10
+    description: Country code
+    documentation: ISO country code of the customer (e.g., PL, US, DE)
+    searchable: true
+  - _name: MarketingAgreement
+    _type: EntityAttribute
+    label: Marketing Agreement
+    physicalName: MARKETING_AGREEMENT
+    dataType: String
+    length: 50
+    description: Marketing agreement status
+    documentation: Marketing agreement or consent status for the customer
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: DHL.entities.Customer.Customer.CustomerID
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  _name: Matcher
+  description: CustomerSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: ExactNameMatch
+      label: Exact Name Match
+      condition: Record1.Name = Record2.Name
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

@@ -1,0 +1,14 @@
+_package: DHL.entities.Customer.dups_managers
+_type: DupsManager
+_name: ManageDuplicatesOnCustomer
+entity: DHL.entities.Customer.Customer
+enableMasterValuePicking: true
+displayCard: DHL.entities.Customer.display_cards.CustomerDisplayCard
+formTab: DHL.entities.Customer.forms.CustomerForm.Customer
+collectionView: DHL.entities.Customer.collection_views.CustomerCollectionView
+checkoutCustomSortEnabled: false
+checkoutUserDefinedSortEnabled: true
+checkoutDefaultDisplayType: TABLE
+checkoutDisplayGridAllowed: false
+checkoutDisplayListAllowed: true
+checkoutDisplayTableAllowed: true

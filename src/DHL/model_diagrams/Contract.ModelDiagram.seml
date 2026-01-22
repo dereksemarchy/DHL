@@ -1,0 +1,31 @@
+_package: DHL.model_diagrams
+_name: Contract
+_type: ModelDiagram
+label: Contract
+entityShapes:
+  - _type: EntityShape
+    entity: DHL.entities.Customer.Customer
+    _name: Customer
+    borderColor: red
+    fontTitleColor: white
+    height: 500
+    position:
+      x: 100
+      y: 100
+    width: 100
+  - _type: EntityShape
+    entity: DHL.entities.Contract.Contract
+    _name: Contract
+    borderColor: red
+    fontTitleColor: white
+    height: 500
+    position:
+      x: 300
+      y: 100
+    width: 100
+referenceLinks:
+  - fromEntityShape: DHL.model_diagrams.Contract.Contract
+    toEntityShape: DHL.model_diagrams.Contract.Customer
+    reference: DHL.references.ContractBelongsToCustomer
+    bendPoints: []
+

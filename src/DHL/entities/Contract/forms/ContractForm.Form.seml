@@ -1,0 +1,110 @@
+_package: DHL.entities.Contract.forms
+_type: Form
+_name: ContractForm
+entity: DHL.entities.Contract.Contract
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Contract
+    label: Contract
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: ContractID
+        value: ContractID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: FDN_Customer
+        value: FDN_Customer
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: IsAnnex
+        value: IsAnnex
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: AnnexStartDate
+        value: AnnexStartDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: ContractIdNumber
+        value: ContractIdNumber
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: Currency
+        value: Currency
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ContractName
+        value: ContractName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: StartDate
+        value: StartDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: EndDate
+        value: EndDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: SendDate
+        value: SendDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: TextField
+        _name: SalesDepot
+        value: SalesDepot
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: BillingFrequency
+        value: BillingFrequency
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: PaymentTerms
+        value: PaymentTerms
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: FlatFeeProducts
+        value: FlatFeeProducts
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: CheckboxField
+        _name: FlatFeeOptions
+        value: FlatFeeOptions
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: CheckboxField
+        _name: MultiParcel
+        value: MultiParcel
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: SapAccountId
+        value: SapAccountId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: LastEsignatureDate
+        value: LastEsignatureDate
+        useCustomLabel: false
+        dataType: DATE
+      - _type: CheckboxField
+        _name: ReratingQuote
+        value: ReratingQuote
+        useCustomLabel: false
+        dataType: BOOLEAN

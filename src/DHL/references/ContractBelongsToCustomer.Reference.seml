@@ -1,0 +1,20 @@
+_package: DHL.references
+_name: ContractBelongsToCustomer
+_type: Reference
+label: Contract Belongs To Customer
+deletePropagation: RESTRICT
+fromEntity: DHL.entities.Contract.Contract
+fromRoleLabel: Contract
+fromRoleName: Contract
+fromRolePluralLabel: Contracts
+physicalName: CONTRACT_CUSTOMER
+toEntity: DHL.entities.Customer.Customer
+toRoleName: Customer
+toRoleLabel: Customer
+toRolePhysicalName: CUSTOMER
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Customer
+  label: Customer
+  physicalName: CUSTOMER

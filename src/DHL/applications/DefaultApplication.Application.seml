@@ -1,0 +1,93 @@
+_package: DHL.applications
+_type: Application
+_name: DefaultApplication
+label: MDM
+visibility: VISIBLE
+applicationTitle: MDM
+avatarImageUrl: https://www.citypng.com/public/uploads/preview/download-round-dhl-express-delivery-logo-icon-png-701751695035671nhorrw95xk.png?v=2026010623
+logoUrl: https://cdn.worldvectorlogo.com/logos/dhl-logo-1.svg
+coverImageUrl: https://www.dhl.com/content/experience-fragments/dhl/gb-en/exp/help_and_related_tea/4_column/discover_sites_exp_hrt_dhl_express_discover_ecommerce/_jcr_content/root/container/teaser.coreimg.80.1197.jpeg/1731080189773/delivery-man-delivers-on-beach-0001.jpeg
+favIcon: https://www.citypng.com/public/uploads/preview/download-round-dhl-express-delivery-logo-icon-png-701751695035671nhorrw95xk.png?v=2026010623
+sortStrategy: POSITION
+historyBrowsingEnabled: false
+historyBrowsingRequiredRole: ""
+titleBarDefaultColor: '#FFCC00'
+defaultAction: DHL.applications.DefaultApplication.Root.TopActions.GlobalSearch
+documentationConfig:
+  documentation: ""
+  documentationConfigDiagrams:
+    - _type: DocumentationConfigDiagram
+      _name: Diagram
+      modelDiagram: DHL.model_diagrams.Contract
+      label: Contract Diagram
+globalSearchConfig:
+  displaySearchForDropdown: true
+  sortBusinessViewsAlphabetically: true
+  globalSearchBusinessViews:
+  - _type: GlobalSearchBoView
+    _name: Contract
+    businessView: DHL.entities.Contract.business_views.ContractBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: DHL.entities.Contract.business_views.ContractBusinessView.Contract.TextConfig
+navDrawer:
+  - _type: FolderNavGroup
+    _name: RootFolder
+    dividerVisible: false
+    labelVisible: false
+    linkedFolder: DHL.applications.DefaultApplication.Root.TopActions
+  - _type: FolderNavGroup
+    _name: MasterData
+    dividerVisible: true
+    labelVisible: false
+    linkedFolder: DHL.applications.DefaultApplication.Root.MasterData
+rootFolder:
+  _type: FolderAction
+  _name: Root
+  label: Root Folder
+  image: images://mdi/folder.svg
+  imageAlign: MIDDLE_CENTER
+  imageMode: FIT
+  appActions:
+    - _type : FolderAction
+      _name: TopActions
+      label: Top Actions
+      image: images://mdi/folder.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: GlobalSearchAction
+        _name: GlobalSearch
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+      - _type: MyTasksAction
+        _name: MyTasks
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        badgeVisible: false
+      - _type: BrowseEntitiesFolderAction
+        _name: Entities
+        lineageEnabled: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+    - _type : FolderAction
+      _name: MasterData
+      label: Master Data
+      image: images://mdi/database.svg
+      imageAlign: MIDDLE_CENTER
+      imageMode: FIT
+      appActions:
+      - _type: BrowseBusinessViewAction
+        _name: Customer
+        businessView: DHL.entities.Customer.business_views.CustomerBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Customer
+      - _type: BrowseBusinessViewAction
+        _name: Contract
+        businessView: DHL.entities.Contract.business_views.ContractBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Contract

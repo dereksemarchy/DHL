@@ -1,0 +1,169 @@
+_package: DHL.entities.Contract
+_type: Entity
+_name: Contract
+label: Contract
+pluralLabel: Contract
+entityType: BASIC
+physicalTableName: CONTRACT
+iconUrl: images://mdi/book.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _name: ContractID
+    _type: EntityAttribute
+    label: Contract ID
+    physicalName: CONTRACT_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _name: IsAnnex
+    _type: EntityAttribute
+    label: Is Annex
+    physicalName: IS_ANNEX
+    dataType: Boolean
+    description: Indicates if the contract is an annex
+    documentation: Flag to determine whether this contract is an annex to another contract
+    searchable: true
+  - _name: AnnexStartDate
+    _type: EntityAttribute
+    label: Annex Start Date
+    physicalName: ANNEX_START_DATE
+    dataType: Date
+    description: Start date of the annex
+    documentation: The date when the annex becomes effective, null if not an annex
+    searchable: true
+  - _name: ContractIdNumber
+    _type: EntityAttribute
+    label: Contract ID Number
+    physicalName: CONTRACT_ID_NUMBER
+    dataType: LongInteger
+    precision: 38
+    description: Contract identifier number
+    documentation: External numeric identifier for the contract from source system
+    searchable: true
+  - _name: Currency
+    _type: EntityAttribute
+    label: Currency
+    physicalName: CURRENCY
+    dataType: String
+    length: 10
+    description: Contract currency code
+    documentation: Currency used for the contract transactions (e.g., PLN, USD, EUR)
+    searchable: true
+  - _name: ContractName
+    _type: EntityAttribute
+    label: Contract Name
+    physicalName: CONTRACT_NAME
+    dataType: String
+    length: 500
+    description: Name of the contract
+    documentation: Descriptive name or title of the contract, typically includes customer name
+    searchable: true
+  - _name: StartDate
+    _type: EntityAttribute
+    label: Start Date
+    physicalName: START_DATE
+    dataType: Date
+    description: Contract start date
+    documentation: The date when the contract becomes effective and valid
+    searchable: true
+  - _name: EndDate
+    _type: EntityAttribute
+    label: End Date
+    physicalName: END_DATE
+    dataType: Date
+    description: Contract end date
+    documentation: The date when the contract expires or terminates
+    searchable: true
+  - _name: SendDate
+    _type: EntityAttribute
+    label: Send Date
+    physicalName: SEND_DATE
+    dataType: Date
+    description: Date the contract was sent
+    documentation: The date when the contract was sent to the customer for review or signature
+    searchable: true
+  - _name: SalesDepot
+    _type: EntityAttribute
+    label: Sales Depot
+    physicalName: SALES_DEPOT
+    dataType: String
+    length: 100
+    description: Sales depot location
+    documentation: Depot or sales office responsible for managing this contract
+    searchable: true
+  - _name: BillingFrequency
+    _type: EntityAttribute
+    label: Billing Frequency
+    physicalName: BILLING_FREQUENCY
+    dataType: String
+    length: 50
+    description: Frequency of billing
+    documentation: How often the customer is billed for services (e.g., Monthly, Quarterly, Annual)
+    searchable: true
+  - _name: PaymentTerms
+    _type: EntityAttribute
+    label: Payment Terms
+    physicalName: PAYMENT_TERMS
+    dataType: String
+    length: 100
+    description: Payment terms
+    documentation: Payment terms agreed with the customer, typically specifies number of days (e.g., 30 days, Net 60)
+    searchable: true
+  - _name: FlatFeeProducts
+    _type: EntityAttribute
+    label: Flat Fee Products
+    physicalName: FLAT_FEE_PRODUCTS
+    dataType: Boolean
+    description: Flat fee for products
+    documentation: Indicates if products have a flat fee pricing structure instead of variable pricing
+    searchable: true
+  - _name: FlatFeeOptions
+    _type: EntityAttribute
+    label: Flat Fee Options
+    physicalName: FLAT_FEE_OPTIONS
+    dataType: Boolean
+    description: Flat fee for options
+    documentation: Indicates if optional services have a flat fee pricing structure instead of variable pricing
+    searchable: true
+  - _name: MultiParcel
+    _type: EntityAttribute
+    label: Multi Parcel
+    physicalName: MULTI_PARCEL
+    dataType: Boolean
+    description: Multi parcel support
+    documentation: Indicates if the contract supports multi-parcel shipments or bundled shipments
+    searchable: true
+  - _name: SapAccountId
+    _type: EntityAttribute
+    label: SAP Account ID
+    physicalName: SAP_ACCOUNT_ID
+    dataType: String
+    length: 50
+    description: SAP account identifier
+    documentation: Account identifier in SAP ERP system for financial integration
+    searchable: true
+  - _name: LastEsignatureDate
+    _type: EntityAttribute
+    label: Last E-signature Date
+    physicalName: LAST_ESIGNATURE_DATE
+    dataType: Date
+    description: Last electronic signature date
+    documentation: The date when the contract was last electronically signed by authorized parties
+    searchable: true
+  - _name: ReratingQuote
+    _type: EntityAttribute
+    label: Rerating Quote
+    physicalName: RERATING_QUOTE
+    dataType: Boolean
+    description: Rerating quote flag
+    documentation: Indicates if the contract requires rerating quote or price recalculation
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: DHL.entities.Contract.Contract.ContractID

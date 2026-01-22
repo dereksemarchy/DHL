@@ -1,0 +1,6 @@
+_type: Model
+_package: DHL
+_name: DHL
+label: DHL
+modelConfiguration:
+  type: POSTGRESQL

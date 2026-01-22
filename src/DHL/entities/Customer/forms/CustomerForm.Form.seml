@@ -1,0 +1,65 @@
+_package: DHL.entities.Customer.forms
+_type: Form
+_name: CustomerForm
+entity: DHL.entities.Customer.Customer
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Customer
+    label: Customer
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: CustomerID
+        value: CustomerID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: CustomerNumber
+        value: CustomerNumber
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: InternalId
+        value: InternalId
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: Name
+        value: Name
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Address
+        value: Address
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: HouseNumber
+        value: HouseNumber
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: PostalCode
+        value: PostalCode
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: City
+        value: City
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Country
+        value: Country
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: MarketingAgreement
+        value: MarketingAgreement
+        useCustomLabel: false
+        dataType: STRING
