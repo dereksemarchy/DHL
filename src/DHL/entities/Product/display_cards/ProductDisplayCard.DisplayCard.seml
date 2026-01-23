@@ -1,0 +1,16 @@
+_package: DHL.entities.Product.display_cards
+_type: DisplayCard
+_name: ProductDisplayCard
+entity: DHL.entities.Product.Product
+default: true
+primaryTextExpression: ProductCode
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

@@ -1,0 +1,27 @@
+_package: DHL.entities.Product.collection_views
+_type: CollectionView
+_name: ProductCollectionView
+entity: DHL.entities.Product.Product
+default: true
+displayCard: DHL.entities.Product.display_cards.ProductDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Product
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: ProductCode
+    value: ProductCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

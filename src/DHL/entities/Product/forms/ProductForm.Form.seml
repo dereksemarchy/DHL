@@ -1,0 +1,19 @@
+_package: DHL.entities.Product.forms
+_type: Form
+_name: ProductForm
+entity: DHL.entities.Product.Product
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Product
+    label: Product
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: ProductCode
+        value: ProductCode
+        useCustomLabel: false
+        dataType: STRING

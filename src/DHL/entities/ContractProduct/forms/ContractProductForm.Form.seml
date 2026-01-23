@@ -1,0 +1,75 @@
+_package: DHL.entities.ContractProduct.forms
+_type: Form
+_name: ContractProductForm
+entity: DHL.entities.ContractProduct.ContractProduct
+default: true
+formTabs:
+  - _type: FormTab
+    _name: ContractProduct
+    label: Contract Product
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: ContractProductID
+        value: ContractProductID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: FDN_Contract
+        value: FDN_Contract
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: FDN_Product
+        value: FDN_Product
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: UsedTariffId
+        value: UsedTariffId
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: PricePolicyId
+        value: PricePolicyId
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: Name
+        value: Name
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: TariffType
+        value: TariffType
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: BasePricingMethod
+        value: BasePricingMethod
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Currency
+        value: Currency
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Uom
+        value: Uom
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Dim1Code
+        value: Dim1Code
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: Dim2Code
+        value: Dim2Code
+        useCustomLabel: false
+        dataType: STRING

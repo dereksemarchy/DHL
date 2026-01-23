@@ -172,6 +172,30 @@
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
                         "label": "Contract"
+                    },
+                    {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Product",
+                        "posInFolder": 2,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.Product.business_views.ProductBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Product"
+                    },
+                    {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractProduct",
+                        "posInFolder": 3,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Contract Product"
                     }
                 ]
             }
@@ -208,6 +232,30 @@
                         "height": 500,
                         "borderColor": "255,0,0",
                         "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "DHL.model_diagrams.Contract.ContractProduct",
+                        "entity": "DHL.entities.ContractProduct.ContractProduct",
+                        "position": {
+                            "x": 500,
+                            "y": 100
+                        },
+                        "width": 100,
+                        "height": 500,
+                        "borderColor": "255,0,0",
+                        "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "DHL.model_diagrams.Contract.Product",
+                        "entity": "DHL.entities.Product.Product",
+                        "position": {
+                            "x": 700,
+                            "y": 100
+                        },
+                        "width": 100,
+                        "height": 500,
+                        "borderColor": "255,0,0",
+                        "fontTitleColor": "255,255,255"
                     }
                 ],
                 "referenceLinks": [
@@ -215,6 +263,18 @@
                         "fromEntityShape": "DHL.model_diagrams.Contract.Contract",
                         "toEntityShape": "DHL.model_diagrams.Contract.Customer",
                         "reference": "DHL.references.ContractBelongsToCustomer",
+                        "bendPoints": []
+                    },
+                    {
+                        "fromEntityShape": "DHL.model_diagrams.Contract.ContractProduct",
+                        "toEntityShape": "DHL.model_diagrams.Contract.Product",
+                        "reference": "DHL.references.ContractProductToProduct",
+                        "bendPoints": []
+                    },
+                    {
+                        "fromEntityShape": "DHL.model_diagrams.Contract.ContractProduct",
+                        "toEntityShape": "DHL.model_diagrams.Contract.Contract",
+                        "reference": "DHL.references.ContractProductToContract",
                         "bendPoints": []
                     }
                 ],
@@ -242,6 +302,26 @@
                     {
                         "qualifiedName": "DHL.model_jobs.JOB_ALL.Customer",
                         "entity": "DHL.entities.Customer.Customer",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "DHL.model_jobs.JOB_ALL.Product",
+                        "entity": "DHL.entities.Product.Product",
+                        "consolidatedDataEnrichmentEnabled": true,
+                        "consolidationEnabled": true,
+                        "matchEnabled": true,
+                        "postConsoValidationEnabled": true,
+                        "sourceDataEnrichmentEnabled": true,
+                        "sourceValidationEnabled": true
+                    },
+                    {
+                        "qualifiedName": "DHL.model_jobs.JOB_ALL.ContractProduct",
+                        "entity": "DHL.entities.ContractProduct.ContractProduct",
                         "consolidatedDataEnrichmentEnabled": true,
                         "consolidationEnabled": true,
                         "matchEnabled": true,
@@ -295,6 +375,56 @@
                     "_type": "ForeignAttribute",
                     "physicalName": "CUSTOMER",
                     "label": "Customer"
+                }
+            },
+            {
+                "qualifiedName": "DHL.references.ContractProductToContract",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "DHL.entities.ContractProduct.ContractProduct",
+                "fromRoleName": "ContractProduct",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "CONTRACT_PRODUCT_CONTRACT",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "DHL.entities.Contract.Contract",
+                "toRoleName": "Contract",
+                "toRolePhysicalName": "CONTRACT",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Contract Product",
+                "fromRolePluralLabel": "Contract Products",
+                "label": "Contract Product To Contract",
+                "toRoleLabel": "Contract",
+                "foreignAttribute": {
+                    "qualifiedName": "DHL.references.ContractProductToContract.Contract",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "CONTRACT",
+                    "label": "Contract"
+                }
+            },
+            {
+                "qualifiedName": "DHL.references.ContractProductToProduct",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "DHL.entities.ContractProduct.ContractProduct",
+                "fromRoleName": "ContractProduct",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "CONTRACT_PRODUCT_PRODUCT",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "DHL.entities.Product.Product",
+                "toRoleName": "Product",
+                "toRolePhysicalName": "PRODUCT",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Contract Product",
+                "fromRolePluralLabel": "Contract Products",
+                "label": "Contract Product To Product",
+                "toRoleLabel": "Product",
+                "foreignAttribute": {
+                    "qualifiedName": "DHL.references.ContractProductToProduct.Product",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "PRODUCT",
+                    "label": "Product"
                 }
             }
         ],
@@ -798,7 +928,34 @@
                                             "searchType": "SEMQL"
                                         }
                                     }
+                                ],
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Contract.business_views.ContractBusinessView.Contract.ContractProduct",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Contract.business_views.ContractBusinessView.Contract.ContractProduct.ContractProduct",
+                                        "transitionPath": "ContractProduct",
+                                        "useCustomLabel": false,
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Contract.business_views.ContractBusinessView.Contract.ContractProduct.ContractProduct",
+                                "collection": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.ContractProduct.ContractProduct",
+                                "form": "DHL.entities.ContractProduct.forms.ContractProductForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet"
                             }
                         ]
                     }
@@ -1440,6 +1597,803 @@
                                 "formTab": "DHL.entities.Contract.forms.ContractForm.Contract",
                                 "label": "Contract",
                                 "parentCollectionStep": "DHL.entities.Contract.steppers.AuthorContracts.Contracts"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
+                "uniqueKeys": []
+            },
+            {
+                "qualifiedName": "DHL.entities.ContractProduct.ContractProduct",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/link-box-variant-outline.svg",
+                "label": "Contract Product",
+                "physicalTableName": "CONTRACT_PRODUCT",
+                "pluralLabel": "Contract Product",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.ContractProductID",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "CONTRACT_PRODUCT_ID",
+                        "valueSeparator": "",
+                        "idGenerationType": "SEQUENCE",
+                        "idSequenceStartsWith": 1,
+                        "label": "Contract Product ID",
+                        "precision": 38,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.UsedTariffId",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "USED_TARIFF_ID",
+                        "valueSeparator": "",
+                        "label": "Used Tariff ID",
+                        "precision": 38,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.PricePolicyId",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "LongInteger",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "PRICE_POLICY_ID",
+                        "valueSeparator": "",
+                        "label": "Price Policy ID",
+                        "precision": 38,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.Name",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "NAME",
+                        "valueSeparator": "",
+                        "label": "Name",
+                        "length": 255,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.TariffType",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "TARIFF_TYPE",
+                        "valueSeparator": "",
+                        "label": "Tariff Type",
+                        "length": 50,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.BasePricingMethod",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "BASE_PRICING_METHOD",
+                        "valueSeparator": "",
+                        "label": "Base Pricing Method",
+                        "length": 100,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.Currency",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "CURRENCY",
+                        "valueSeparator": "",
+                        "label": "Currency",
+                        "length": 10,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.Uom",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "UOM",
+                        "valueSeparator": "",
+                        "label": "Unit of Measure",
+                        "length": 50,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.Dim1Code",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "DIM1_CODE",
+                        "valueSeparator": "",
+                        "label": "Dimension 1 Code",
+                        "length": 50,
+                        "searchable": true
+                    },
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.ContractProduct.Dim2Code",
+                        "_type": "AtomicAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "lovValidationScope": "NONE",
+                        "mandatory": false,
+                        "mandatoryValidationLabel": "",
+                        "mandatoryValidationScope": "NONE",
+                        "multiValued": false,
+                        "physicalColName": "DIM2_CODE",
+                        "valueSeparator": "",
+                        "label": "Dimension 2 Code",
+                        "length": 50,
+                        "searchable": true
+                    }
+                ],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Contract Product Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.CreateAuthorContractProducts",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "DHL.entities.ContractProduct.steppers.AuthorContractProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.EditAuthorContractProducts",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "DHL.entities.ContractProduct.steppers.AuthorContractProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.MassUpdateAuthorContractProducts",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "DHL.entities.ContractProduct.steppers.AuthorContractProducts",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.ImportAuthorContractProducts",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "DHL.entities.ContractProduct.steppers.AuthorContractProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet.CopyAuthorContractProducts",
+                                "_type": "CopyAction",
+                                "description": "",
+                                "label": "Copy",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "stepper": "DHL.entities.ContractProduct.steppers.AuthorContractProducts"
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct",
+                        "rootDescription": "",
+                        "rootLabel": "Contract Products",
+                        "rootPluralLabel": "Contract Products",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct",
+                                "collection": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.ContractProduct.ContractProduct",
+                                "form": "DHL.entities.ContractProduct.forms.ContractProductForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Contract Product",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": false,
+                        "displayCard": "DHL.entities.ContractProduct.display_cards.ContractProductDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.ContractProductID",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ContractProductID",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Contract",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_Contract",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Product",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_Product",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.UsedTariffId",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "UsedTariffId",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.PricePolicyId",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "PricePolicyId",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Name",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "Name",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.TariffType",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "TariffType",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.BasePricingMethod",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "BasePricingMethod",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Currency",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "Currency",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Uom",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "Uom",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Dim1Code",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "Dim1Code",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView.Dim2Code",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "Dim2Code",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.display_cards.ContractProductDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "SEM_NUMBER_TO_CHAR(ContractProductID)"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Contract Product",
+                                "labelWidth": "150",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.ContractProductID",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ContractProductID",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.FDN_Contract",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 1,
+                                "useCustomLabel": false,
+                                "value": "FDN_Contract",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.FDN_Product",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_Product",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.UsedTariffId",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 3,
+                                "useCustomLabel": false,
+                                "value": "UsedTariffId",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.PricePolicyId",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 4,
+                                "useCustomLabel": false,
+                                "value": "PricePolicyId",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "LONG_INTEGER",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.Name",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 5,
+                                "useCustomLabel": false,
+                                "value": "Name",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.TariffType",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 6,
+                                "useCustomLabel": false,
+                                "value": "TariffType",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.BasePricingMethod",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 7,
+                                "useCustomLabel": false,
+                                "value": "BasePricingMethod",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.Currency",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 8,
+                                "useCustomLabel": false,
+                                "value": "Currency",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.Uom",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 9,
+                                "useCustomLabel": false,
+                                "value": "Uom",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.Dim1Code",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "Dim1Code",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct.Dim2Code",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": false,
+                                "value": "Dim2Code",
+                                "parentFormContainer": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "DHL.entities.ContractProduct.steppers.AuthorContractProducts",
+                        "label": "Contract Products",
+                        "rootCollectionStep": "DHL.entities.ContractProduct.steppers.AuthorContractProducts.ContractProducts",
+                        "steps": [
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.steppers.AuthorContractProducts.ContractProducts",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Contract Products"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.ContractProduct.steppers.AuthorContractProducts.ContractProducts.ContractProduct",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "DHL.entities.ContractProduct.forms.ContractProductForm.ContractProduct",
+                                "label": "Contract Product",
+                                "parentCollectionStep": "DHL.entities.ContractProduct.steppers.AuthorContractProducts.ContractProducts"
                             }
                         ]
                     }
@@ -2336,6 +3290,340 @@
                         "documentation": ""
                     }
                 ],
+                "uniqueKeys": []
+            },
+            {
+                "qualifiedName": "DHL.entities.Product.Product",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/toolbox-outline.svg",
+                "label": "Product",
+                "physicalTableName": "PRODUCT",
+                "pluralLabel": "Product",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.Product.ProductCode",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "PRODUCT_CODE",
+                        "valueSeparator": "",
+                        "idGenerationType": "MANUAL",
+                        "label": "Product Code",
+                        "length": 50,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "Product Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.CreateAuthorProducts",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "DHL.entities.Product.steppers.AuthorProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.EditAuthorProducts",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "DHL.entities.Product.steppers.AuthorProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.MassUpdateAuthorProducts",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "DHL.entities.Product.steppers.AuthorProducts",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.ImportAuthorProducts",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "DHL.entities.Product.steppers.AuthorProducts"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.action_sets.ProductActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "DHL.entities.Product.business_views.ProductBusinessView.Product",
+                        "rootDescription": "",
+                        "rootLabel": "Products",
+                        "rootPluralLabel": "Products",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView.Product",
+                                "collection": "DHL.entities.Product.collection_views.ProductCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.Product.Product",
+                                "form": "DHL.entities.Product.forms.ProductForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.Product.action_sets.ProductActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView.Product.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView.Product.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView.Product.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Product.business_views.ProductBusinessView.Product.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.collection_views.ProductCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "Product",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "DHL.entities.Product.display_cards.ProductDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.collection_views.ProductCollectionView.ProductCode",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ProductCode",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.display_cards.ProductDisplayCard",
+                        "avatarImageValueInterpreter": "LITERAL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "ProductCode"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "DHL.entities.Product.forms.ProductForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.forms.ProductForm.Product",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "Product",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.forms.ProductForm.Product.ProductCode",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "ProductCode",
+                                "parentFormContainer": "DHL.entities.Product.forms.ProductForm.Product",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "DHL.entities.Product.steppers.AuthorProducts",
+                        "label": "Products",
+                        "rootCollectionStep": "DHL.entities.Product.steppers.AuthorProducts.Products",
+                        "steps": [
+                            {
+                                "qualifiedName": "DHL.entities.Product.steppers.AuthorProducts.Products",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "DHL.entities.Product.collection_views.ProductCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "Products"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Product.steppers.AuthorProducts.Products.Product",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "DHL.entities.Product.forms.ProductForm.Product",
+                                "label": "Product",
+                                "parentCollectionStep": "DHL.entities.Product.steppers.AuthorProducts.Products"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
                 "uniqueKeys": []
             }
         ]

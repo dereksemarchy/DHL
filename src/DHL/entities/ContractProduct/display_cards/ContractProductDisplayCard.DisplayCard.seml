@@ -1,0 +1,16 @@
+_package: DHL.entities.ContractProduct.display_cards
+_type: DisplayCard
+_name: ContractProductDisplayCard
+entity: DHL.entities.ContractProduct.ContractProduct
+default: true
+primaryTextExpression: SEM_NUMBER_TO_CHAR(ContractProductID)
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: LITERAL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT

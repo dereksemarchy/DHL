@@ -1,0 +1,98 @@
+_package: DHL.entities.ContractProduct
+_type: Entity
+_name: ContractProduct
+label: Contract Product
+pluralLabel: Contract Product
+entityType: BASIC
+physicalTableName: CONTRACT_PRODUCT
+iconUrl: images://mdi/link-box-variant-outline.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: ContractProductID
+    label: Contract Product ID
+    physicalName: CONTRACT_PRODUCT_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: UsedTariffId
+    label: Used Tariff ID
+    physicalName: USED_TARIFF_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: PricePolicyId
+    label: Price Policy ID
+    physicalName: PRICE_POLICY_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Name
+    label: Name
+    physicalName: NAME
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: TariffType
+    label: Tariff Type
+    physicalName: TARIFF_TYPE
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: BasePricingMethod
+    label: Base Pricing Method
+    physicalName: BASE_PRICING_METHOD
+    dataType: String
+    length: 100
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Currency
+    label: Currency
+    physicalName: CURRENCY
+    dataType: String
+    length: 10
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Uom
+    label: Unit of Measure
+    physicalName: UOM
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Dim1Code
+    label: Dimension 1 Code
+    physicalName: DIM1_CODE
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: Dim2Code
+    label: Dimension 2 Code
+    physicalName: DIM2_CODE
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: DHL.entities.ContractProduct.ContractProduct.ContractProductID

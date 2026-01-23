@@ -1,0 +1,25 @@
+_package: DHL.entities.Product
+_type: Entity
+_name: Product
+label: Product
+pluralLabel: Product
+entityType: BASIC
+physicalTableName: PRODUCT
+iconUrl: images://mdi/toolbox-outline.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: ProductCode
+    label: Product Code
+    physicalName: PRODUCT_CODE
+    dataType: String
+    length: 50
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: DHL.entities.Product.Product.ProductCode

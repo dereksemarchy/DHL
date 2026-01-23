@@ -1,0 +1,36 @@
+_package: DHL.entities.ContractProduct.business_views
+_type: BusinessView
+_name: ContractProductBusinessView
+entity: DHL.entities.ContractProduct.ContractProduct
+rootLabel: Contract Products
+rootPluralLabel: Contract Products
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: ContractProduct
+  entity: DHL.entities.ContractProduct.ContractProduct
+  actionSet: DHL.entities.ContractProduct.action_sets.ContractProductActionSet
+  collection: DHL.entities.ContractProduct.collection_views.ContractProductCollectionView
+  form: DHL.entities.ContractProduct.forms.ContractProductForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

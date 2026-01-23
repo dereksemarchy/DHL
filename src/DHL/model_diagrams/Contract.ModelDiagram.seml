@@ -23,9 +23,36 @@ entityShapes:
       x: 300
       y: 100
     width: 100
+  - _type: EntityShape
+    entity: DHL.entities.ContractProduct.ContractProduct
+    _name: ContractProduct
+    borderColor: red
+    fontTitleColor: white
+    height: 500
+    position:
+      x: 500
+      y: 100
+    width: 100      
+  - _type: EntityShape
+    entity: DHL.entities.Product.Product
+    _name: Product
+    borderColor: red
+    fontTitleColor: white
+    height: 500
+    position:
+      x: 700
+      y: 100
+    width: 100    
 referenceLinks:
   - fromEntityShape: DHL.model_diagrams.Contract.Contract
     toEntityShape: DHL.model_diagrams.Contract.Customer
     reference: DHL.references.ContractBelongsToCustomer
     bendPoints: []
-
+  - fromEntityShape: DHL.model_diagrams.Contract.ContractProduct
+    toEntityShape: DHL.model_diagrams.Contract.Product
+    reference: DHL.references.ContractProductToProduct
+    bendPoints: []
+  - fromEntityShape: DHL.model_diagrams.Contract.ContractProduct
+    toEntityShape: DHL.model_diagrams.Contract.Contract
+    reference: DHL.references.ContractProductToContract
+    bendPoints: []

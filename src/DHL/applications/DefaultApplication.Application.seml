@@ -91,3 +91,17 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Contract
+      - _type: BrowseBusinessViewAction
+        _name: Product
+        businessView: DHL.entities.Product.business_views.ProductBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Product
+      - _type: BrowseBusinessViewAction
+        _name: ContractProduct
+        businessView: DHL.entities.ContractProduct.business_views.ContractProductBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Contract Product
