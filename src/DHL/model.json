@@ -2775,7 +2775,7 @@
                     {
                         "qualifiedName": "DHL.entities.Customer.business_views.CustomerBusinessView",
                         "displayRootNodeAs": "ICON_LABEL",
-                        "enableHierarchyView": false,
+                        "enableHierarchyView": true,
                         "filter": "1 = 1",
                         "rootBoViewEntity": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer",
                         "rootDescription": "",
@@ -2833,6 +2833,7 @@
                                         "targetBoViewEntity": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer.Contract.Contract",
                                         "transitionPath": "Contract",
                                         "useCustomLabel": false,
+                                        "enableHierarchy": "1",
                                         "transitionType": "FULLY_QUALIFIED"
                                     }
                                 ]
@@ -2850,7 +2851,35 @@
                                 "overrideDefaultSort": false,
                                 "sortExpression": "",
                                 "tableAllowed": true,
-                                "actionSet": "DHL.entities.Contract.action_sets.ContractActionSet"
+                                "actionSet": "DHL.entities.Contract.action_sets.ContractActionSet",
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer.Contract.Contract.ContractProduct",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer.Contract.Contract.ContractProduct.ContractProduct",
+                                        "transitionPath": "ContractProduct",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "1",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer.Contract.Contract.ContractProduct.ContractProduct",
+                                "collection": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.ContractProduct.ContractProduct",
+                                "form": "DHL.entities.ContractProduct.forms.ContractProductForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet"
                             }
                         ]
                     }

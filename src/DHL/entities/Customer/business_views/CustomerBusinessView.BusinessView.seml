@@ -38,6 +38,7 @@ rootBusinessViewEntity:
       _name: Contract
       transitionType: FULLY_QUALIFIED
       transitionPath: Contract
+      enableHierarchy: "1"
       businessViewEntity: 
         _type: BusinessViewEntity
         _name: Contract
@@ -52,5 +53,28 @@ rootBusinessViewEntity:
         gridAllowed: true
         enableUserDefinedSort: true
         overrideDefaultSort: false
-enableHierarchyView: false
+        transitions:
+          - useCustomLabel: false
+            _type: BusinessViewTransition
+            _name: ContractProduct
+            transitionType: FULLY_QUALIFIED
+            transitionPath: ContractProduct
+            enableHierarchy: "1"
+            businessViewEntity: 
+              _type: BusinessViewEntity
+              _name: ContractProduct
+              entity: DHL.entities.ContractProduct.ContractProduct
+              actionSet: DHL.entities.ContractProduct.action_sets.ContractProductActionSet
+              collection: DHL.entities.ContractProduct.collection_views.ContractProductCollectionView
+              form: DHL.entities.ContractProduct.forms.ContractProductForm
+              outlineVisible: false
+              displayRecordCount: ALWAYS
+              listAllowed: true
+              tableAllowed: true
+              gridAllowed: true
+              enableUserDefinedSort: true
+              overrideDefaultSort: false
+
+
+enableHierarchyView: true
 useHierarchyOnOpen: false
