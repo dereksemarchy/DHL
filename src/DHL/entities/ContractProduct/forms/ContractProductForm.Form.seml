@@ -13,63 +13,88 @@ formTabs:
     displayFormTabAs: LABEL
     labelWidth: "150"
     content:
-      - _type: IdField
-        _name: ContractProductID
-        value: ContractProductID
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: FDN_Contract
-        value: FDN_Contract
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: FDN_Product
-        value: FDN_Product
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: UsedTariffId
-        value: UsedTariffId
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: PricePolicyId
-        value: PricePolicyId
-        useCustomLabel: false
-        dataType: LONG_INTEGER
-      - _type: TextField
-        _name: Name
-        value: Name
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: TariffType
-        value: TariffType
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: BasePricingMethod
-        value: BasePricingMethod
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: Currency
-        value: Currency
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: Uom
-        value: Uom
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: Dim1Code
-        value: Dim1Code
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
-        _name: Dim2Code
-        value: Dim2Code
-        useCustomLabel: false
-        dataType: STRING
+      - _type: FormContainer
+        _name: ContractProductContainer
+        layoutDirection: ROW
+        content:
+          - _type: FormSection
+            _name: CurrentTariff
+            label: Current Tariff
+            layoutDirection: COLUMN
+            visibleValue: '1'
+            labelWidth: 150px
+            visibleValueInterpreter: LITERAL
+            content:
+              - _type: IdField
+                _name: ContractProductID
+                value: ContractProductID
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: FDN_Contract
+                value: FDN_Contract
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: FDN_Product
+                value: FDN_Product
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: UsedTariffId
+                value: UsedTariffId
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: PricePolicyId
+                value: PricePolicyId
+                useCustomLabel: false
+                dataType: LONG_INTEGER
+              - _type: TextField
+                _name: Name
+                value: Name
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: TariffType
+                value: TariffType
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: BasePricingMethod
+                value: BasePricingMethod
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: Currency
+                value: Currency
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: Uom
+                value: Uom
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: Dim1Code
+                value: Dim1Code
+                useCustomLabel: false
+                dataType: STRING
+              - _type: TextField
+                _name: Dim2Code
+                value: Dim2Code
+                useCustomLabel: false
+                dataType: STRING
+          - _type: FormSection
+            _name: CurrentTariff1
+            label: Current Tariff1
+            layoutDirection: COLUMN
+            visibleValue: '0'
+            labelWidth: 120px
+            visibleValueInterpreter: LITERAL
+            content:
+              - _type: IdField
+                _name: ContractProductID1
+                value: ContractProductID
+                useCustomLabel: false
+                dataType: LONG_INTEGER

@@ -26,10 +26,25 @@ globalSearchConfig:
   globalSearchBusinessViews:
   - _type: GlobalSearchBoView
     _name: Contract
+    label: Contract
     businessView: DHL.entities.Contract.business_views.ContractBusinessView
     maxResults: 100
     viewType: "GD"
     searchTypeConfig: DHL.entities.Contract.business_views.ContractBusinessView.Contract.TextConfig
+  - _type: GlobalSearchBoView
+    _name: Customer
+    label: Customer
+    businessView: DHL.entities.Customer.business_views.CustomerBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: DHL.entities.Customer.business_views.CustomerBusinessView.Customer.TextConfig
+  - _type: GlobalSearchBoView
+    _name: ContractProduct
+    label: Contract Product
+    businessView: DHL.entities.ContractProduct.business_views.ContractProductBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.TextConfig
 navDrawer:
   - _type: FolderNavGroup
     _name: RootFolder

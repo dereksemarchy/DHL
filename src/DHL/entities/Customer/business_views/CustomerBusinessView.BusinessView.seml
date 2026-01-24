@@ -2,6 +2,7 @@ _package: DHL.entities.Customer.business_views
 _type: BusinessView
 _name: CustomerBusinessView
 entity: DHL.entities.Customer.Customer
+label: Customer
 rootLabel: Customers
 rootPluralLabel: Customers
 displayRootNodeAs: ICON_LABEL
@@ -74,7 +75,5 @@ rootBusinessViewEntity:
               gridAllowed: true
               enableUserDefinedSort: true
               overrideDefaultSort: false
-
-
 enableHierarchyView: true
 useHierarchyOnOpen: false
