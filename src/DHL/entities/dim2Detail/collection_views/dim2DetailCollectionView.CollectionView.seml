@@ -1,0 +1,48 @@
+_package: DHL.entities.dim2Detail.collection_views
+_type: CollectionView
+_name: dim2DetailCollectionView
+entity: DHL.entities.dim2Detail.dim2Detail
+default: true
+displayCard: DHL.entities.dim2Detail.display_cards.dim2DetailDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: dim2Detail
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: dim2DetailID
+    value: dim2DetailID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: ContractProduct
+    value: FDN_ContractProduct
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: dim2Element
+    value: dim2Element
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: segments
+    value: segments
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

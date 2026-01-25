@@ -1,0 +1,42 @@
+_package: DHL.entities.dim2Detail
+_type: Entity
+_name: dim2Detail
+label: dim2Detail
+pluralLabel: dim2Detail
+entityType: BASIC
+physicalTableName: DIM2DETAIL
+iconUrl: images://mdi/ruler.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: dim2DetailID
+    label: dim2Detail ID
+    physicalName: DIM2DETAIL_ID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: dim2Element
+    label: dim2 Element
+    physicalName: DIM2ELEMENT
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: segments
+    label: Segments
+    physicalName: SEGMENTS
+    dataType: String
+    length: 2560
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+primaryKey: DHL.entities.dim2Detail.dim2Detail.dim2DetailID

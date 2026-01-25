@@ -22,7 +22,7 @@ tableColumns:
     _name: ContractProductID
     value: ContractProductID
     useCustomLabel: false
-    dataType: LONG_INTEGER
+    dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
   - _type: TextColumn

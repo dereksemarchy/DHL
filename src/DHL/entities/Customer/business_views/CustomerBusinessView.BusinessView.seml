@@ -75,5 +75,26 @@ rootBusinessViewEntity:
               gridAllowed: true
               enableUserDefinedSort: true
               overrideDefaultSort: false
+              transitions:
+                - useCustomLabel: false
+                  _type: BusinessViewTransition
+                  _name: dim2Detail
+                  transitionType: FULLY_QUALIFIED
+                  transitionPath: dim2Detail
+                  enableHierarchy: "1"
+                  businessViewEntity: 
+                    _type: BusinessViewEntity
+                    _name: dim2Detail
+                    entity: DHL.entities.dim2Detail.dim2Detail
+                    actionSet: DHL.entities.dim2Detail.action_sets.dim2DetailActionSet
+                    collection: DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView
+                    form: DHL.entities.dim2Detail.forms.dim2DetailForm
+                    outlineVisible: false
+                    displayRecordCount: ALWAYS
+                    listAllowed: true
+                    tableAllowed: true
+                    gridAllowed: true
+                    enableUserDefinedSort: true
+                    overrideDefaultSort: false
 enableHierarchyView: true
 useHierarchyOnOpen: false

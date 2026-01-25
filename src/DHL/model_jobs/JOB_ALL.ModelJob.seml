@@ -28,7 +28,7 @@ modelTasks:
     _name: Product
     consolidatedDataEnrichmentEnabled: true
     consolidationEnabled: true
-    matchEnabled: true
+    matchEnabled: false
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true    
@@ -37,7 +37,16 @@ modelTasks:
     _name: ContractProduct
     consolidatedDataEnrichmentEnabled: true
     consolidationEnabled: true
-    matchEnabled: true
+    matchEnabled: false
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true   
+  - _type: ModelJobTask
+    entity: DHL.entities.dim2Detail.dim2Detail
+    _name: dim2Detail
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: false
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true   

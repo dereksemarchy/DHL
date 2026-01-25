@@ -29,7 +29,7 @@ formTabs:
                 _name: ContractProductID
                 value: ContractProductID
                 useCustomLabel: false
-                dataType: LONG_INTEGER
+                dataType: STRING
               - _type: TextField
                 _name: FDN_Contract
                 value: FDN_Contract

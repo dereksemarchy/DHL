@@ -1,0 +1,35 @@
+_package: DHL.entities.dim2Detail.forms
+_type: Form
+_name: dim2DetailForm
+entity: DHL.entities.dim2Detail.dim2Detail
+default: true
+formTabs:
+  - _type: FormTab
+    _name: dim2Detail
+    label: dim2Detail
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: dim2DetailID
+        value: dim2DetailID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: ContractProduct
+        value: FDN_ContractProduct
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: dim2Element
+        value: dim2Element
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: segments
+        value: segments
+        useCustomLabel: false
+        dataType: STRING

@@ -1,34 +1,34 @@
-_package: DHL.entities.ContractProduct.action_sets
+_package: DHL.entities.dim2Detail.action_sets
 _type: ActionSet
-_name: ContractProductActionSet
-entity: DHL.entities.ContractProduct.ContractProduct
-label: Contract Product Action Set
+_name: dim2DetailActionSet
+entity: DHL.entities.dim2Detail.dim2Detail
+label: dim2Detail Action Set
 defaultActionSet: true
 actions:
   - _type: CreateAction
-    _name: CreateAuthorContractProducts
+    _name: CreateAuthordim2Details
     label: Create
     useCustomLabel: true
-    stepper: DHL.entities.ContractProduct.steppers.AuthorContractProducts
+    stepper: DHL.entities.dim2Detail.steppers.Authordim2Details
     createMultiple: false
     createdRecordType: GOLDEN
     waitDialogEnabled: false
     allowOtherPublishers: true
   - _type: EditAction
-    _name: EditAuthorContractProducts
+    _name: EditAuthordim2Details
     label: Edit
     useCustomLabel: true
-    stepper: DHL.entities.ContractProduct.steppers.AuthorContractProducts
+    stepper: DHL.entities.dim2Detail.steppers.Authordim2Details
     multipleSelectionAllowed: true
     availableForGoldenData: true
     availableForMasterData: false
     availableForErrorData: false
     waitDialogEnabled: false
   - _type: MassUpdateAction
-    _name: MassUpdateAuthorContractProducts
+    _name: MassUpdateAuthordim2Details
     label: Mass Update
     useCustomLabel: true
-    stepper: DHL.entities.ContractProduct.steppers.AuthorContractProducts
+    stepper: DHL.entities.dim2Detail.steppers.Authordim2Details
     availableForGoldenData: true
     availableForErrorData: false
     availableForMasterData: false
@@ -48,11 +48,11 @@ actions:
     useCustomLabel: true
     waitDialogEnabled: false
   - _type: ImportAction
-    _name: ImportAuthorContractProducts
+    _name: ImportAuthordim2Details
     label: Import
     useCustomLabel: true
     importMode: CREATE_AND_UPDATE
-    stepper: DHL.entities.ContractProduct.steppers.AuthorContractProducts
+    stepper: DHL.entities.dim2Detail.steppers.Authordim2Details
     importedRecordType: GOLDEN
     waitDialogEnabled: false
     allowOtherPublishers: true
@@ -60,4 +60,11 @@ actions:
     _name: BrowseGraph
     label: Browse Graph
     useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: CopyAction
+    _name: CopyAuthordim2Details
+    label: Copy
+    useCustomLabel: true
+    stepper: DHL.entities.dim2Detail.steppers.Authordim2Details
+    multipleSelectionAllowed: true
     waitDialogEnabled: false

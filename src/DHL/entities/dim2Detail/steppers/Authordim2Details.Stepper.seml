@@ -1,0 +1,33 @@
+_package: DHL.entities.dim2Detail.steppers
+_type: Stepper
+_name: Authordim2Details
+entity: DHL.entities.dim2Detail.dim2Detail
+label: dim2Details
+rootStep:
+  _type: CollectionStep
+  _name: dim2Details
+  label: dim2Details
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: dim2Detail
+      label: dim2Detail
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: DHL.entities.dim2Detail.forms.dim2DetailForm.dim2Detail

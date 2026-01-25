@@ -16,8 +16,8 @@ attributes:
     _name: ContractProductID
     label: Contract Product ID
     physicalName: CONTRACT_PRODUCT_ID
-    dataType: LongInteger
-    precision: 38
+    dataType: String
+    length: 128
     mandatory: true
     searchable: true
   - _type: EntityAttribute
@@ -93,6 +93,5 @@ attributes:
     mandatory: false
     searchable: true
 sourceIdGeneration:
-  mode: SEQUENCE
-  startWith: 1
+  mode: MANUAL
 primaryKey: DHL.entities.ContractProduct.ContractProduct.ContractProductID

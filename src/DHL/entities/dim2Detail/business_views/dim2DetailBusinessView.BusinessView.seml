@@ -1,0 +1,36 @@
+_package: DHL.entities.dim2Detail.business_views
+_type: BusinessView
+_name: dim2DetailBusinessView
+entity: DHL.entities.dim2Detail.dim2Detail
+rootLabel: dim2Details
+rootPluralLabel: dim2Details
+displayRootNodeAs: ICON_LABEL
+rootBusinessViewEntity:
+  _type: BusinessViewEntity
+  _name: dim2Detail
+  entity: DHL.entities.dim2Detail.dim2Detail
+  actionSet: DHL.entities.dim2Detail.action_sets.dim2DetailActionSet
+  collection: DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView
+  form: DHL.entities.dim2Detail.forms.dim2DetailForm
+  outlineVisible: false
+  displayRecordCount: ALWAYS
+  businessEntitySearchConfigs:
+    - _name: TextConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: TEXT
+    - _name: FormConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: BY_FORM
+    - _name: AdvancedConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: ADVANCED
+    - _name: SemqlConfig
+      _type: BusinessEntitySearchTypeConfig
+      searchType: SEMQL
+  overrideDefaultSort: false
+  enableUserDefinedSort: true
+  listAllowed: true
+  tableAllowed: true
+  gridAllowed: true
+enableHierarchyView: false
+useHierarchyOnOpen: false

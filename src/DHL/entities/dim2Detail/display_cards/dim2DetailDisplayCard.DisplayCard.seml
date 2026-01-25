@@ -1,9 +1,9 @@
-_package: DHL.entities.ContractProduct.display_cards
+_package: DHL.entities.dim2Detail.display_cards
 _type: DisplayCard
-_name: ContractProductDisplayCard
-entity: DHL.entities.ContractProduct.ContractProduct
+_name: dim2DetailDisplayCard
+entity: DHL.entities.dim2Detail.dim2Detail
 default: true
-primaryTextExpression: FDN_Contract||FDN_Product
+primaryTextExpression: dim2Element
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER
