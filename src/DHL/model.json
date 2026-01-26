@@ -227,6 +227,18 @@
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
                         "label": "dim2Detail"
+                    },
+                    {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.dim1Element",
+                        "posInFolder": 5,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "dim1Element"
                     }
                 ]
             }
@@ -294,6 +306,18 @@
                         "position": {
                             "x": 700,
                             "y": 300
+                        },
+                        "width": 100,
+                        "height": 500,
+                        "borderColor": "255,0,0",
+                        "fontTitleColor": "255,255,255"
+                    },
+                    {
+                        "qualifiedName": "DHL.model_diagrams.Contract.dim1Element",
+                        "entity": "DHL.entities.dim1Element.dim1Element",
+                        "position": {
+                            "x": 900,
+                            "y": 500
                         },
                         "width": 100,
                         "height": 500,
@@ -3494,6 +3518,341 @@
                         "documentation": ""
                     }
                 ],
+                "uniqueKeys": []
+            },
+            {
+                "qualifiedName": "DHL.entities.dim1Element.dim1Element",
+                "dataEntryAllowed": true,
+                "historizeGolden": false,
+                "historizeMaster": false,
+                "description": "",
+                "documentation": "",
+                "enableDelete": true,
+                "entityType": "BASIC",
+                "iconUrl": "images://mdi/flag-variant-outline.svg",
+                "label": "dim1Element",
+                "physicalTableName": "DIM1ELEMENT",
+                "pluralLabel": "dim1Element",
+                "pkAttributes": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.dim1Element.dim1ElementName",
+                        "_type": "PKAttribute",
+                        "abstractAtomicType": "String",
+                        "goldenAttribute": true,
+                        "i18ned": false,
+                        "mandatory": true,
+                        "multiValued": false,
+                        "physicalColName": "DIM1ELEMENT_NAME",
+                        "valueSeparator": "",
+                        "idGenerationType": "MANUAL",
+                        "label": "dim1Element Name",
+                        "length": 128,
+                        "searchable": true
+                    }
+                ],
+                "atomicAttributes": [],
+                "complexAttributes": [],
+                "abstractRowCheckConstraints": [],
+                "actionSets": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet",
+                        "defaultActionSet": true,
+                        "description": "",
+                        "label": "dim1Element Action Set",
+                        "actions": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.CreateAuthordim1Elements",
+                                "_type": "CreateAction",
+                                "description": "",
+                                "label": "Create",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "createdRecordType": "GOLDEN",
+                                "createMultiple": false,
+                                "stepper": "DHL.entities.dim1Element.steppers.Authordim1Elements"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.EditAuthordim1Elements",
+                                "_type": "EditAction",
+                                "description": "",
+                                "label": "Edit",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "multipleSelectionAllowed": true,
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false,
+                                "stepper": "DHL.entities.dim1Element.steppers.Authordim1Elements"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.MassUpdateAuthordim1Elements",
+                                "_type": "MassUpdateAction",
+                                "description": "",
+                                "label": "Mass Update",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "stepper": "DHL.entities.dim1Element.steppers.Authordim1Elements",
+                                "availableForErrorData": false,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.Delete",
+                                "_type": "DeleteAction",
+                                "description": "",
+                                "label": "Delete",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "deleteType": "HARD_DELETE",
+                                "multipleSelectionAllowed": true,
+                                "availableForGoldenData": true,
+                                "availableForMasterData": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.Export",
+                                "_type": "ExportAction",
+                                "description": "",
+                                "label": "Export",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.ImportAuthordim1Elements",
+                                "_type": "ImportAction",
+                                "description": "",
+                                "label": "Import",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false,
+                                "allowOtherPublishers": true,
+                                "importedRecordType": "GOLDEN",
+                                "importMode": "CREATE_AND_UPDATE",
+                                "stepper": "DHL.entities.dim1Element.steppers.Authordim1Elements"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet.BrowseGraph",
+                                "_type": "BrowseGraphAction",
+                                "description": "",
+                                "label": "Browse Graph",
+                                "useCustomLabel": true,
+                                "waitDialogEnabled": false
+                            }
+                        ]
+                    }
+                ],
+                "businessObjectViews": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView",
+                        "displayRootNodeAs": "ICON_LABEL",
+                        "enableHierarchyView": false,
+                        "filter": "1 = 1",
+                        "rootBoViewEntity": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element",
+                        "rootDescription": "",
+                        "rootLabel": "dim1Elements",
+                        "rootPluralLabel": "dim1Elements",
+                        "useHierarchyOnOpen": false,
+                        "visible": true,
+                        "boViewEntities": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element",
+                                "collection": "DHL.entities.dim1Element.collection_views.dim1ElementCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.dim1Element.dim1Element",
+                                "form": "DHL.entities.dim1Element.forms.dim1ElementForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.dim1Element.action_sets.dim1ElementActionSet",
+                                "businessEntitySearchConfigs": [
+                                    {
+                                        "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element.TextConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "TEXT"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element.FormConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "BY_FORM"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element.AdvancedConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "ADVANCED"
+                                        }
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView.dim1Element.SemqlConfig",
+                                        "searchTypeConfig": {
+                                            "searchType": "SEMQL"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "collections": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.collection_views.dim1ElementCollectionView",
+                        "default": true,
+                        "gridAllowed": false,
+                        "gridColumns": 4,
+                        "gridTextPosition": "BOTTOM",
+                        "gridTileHeight": "1:1",
+                        "gridTileLines": 1,
+                        "listAllowed": true,
+                        "listItemLines": 1,
+                        "listShowDisplayCardAvatar": false,
+                        "listShowDivider": true,
+                        "tableAllowed": true,
+                        "tableDisplayCardColumnLabel": "dim1Element",
+                        "tableRowLines": 1,
+                        "tableShowDisplayCard": true,
+                        "displayCard": "DHL.entities.dim1Element.display_cards.dim1ElementDisplayCard",
+                        "tableColumns": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.collection_views.dim1ElementCollectionView.dim1ElementName",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "dim1ElementName",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "displayCards": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.display_cards.dim1ElementDisplayCard",
+                        "avatarImageValueInterpreter": "SEMQL",
+                        "default": true,
+                        "primaryImageFallbackValueInterpreter": "LITERAL",
+                        "primaryImageValueInterpreter": "LITERAL",
+                        "avatarImageAlign": "MIDDLE_CENTER",
+                        "avatarImageMode": "FIT",
+                        "avatarImageSourceType": "URL",
+                        "avatarImageValue": "'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || LOWER(LEFT(dim1ElementName,2)) || '.svg'",
+                        "primaryImageAlign": "MIDDLE_CENTER",
+                        "primaryImageFallbackSourceType": "URL",
+                        "primaryImageMode": "FIT",
+                        "primaryImageSourceType": "URL",
+                        "primaryTextExpression": "dim1ElementName"
+                    }
+                ],
+                "dupsManagers": [],
+                "enrichers": [],
+                "forms": [
+                    {
+                        "default": true,
+                        "qualifiedName": "DHL.entities.dim1Element.forms.dim1ElementForm",
+                        "formCharts": [],
+                        "formCollections": [],
+                        "formContainers": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.forms.dim1ElementForm.dim1Element",
+                                "_type": "FormTab",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "visibleValueInterpreter": "LITERAL",
+                                "displayFormTabAs": "LABEL",
+                                "label": "dim1Element",
+                                "visibleValue": "1"
+                            }
+                        ],
+                        "formDashboards": [],
+                        "formFields": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.forms.dim1ElementForm.dim1Element.dim1ElementName",
+                                "_type": "FormField",
+                                "componentName": "semIdField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": false,
+                                "value": "dim1ElementName",
+                                "parentFormContainer": "DHL.entities.dim1Element.forms.dim1ElementForm.dim1Element",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            }
+                        ]
+                    }
+                ],
+                "searchForms": [],
+                "steppers": [
+                    {
+                        "qualifiedName": "DHL.entities.dim1Element.steppers.Authordim1Elements",
+                        "label": "dim1Elements",
+                        "rootCollectionStep": "DHL.entities.dim1Element.steppers.Authordim1Elements.dim1Elements",
+                        "steps": [
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.steppers.Authordim1Elements.dim1Elements",
+                                "_type": "CollectionStep",
+                                "canFinishSubLevel": true,
+                                "childDeleteType": "HARD_DELETE",
+                                "childImportModeOnParentEdit": "CREATE_AND_UPDATE",
+                                "collectionView": "DHL.entities.dim1Element.collection_views.dim1ElementCollectionView",
+                                "createChildUsingManyToManyPicker": false,
+                                "customSortEnabled": false,
+                                "defaultDisplayType": "TABLE",
+                                "displayGridAllowed": false,
+                                "displayListAllowed": true,
+                                "displayTableAllowed": true,
+                                "enableChildCopyOnParentCreate": false,
+                                "enableChildCopyOnParentEdit": false,
+                                "enableChildCreationOnParentCreate": false,
+                                "enableChildCreationOnParentEdit": false,
+                                "enableChildDeleteOnParentEdit": false,
+                                "enableChildEditOnParentCreate": false,
+                                "enableChildEditOnParentEdit": false,
+                                "enableChildExport": false,
+                                "enableChildImportOnParentCreate": true,
+                                "enableChildImportOnParentEdit": false,
+                                "enableChildRemoveOnParentCreate": false,
+                                "enableChildRemoveOnParentEdit": false,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "formFieldsMode": "AUTO",
+                                "linear": false,
+                                "manyToManyCustomSortEnabled": false,
+                                "manyToManyDefaultDisplayType": "GRID",
+                                "manyToManyDisplayGridAllowed": false,
+                                "manyToManyDisplayListAllowed": false,
+                                "manyToManyDisplayTableAllowed": false,
+                                "manyToManyUserDefinedSortEnabled": false,
+                                "skipToChildCreationOnParentCreate": false,
+                                "skipToChildEditingOnParentEdit": false,
+                                "useCustomCollectionLabel": false,
+                                "userDefinedSortEnabled": true,
+                                "label": "dim1Elements"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.dim1Element.steppers.Authordim1Elements.dim1Elements.dim1Element",
+                                "_type": "FormStep",
+                                "canFinishSubLevel": true,
+                                "enabledOnParentCreate": true,
+                                "enabledOnParentEdit": true,
+                                "enableMasterValuePicking": false,
+                                "formFieldsMode": "AUTO",
+                                "formTab": "DHL.entities.dim1Element.forms.dim1ElementForm.dim1Element",
+                                "label": "dim1Element",
+                                "parentCollectionStep": "DHL.entities.dim1Element.steppers.Authordim1Elements.dim1Elements"
+                            }
+                        ]
+                    }
+                ],
+                "survivorshipRules": [],
                 "uniqueKeys": []
             },
             {

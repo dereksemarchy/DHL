@@ -127,3 +127,10 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: dim2Detail
+      - _type: BrowseBusinessViewAction
+        _name: dim1Element
+        businessView: DHL.entities.dim1Element.business_views.dim1ElementBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: dim1Element        

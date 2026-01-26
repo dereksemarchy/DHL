@@ -1,0 +1,19 @@
+_package: DHL.entities.dim1Element.forms
+_type: Form
+_name: dim1ElementForm
+entity: DHL.entities.dim1Element.dim1Element
+default: true
+formTabs:
+  - _type: FormTab
+    _name: dim1Element
+    label: dim1Element
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    content:
+      - _type: IdField
+        _name: dim1ElementName
+        value: dim1ElementName
+        useCustomLabel: false
+        dataType: STRING

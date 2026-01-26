@@ -1,0 +1,63 @@
+_package: DHL.entities.dim1Element.action_sets
+_type: ActionSet
+_name: dim1ElementActionSet
+entity: DHL.entities.dim1Element.dim1Element
+label: dim1Element Action Set
+defaultActionSet: true
+actions:
+  - _type: CreateAction
+    _name: CreateAuthordim1Elements
+    label: Create
+    useCustomLabel: true
+    stepper: DHL.entities.dim1Element.steppers.Authordim1Elements
+    createMultiple: false
+    createdRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: EditAction
+    _name: EditAuthordim1Elements
+    label: Edit
+    useCustomLabel: true
+    stepper: DHL.entities.dim1Element.steppers.Authordim1Elements
+    multipleSelectionAllowed: true
+    availableForGoldenData: true
+    availableForMasterData: false
+    availableForErrorData: false
+    waitDialogEnabled: false
+  - _type: MassUpdateAction
+    _name: MassUpdateAuthordim1Elements
+    label: Mass Update
+    useCustomLabel: true
+    stepper: DHL.entities.dim1Element.steppers.Authordim1Elements
+    availableForGoldenData: true
+    availableForErrorData: false
+    availableForMasterData: false
+    waitDialogEnabled: false
+  - _type: DeleteAction
+    _name: Delete
+    label: Delete
+    useCustomLabel: true
+    multipleSelectionAllowed: true
+    deleteType: HARD_DELETE
+    waitDialogEnabled: false
+    availableForGoldenData: true
+    availableForMasterData: false
+  - _type: ExportAction
+    _name: Export
+    label: Export
+    useCustomLabel: true
+    waitDialogEnabled: false
+  - _type: ImportAction
+    _name: ImportAuthordim1Elements
+    label: Import
+    useCustomLabel: true
+    importMode: CREATE_AND_UPDATE
+    stepper: DHL.entities.dim1Element.steppers.Authordim1Elements
+    importedRecordType: GOLDEN
+    waitDialogEnabled: false
+    allowOtherPublishers: true
+  - _type: BrowseGraphAction
+    _name: BrowseGraph
+    label: Browse Graph
+    useCustomLabel: true
+    waitDialogEnabled: false

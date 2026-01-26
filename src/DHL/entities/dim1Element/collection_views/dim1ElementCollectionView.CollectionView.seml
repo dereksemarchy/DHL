@@ -1,0 +1,27 @@
+_package: DHL.entities.dim1Element.collection_views
+_type: CollectionView
+_name: dim1ElementCollectionView
+entity: DHL.entities.dim1Element.dim1Element
+default: true
+displayCard: DHL.entities.dim1Element.display_cards.dim1ElementDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: dim1Element
+tableRowLines: 1
+tableShowDisplayCard: true
+tableColumns:
+  - _type: IdColumn
+    _name: dim1ElementName
+    value: dim1ElementName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

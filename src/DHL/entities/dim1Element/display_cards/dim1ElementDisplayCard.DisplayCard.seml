@@ -1,0 +1,17 @@
+_package: DHL.entities.dim1Element.display_cards
+_type: DisplayCard
+_name: dim1ElementDisplayCard
+entity: DHL.entities.dim1Element.dim1Element
+default: true
+primaryTextExpression: dim1ElementName
+primaryImageValueInterpreter: LITERAL
+avatarImageSourceType: URL
+primaryImageAlign: MIDDLE_CENTER
+primaryImageMode: FIT
+primaryImageFallbackValueInterpreter: LITERAL
+primaryImageFallbackSourceType: URL
+avatarImageValueInterpreter: SEMQL
+primaryImageSourceType: URL
+avatarImageAlign: MIDDLE_CENTER
+avatarImageMode: FIT
+avatarImageValue: "'https://semarchy-tutorials.s3.amazonaws.com/iso-3166/' || LOWER(LEFT(dim1ElementName,2)) || '.svg'"

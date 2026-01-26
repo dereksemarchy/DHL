@@ -53,6 +53,16 @@ entityShapes:
       x: 700
       y: 300
     width: 100
+  - _type: EntityShape
+    entity: DHL.entities.dim1Element.dim1Element
+    _name: dim1Element
+    borderColor: red
+    fontTitleColor: white
+    height: 500
+    position:
+      x: 900
+      y: 500
+    width: 100
 referenceLinks:
   - fromEntityShape: DHL.model_diagrams.Contract.Contract
     toEntityShape: DHL.model_diagrams.Contract.Customer

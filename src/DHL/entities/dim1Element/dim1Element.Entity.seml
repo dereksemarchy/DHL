@@ -1,0 +1,25 @@
+_package: DHL.entities.dim1Element
+_type: Entity
+_name: dim1Element
+label: dim1Element
+pluralLabel: dim1Element
+entityType: BASIC
+physicalTableName: DIM1ELEMENT
+iconUrl: images://mdi/flag-variant-outline.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: dim1ElementName
+    label: dim1Element Name
+    physicalName: DIM1ELEMENT_NAME
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: DHL.entities.dim1Element.dim1Element.dim1ElementName
