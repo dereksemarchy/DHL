@@ -50,3 +50,21 @@ modelTasks:
     postConsoValidationEnabled: true
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true   
+  - _type: ModelJobTask
+    entity: DHL.entities.dim1Element.dim1Element
+    _name: dim1Element
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: false
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true  
+  - _type: ModelJobTask
+    entity: DHL.entities.prices.prices
+    _name: prices
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: false
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true  

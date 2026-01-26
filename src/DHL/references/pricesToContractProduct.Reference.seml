@@ -1,0 +1,20 @@
+_package: DHL.references
+_name: pricesToContractProduct
+_type: Reference
+label: prices to ContractProduct
+deletePropagation: RESTRICT
+fromEntity: DHL.entities.prices.prices
+fromRoleLabel: price
+fromRoleName: price
+fromRolePluralLabel: prices
+physicalName: PRICES_TOCONTRACTPRODUCT
+toEntity: DHL.entities.ContractProduct.ContractProduct
+toRoleLabel: Contract Product
+toRoleName: ContractProduct
+toRolePhysicalName: CONTRACT_PRODUCT
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: ContractProduct
+  label: Contract Product
+  physicalName: CONTRACT_PRODUCT

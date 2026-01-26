@@ -2,6 +2,7 @@ _package: DHL.entities.ContractProduct.business_views
 _type: BusinessView
 _name: ContractProductBusinessView
 entity: DHL.entities.ContractProduct.ContractProduct
+label: Contract Products
 rootLabel: Contract Products
 rootPluralLabel: Contract Products
 displayRootNodeAs: ICON_LABEL
@@ -33,9 +34,9 @@ rootBusinessViewEntity:
   tableAllowed: true
   gridAllowed: true
   transitions:
-    - useCustomLabel: false
-      _type: BusinessViewTransition
+    - _type: BusinessViewTransition
       _name: dim2Detail
+      useCustomLabel: false
       transitionType: FULLY_QUALIFIED
       transitionPath: dim2Detail
       enableHierarchy: "1"
@@ -52,6 +53,26 @@ rootBusinessViewEntity:
         tableAllowed: true
         gridAllowed: true
         enableUserDefinedSort: true
-        overrideDefaultSort: false  
-enableHierarchyView: false
+        overrideDefaultSort: false
+    - _type: BusinessViewTransition
+      _name: prices
+      useCustomLabel: false
+      transitionType: FULLY_QUALIFIED
+      transitionPath: price
+      enableHierarchy: "1"
+      businessViewEntity: 
+        _type: BusinessViewEntity
+        _name: prices
+        entity: DHL.entities.prices.prices
+        actionSet: DHL.entities.prices.action_sets.pricesActionSet
+        collection: DHL.entities.prices.collection_views.pricesCollectionView
+        form: DHL.entities.prices.forms.pricesForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        enableUserDefinedSort: true
+        overrideDefaultSort: false
+enableHierarchyView: true
 useHierarchyOnOpen: false

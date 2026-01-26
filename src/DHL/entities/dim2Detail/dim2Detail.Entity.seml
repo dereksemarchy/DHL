@@ -16,8 +16,8 @@ attributes:
     _name: dim2DetailID
     label: dim2Detail ID
     physicalName: DIM2DETAIL_ID
-    dataType: LongInteger
-    precision: 38
+    dataType: String
+    length: 128
     mandatory: true
     searchable: true
   - _type: EntityAttribute
@@ -37,6 +37,6 @@ attributes:
     mandatory: false
     searchable: true
 sourceIdGeneration:
-  mode: SEQUENCE
-  startWith: 1
+  mode: SEMQL
+  idExpression: "CONCAT(FID_ContractProduct, '_', dim2Element)"
 primaryKey: DHL.entities.dim2Detail.dim2Detail.dim2DetailID

@@ -1,0 +1,33 @@
+_package: DHL.entities.prices.steppers
+_type: Stepper
+_name: Authorpricess
+entity: DHL.entities.prices.prices
+label: pricess
+rootStep:
+  _type: CollectionStep
+  _name: pricess
+  label: pricess
+  canFinishSubLevel: true
+  enabledOnParentCreate: true
+  enabledOnParentEdit: true
+  formFieldsMode: AUTO
+  linear: false
+  childDeleteType: HARD_DELETE
+  collectionView: DHL.entities.prices.collection_views.pricesCollectionView
+  defaultDisplayType: TABLE
+  customSortEnabled: false
+  userDefinedSortEnabled: true
+  displayGridAllowed: false
+  displayListAllowed: true
+  displayTableAllowed: true
+  useCustomCollectionLabel: false
+  childSteps:
+    - _type: FormStep
+      _name: prices
+      label: prices
+      canFinishSubLevel: true
+      enabledOnParentCreate: true
+      enabledOnParentEdit: true
+      formFieldsMode: AUTO
+      enableMasterValuePicking: false
+      formTab: DHL.entities.prices.forms.pricesForm.prices

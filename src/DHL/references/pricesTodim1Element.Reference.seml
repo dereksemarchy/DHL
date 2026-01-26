@@ -1,0 +1,20 @@
+_package: DHL.references
+_name: pricesTodim1Element
+_type: Reference
+label: prices to dim1Element
+deletePropagation: RESTRICT
+fromEntity: DHL.entities.prices.prices
+fromRoleLabel: price
+fromRoleName: price
+fromRolePluralLabel: prices
+physicalName: PRICES_TODIM1ELEMENT
+toEntity: DHL.entities.dim1Element.dim1Element
+toRoleLabel: dim1Element
+toRoleName: dim1Element
+toRolePhysicalName: DIM1ELEMENT
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: dim1Element
+  label: dim1Element
+  physicalName: DIM1ELEMENT

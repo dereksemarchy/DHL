@@ -96,5 +96,25 @@ rootBusinessViewEntity:
                     gridAllowed: true
                     enableUserDefinedSort: true
                     overrideDefaultSort: false
+                - useCustomLabel: false
+                  _type: BusinessViewTransition
+                  _name: prices
+                  transitionType: FULLY_QUALIFIED
+                  transitionPath: price
+                  enableHierarchy: "1"
+                  businessViewEntity: 
+                    _type: BusinessViewEntity
+                    _name: prices
+                    entity: DHL.entities.prices.prices
+                    actionSet: DHL.entities.prices.action_sets.pricesActionSet
+                    collection: DHL.entities.prices.collection_views.pricesCollectionView
+                    form: DHL.entities.prices.forms.pricesForm
+                    outlineVisible: false
+                    displayRecordCount: ALWAYS
+                    listAllowed: true
+                    tableAllowed: true
+                    gridAllowed: true
+                    enableUserDefinedSort: true
+                    overrideDefaultSort: false
 enableHierarchyView: true
 useHierarchyOnOpen: false

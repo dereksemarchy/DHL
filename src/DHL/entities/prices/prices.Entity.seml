@@ -1,0 +1,52 @@
+_package: DHL.entities.prices
+_type: Entity
+_name: prices
+label: prices
+pluralLabel: prices
+entityType: BASIC
+physicalTableName: PRICES
+iconUrl: images://mdi/currency-usd.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: pricesID
+    label: prices ID
+    physicalName: PRICES_ID
+    dataType: String
+    length: 128
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: dim2ElementName
+    label: dim2 Element Name
+    physicalName: DIM2ELEMENT_NAME
+    dataType: String
+    length: 128
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: unitPrice
+    label: Unit Price
+    physicalName: UNIT_PRICE
+    dataType: Decimal
+    precision: 18
+    scale: 4
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: discount
+    label: Discount
+    physicalName: DISCOUNT
+    dataType: Decimal
+    precision: 8
+    scale: 4
+    mandatory: false
+    searchable: true
+sourceIdGeneration:
+  mode: SEMQL
+  idExpression: "CONCAT(FID_ContractProduct, '_', FID_dim1Element, '_', dim2ElementName)"
+primaryKey: DHL.entities.prices.prices.pricesID

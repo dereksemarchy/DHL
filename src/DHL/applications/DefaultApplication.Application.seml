@@ -134,3 +134,10 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: dim1Element        
+      - _type: BrowseBusinessViewAction
+        _name: prices
+        businessView: DHL.entities.prices.business_views.pricesBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: prices   

@@ -1,0 +1,57 @@
+_package: DHL.entities.prices.forms
+_type: Form
+_name: pricesForm
+entity: DHL.entities.prices.prices
+default: true
+formTabs:
+  - _type: FormTab
+    _name: prices
+    label: prices
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: pricesID
+        value: pricesID
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: ContractProduct
+        value: FDN_ContractProduct
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: dim1Element
+        value: FDN_dim1Element
+        useCustomLabel: false
+        dataType: STRING 
+      - _type: TextField
+        _name: dim2ElementName
+        value: dim2ElementName
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: unitPrice
+        value: unitPrice
+        useCustomLabel: false
+        dataType: DECIMAL
+      - _type: TextField
+        _name: discount
+        value: discount
+        useCustomLabel: false
+        dataType: DECIMAL
+      - _type: ReferenceField
+        _name: FDN_ContractProduct
+        value: FDN_ContractProduct
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: DHL.entities.ContractProduct.ContractProduct
+      - _type: ReferenceField
+        _name: FDN_dim1Element
+        value: FDN_dim1Element
+        useCustomLabel: false
+        dataType: STRING
+        referencedEntity: DHL.entities.dim1Element.dim1Element

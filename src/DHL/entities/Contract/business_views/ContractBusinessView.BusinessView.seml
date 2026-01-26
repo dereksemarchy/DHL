@@ -2,6 +2,7 @@ _package: DHL.entities.Contract.business_views
 _type: BusinessView
 _name: ContractBusinessView
 entity: DHL.entities.Contract.Contract
+label: Contracts
 rootLabel: Contracts
 rootPluralLabel: Contracts
 displayRootNodeAs: ICON_LABEL
@@ -38,6 +39,7 @@ rootBusinessViewEntity:
       _name: ContractProduct
       transitionType: FULLY_QUALIFIED
       transitionPath: ContractProduct
+      enableHierarchy: "1"
       businessViewEntity: 
         _type: BusinessViewEntity
         _name: ContractProduct
@@ -52,5 +54,46 @@ rootBusinessViewEntity:
         gridAllowed: true
         enableUserDefinedSort: true
         overrideDefaultSort: false
-enableHierarchyView: false
+        transitions:
+          - _type: BusinessViewTransition
+            _name: dim2Detail
+            useCustomLabel: false
+            transitionType: FULLY_QUALIFIED
+            transitionPath: dim2Detail
+            enableHierarchy: "1"
+            businessViewEntity: 
+              _type: BusinessViewEntity
+              _name: dim2Detail
+              entity: DHL.entities.dim2Detail.dim2Detail
+              actionSet: DHL.entities.dim2Detail.action_sets.dim2DetailActionSet
+              collection: DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView
+              form: DHL.entities.dim2Detail.forms.dim2DetailForm
+              outlineVisible: false
+              displayRecordCount: ALWAYS
+              listAllowed: true
+              tableAllowed: true
+              gridAllowed: true
+              enableUserDefinedSort: true
+              overrideDefaultSort: false
+          - _type: BusinessViewTransition
+            _name: prices
+            useCustomLabel: false
+            transitionType: FULLY_QUALIFIED
+            transitionPath: price
+            enableHierarchy: "1"
+            businessViewEntity: 
+              _type: BusinessViewEntity
+              _name: prices
+              entity: DHL.entities.prices.prices
+              actionSet: DHL.entities.prices.action_sets.pricesActionSet
+              collection: DHL.entities.prices.collection_views.pricesCollectionView
+              form: DHL.entities.prices.forms.pricesForm
+              outlineVisible: false
+              displayRecordCount: ALWAYS
+              listAllowed: true
+              tableAllowed: true
+              gridAllowed: true
+              enableUserDefinedSort: true
+              overrideDefaultSort: false
+enableHierarchyView: true
 useHierarchyOnOpen: false
