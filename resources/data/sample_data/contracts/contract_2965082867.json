@@ -1,0 +1,204 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 777512,
+  "currency": "EUR",
+  "contractName": "Grohe AG - White Glove Service Agreement",
+  "startDate": "2020-04-25T00:00:00",
+  "endDate": "2021-02-07T00:00:00",
+  "sendDate": "2029-12-04T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "2965082867",
+  "customer": {
+    "number": "2965082867",
+    "internalId": 391469,
+    "name": "Grohe AG",
+    "adress": "Feldmühleplatz",
+    "houseNumber": "308",
+    "postalCode": "86-279",
+    "city": "München",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "KA",
+      "currentTariff": {
+        "usedTariffId": 38076160,
+        "pricePolicyId": 181919,
+        "name": "THIRD PARTY PAYER - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-6",
+        "dim2Code": "DE-W-2",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.12,
+          "percent": 0.005,
+          "price": 10.36,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 75.86,
+            "discount": 0.4893
+          },
+          {
+            "dim1ElementName": "CZ-Czech Republic",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 53.32,
+            "discount": 0.0872
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 17957496,
+            "pricePolicyId": 3114563,
+            "name": "THIRD PARTY PAYER - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.36,
+              "percent": 14.7
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "EH",
+      "currentTariff": {
+        "usedTariffId": 54222978,
+        "pricePolicyId": 2206489,
+        "name": "THIRD PARTY PAYER - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": "DE-W-1",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.0,
+          "percent": 23.46
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SI-Slovenia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 92.41,
+            "discount": 0.4433
+          },
+          {
+            "dim1ElementName": "GB-United Kingdom",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 138.76,
+            "discount": 0.4931
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 62421204,
+            "pricePolicyId": 9062123,
+            "name": "Express Delivery - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.15,
+              "percent": 18.74
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1813,
+    "domesticPallets": 0.0118,
+    "internationalParcels": 213.592,
+    "internationalPallets": 0.0791
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2020-02-12T00:00:00",
+  "rerating_quote": true
+}

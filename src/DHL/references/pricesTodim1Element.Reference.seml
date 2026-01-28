@@ -2,7 +2,7 @@ _package: DHL.references
 _name: pricesTodim1Element
 _type: Reference
 label: prices to dim1Element
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: DHL.entities.prices.prices
 fromRoleLabel: price
 fromRoleName: price

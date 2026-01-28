@@ -1,0 +1,204 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 1897321,
+  "currency": "EUR",
+  "contractName": "Hugo Boss AG - Volume Discount Agreement",
+  "startDate": "2020-01-13T00:00:00",
+  "endDate": "2029-10-27T00:00:00",
+  "sendDate": "2026-04-12T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "6862801617",
+  "customer": {
+    "number": "6862801617",
+    "internalId": 685274,
+    "name": "Hugo Boss AG",
+    "adress": "Dieselstrasse",
+    "houseNumber": "952",
+    "postalCode": "49-639",
+    "city": "Essen",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "LC",
+      "currentTariff": {
+        "usedTariffId": 74712420,
+        "pricePolicyId": 2886219,
+        "name": "PROOF OF DELIVERY (POD)",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-2",
+        "dim2Code": "PL-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.39,
+          "percent": 0.005,
+          "price": 14.45,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 97.27,
+            "discount": 0.0104
+          },
+          {
+            "dim1ElementName": "BE-Belgium",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 89.94,
+            "discount": 0.1746
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 38605148,
+            "pricePolicyId": 1199817,
+            "name": "Economy Shipping - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.09,
+              "percent": 11.3
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "VRK",
+      "currentTariff": {
+        "usedTariffId": 5838128,
+        "pricePolicyId": 2614793,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-6",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.7315,
+          "price": 31.43
+        },
+        "prices": [
+          {
+            "dim1ElementName": "ES-Spain",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 46.43,
+            "discount": 0.2435
+          },
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 58.88,
+            "discount": 0.3371
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 67325332,
+            "pricePolicyId": 4376645,
+            "name": "Economy Shipping - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.25,
+              "percent": 20.04
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0013,
+    "domesticPallets": 0.0573,
+    "internationalParcels": 76.9776,
+    "internationalPallets": 0.0927
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2028-07-09T00:00:00",
+  "rerating_quote": true
+}

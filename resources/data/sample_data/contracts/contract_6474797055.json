@@ -1,0 +1,212 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 4458525,
+  "currency": "EUR",
+  "contractName": "Wacker Chemie AG - Premium Delivery Agreement",
+  "startDate": "2024-06-13T00:00:00",
+  "endDate": "2023-03-04T00:00:00",
+  "sendDate": "2021-04-17T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": false,
+  "sapAccountId": "6474797055",
+  "customer": {
+    "number": "6474797055",
+    "internalId": 482098,
+    "name": "Wacker Chemie AG",
+    "adress": "Hanns-Seidel-Platz",
+    "houseNumber": "437",
+    "postalCode": "22-617",
+    "city": "Berlin",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "QTD",
+      "currentTariff": {
+        "usedTariffId": 6422912,
+        "pricePolicyId": 9063840,
+        "name": "Editable - SHIPMENT INSURANCE for Pallets",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-3",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.66,
+          "percent": 0.007,
+          "price": 11.29,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LT-Lithuania",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 146.25,
+            "discount": 0.7037
+          },
+          {
+            "dim1ElementName": "IE-Ireland",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 115.63,
+            "discount": 0.6102
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 65360507,
+            "pricePolicyId": 1692164,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.19,
+              "percent": 11.63
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "JQ",
+      "currentTariff": {
+        "usedTariffId": 52294708,
+        "pricePolicyId": 9447228,
+        "name": "CREDIT CARD PAYMENT FOR COD AMOUNT DUE - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-3",
+        "dim2Code": "PL-D-4",
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.4973,
+              0.6406
+            ],
+            [
+              0.7588,
+              0.6378
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "CZ-Czech Republic",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 114.71,
+            "discount": 0.1995
+          },
+          {
+            "dim1ElementName": "FR-France",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 51.13,
+            "discount": 0.1693
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 16454153,
+            "pricePolicyId": 9599716,
+            "name": "RETURN OF CONFIRMED DOCUMENTS (ROD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.47,
+              "percent": 15.8
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1612,
+    "domesticPallets": 0.128,
+    "internationalParcels": 173.5855,
+    "internationalPallets": 0.0456
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2023-09-28T00:00:00",
+  "rerating_quote": true
+}

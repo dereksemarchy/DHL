@@ -1,0 +1,300 @@
+_package: DHL.entities.Account
+_type: Entity
+_name: Account
+label: Account
+pluralLabel: Account
+entityType: FUZZY_MATCHED
+physicalTableName: ACCOUNT
+iconUrl: images://mdi/account-cash.svg
+description: ""
+documentation: ""
+historizeGolden: false
+historizeMaster: false
+enableDelete: true
+attributes:
+  - _type: EntityAttribute
+    _name: MDMID
+    label: MDMID
+    physicalName: MDMID
+    dataType: LongInteger
+    precision: 38
+    mandatory: true
+    searchable: true
+  - _type: EntityAttribute
+    _name: mdmAccountId
+    label: MDM Account ID
+    physicalName: MDM_ACCOUNT_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: sfAccountId
+    label: Salesforce Account ID
+    physicalName: SF_ACCOUNT_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: sapAccountId
+    label: SAP Account ID
+    physicalName: SAP_ACCOUNT_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: industrySector
+    label: Industry Sector
+    physicalName: INDUSTRY_SECTOR
+    dataType: String
+    length: 100
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: businessRoles
+    label: Business Roles
+    physicalName: BUSINESS_ROLES
+    dataType: String
+    length: 500
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: legalForm
+    label: Legal Form
+    physicalName: LEGAL_FORM
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: name1
+    label: Name 1
+    physicalName: NAME_1
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: name2
+    label: Name 2
+    physicalName: NAME_2
+    dataType: String
+    length: 255
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: searchTerm
+    label: Search Term
+    physicalName: SEARCH_TERM
+    dataType: String
+    length: 100
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: language
+    label: Language
+    physicalName: LANG
+    dataType: String
+    length: 10
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: currency
+    label: Currency
+    physicalName: CURRENCY
+    dataType: String
+    length: 3
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: paymentTerms
+    label: Payment Terms
+    physicalName: PAYMENT_TERMS
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: accountStatement
+    label: Account Statement
+    physicalName: ACCOUNT_STATEMENT
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: creditLimit
+    label: Credit Limit
+    physicalName: CREDIT_LIMIT
+    dataType: Decimal
+    precision: 15
+    scale: 2
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: creditCurrency
+    label: Credit Currency
+    physicalName: CREDIT_CURRENCY
+    dataType: String
+    length: 3
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: isNaturalPerson
+    label: Is Natural Person
+    physicalName: IS_NATURAL_PERSON
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: primaryContactPersonId
+    label: Primary Contact Person ID
+    physicalName: PRIMARY_CONTACT_PERSON_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: primaryAddressId
+    label: Primary Address ID
+    physicalName: PRIMARY_ADDRESS_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: parentAccountId
+    label: Parent Account ID
+    physicalName: PARENT_ACCOUNT_ID
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: hasOrderBlock
+    label: Has Order Block
+    physicalName: HAS_ORDER_BLOCK
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: hasBillingBlock
+    label: Has Billing Block
+    physicalName: HAS_BILLING_BLOCK
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: isTsaApproved
+    label: Is TSA Approved
+    physicalName: IS_TSA_APPROVED
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: customerType
+    label: Customer Type
+    physicalName: CUSTOMER_TYPE
+    dataType: String
+    length: 20
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: salesPic
+    label: Sales PIC
+    physicalName: SALES_PIC
+    dataType: String
+    length: 100
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: salesManager
+    label: Sales Manager
+    physicalName: SALES_MANAGER
+    dataType: String
+    length: 100
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: segmentGroup
+    label: Segment Group
+    physicalName: SEGMENT_GROUP
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: segmentGroup2
+    label: Segment Group 2
+    physicalName: SEGMENT_GROUP_2
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: isTrustedCustomer
+    label: Is Trusted Customer
+    physicalName: IS_TRUSTED_CUSTOMER
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: ppdProfile
+    label: PPD Profile
+    physicalName: PPD_PROFILE
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: avgPpdProfile
+    label: Average PPD Profile
+    physicalName: AVG_PPD_PROFILE
+    dataType: String
+    length: 50
+    mandatory: false
+    searchable: true
+  - _type: EntityAttribute
+    _name: isFirstTimeBuyer
+    label: Is First Time Buyer
+    physicalName: IS_FIRST_TIME_BUYER
+    dataType: Boolean
+    mandatory: false
+    searchable: false
+  - _type: EntityAttribute
+    _name: firstTimeBuyerDate
+    label: First Time Buyer Date
+    physicalName: FIRST_TIME_BUYER_DATE
+    dataType: Date
+    mandatory: false
+    searchable: false
+sourceIdGeneration:
+  mode: MANUAL
+primaryKey: DHL.entities.Account.Account.MDMID
+goldenIdGeneration:
+  mode: SEQUENCE
+  startWith: 1
+matcher:
+  _type: SemQLMatcher
+  _name: Matcher
+  description: AccountSemQLMatcher
+  matchRules:
+    - _type: SemQLMatchRule
+      _name: ExactName1Match
+      label: Exact name1 Match
+      condition: Record1.name1 = Record2.name1
+      matchScore: 100
+      usingMatchOn: false
+  useTransitiveMatchScore: true
+  useMultiIterationGrouping: true
+  mergeThresholdNewGroup: 0
+  mergeThresholdMergingUnconfirmed: 0
+  mergeThresholdMergingConfirmed: 0
+  mergeThresholdMergingConfirmedWithUnconfirmed: 0
+  mergeThresholdMergingUnconfirmedWithNewMasters: 0
+  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdRemergingPreviouslySplit: 100
+  autoConfirmGoldenThreshold: 99
+  autoConfirmSingletons: false

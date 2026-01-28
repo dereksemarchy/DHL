@@ -1,0 +1,206 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 7475456,
+  "currency": "EUR",
+  "contractName": "Evonik Industries - Last Mile Delivery Contract",
+  "startDate": "2021-11-08T00:00:00",
+  "endDate": "2024-04-07T00:00:00",
+  "sendDate": "2023-02-13T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": false,
+  "sapAccountId": "0477603036",
+  "customer": {
+    "number": "0477603036",
+    "internalId": 59358,
+    "name": "Evonik Industries",
+    "adress": "Rellinghauser Strasse",
+    "houseNumber": "947",
+    "postalCode": "60-742",
+    "city": "München",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "RCP",
+      "currentTariff": {
+        "usedTariffId": 92800601,
+        "pricePolicyId": 5880403,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": "PL-D-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.18,
+          "percent": 0.005,
+          "price": 13.41,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 54.11,
+            "discount": 0.3234
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 72.34,
+            "discount": 0.7358
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 50849786,
+            "pricePolicyId": 337839,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.43,
+              "percent": 12.58
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "NJ",
+      "currentTariff": {
+        "usedTariffId": 31133454,
+        "pricePolicyId": 3337592,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-3",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.57,
+          "percent": 0.004,
+          "price": 7.48,
+          "breakpoint": 10000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "RO-Romania",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 41.98,
+            "discount": 0.1768
+          },
+          {
+            "dim1ElementName": "DK-Denmark",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 27.44,
+            "discount": 0.8787
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 8043551,
+            "pricePolicyId": 9972396,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.22,
+              "percent": 17.51
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0674,
+    "domesticPallets": 0.128,
+    "internationalParcels": 250.5748,
+    "internationalPallets": 0.1789
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": true,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2028-06-20T00:00:00",
+  "rerating_quote": false
+}

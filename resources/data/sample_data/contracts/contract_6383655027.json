@@ -1,0 +1,203 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 8408794,
+  "currency": "EUR",
+  "contractName": "Volkswagen AG - E-commerce Fulfillment Agreement",
+  "startDate": "2023-12-23T00:00:00",
+  "endDate": "2027-10-01T00:00:00",
+  "sendDate": "2021-03-03T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "6383655027",
+  "customer": {
+    "number": "6383655027",
+    "internalId": 771391,
+    "name": "Volkswagen AG",
+    "adress": "Berliner Ring",
+    "houseNumber": "714",
+    "postalCode": "46-352",
+    "city": "Köln",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "QME",
+      "currentTariff": {
+        "usedTariffId": 62544935,
+        "pricePolicyId": 8081260,
+        "name": "Editable - SHIPMENT INSURANCE for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.66,
+          "MinPrice": 2.6,
+          "price": 0.043
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SI-Slovenia",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 21.06,
+            "discount": 0.6639
+          },
+          {
+            "dim1ElementName": "IE-Ireland",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 70.65,
+            "discount": 0.8616
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 1146428,
+            "pricePolicyId": 6593676,
+            "name": "PRE-DELIVERY INFORMATION (PDI) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.25,
+              "percent": 24.36
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "TD",
+      "currentTariff": {
+        "usedTariffId": 34725514,
+        "pricePolicyId": 8959736,
+        "name": "FUEL AND ROAD SURCHARGE - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.1444,
+          "price": 45.29
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SI-Slovenia",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 63.38,
+            "discount": 0.6092
+          },
+          {
+            "dim1ElementName": "RO-Romania",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 68.53,
+            "discount": 0.0325
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 37356214,
+            "pricePolicyId": 4127620,
+            "name": "Standard (existing) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.09,
+              "percent": 22.32
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0982,
+    "domesticPallets": 0.1504,
+    "internationalParcels": 142.2105,
+    "internationalPallets": 0.0738
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": true,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2026-05-26T00:00:00",
+  "rerating_quote": true
+}

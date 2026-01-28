@@ -2,7 +2,7 @@ _package: DHL.references
 _name: dim2DetailToContractProduct
 _type: Reference
 label: dim2Detail To Contract Product
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: DHL.entities.dim2Detail.dim2Detail
 fromRoleLabel: dim2Detail
 fromRoleName: dim2Detail

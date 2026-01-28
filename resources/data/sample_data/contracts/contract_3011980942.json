@@ -1,0 +1,210 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 9778533,
+  "currency": "EUR",
+  "contractName": "Miele & Cie KG - Parcel Shipping Agreement",
+  "startDate": "2025-11-13T00:00:00",
+  "endDate": "2028-09-12T00:00:00",
+  "sendDate": "2021-11-23T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "3011980942",
+  "customer": {
+    "number": "3011980942",
+    "internalId": 859429,
+    "name": "Miele & Cie KG",
+    "adress": "Carl-Miele-Strasse",
+    "houseNumber": "223",
+    "postalCode": "30-535",
+    "city": "Leipzig",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "MWC",
+      "currentTariff": {
+        "usedTariffId": 97912799,
+        "pricePolicyId": 371875,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.12,
+          "percent": 18.1
+        },
+        "prices": [
+          {
+            "dim1ElementName": "EE-Estonia",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 40.97,
+            "discount": 0.5209
+          },
+          {
+            "dim1ElementName": "SK-Slovakia",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 60.31,
+            "discount": 0.8209
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 87388523,
+            "pricePolicyId": 5053255,
+            "name": "RETURN OF CONFIRMED DOCUMENTS (ROD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.11,
+              "percent": 20.24
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "BDP",
+      "currentTariff": {
+        "usedTariffId": 18529997,
+        "pricePolicyId": 4787338,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Price grid (1D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-6",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.7735,
+              0.5958
+            ],
+            [
+              0.2832,
+              0.2706
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "HR-Croatia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 70.93,
+            "discount": 0.6785
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 130.3,
+            "discount": 0.3244
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 91486358,
+            "pricePolicyId": 691533,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.07,
+              "percent": 13.62
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1123,
+    "domesticPallets": 0.1113,
+    "internationalParcels": 224.4069,
+    "internationalPallets": 0.1656
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": true,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2024-12-13T00:00:00",
+  "rerating_quote": true
+}

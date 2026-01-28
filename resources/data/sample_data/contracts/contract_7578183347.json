@@ -1,0 +1,211 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 7692456,
+  "currency": "EUR",
+  "contractName": "Sick AG - White Glove Service Agreement",
+  "startDate": "2022-06-16T00:00:00",
+  "endDate": "2028-05-15T00:00:00",
+  "sendDate": "2022-07-28T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": true,
+  "sapAccountId": "7578183347",
+  "customer": {
+    "number": "7578183347",
+    "internalId": 801191,
+    "name": "Sick AG",
+    "adress": "Erwin-Sick-Strasse",
+    "houseNumber": "402",
+    "postalCode": "29-347",
+    "city": "Dortmund",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "PCZ",
+      "currentTariff": {
+        "usedTariffId": 15768044,
+        "pricePolicyId": 3374212,
+        "name": "Standard (existing) - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": "PL-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.01,
+          "MinPrice": 1.94,
+          "price": 0.047
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 129.36,
+            "discount": 0.0931
+          },
+          {
+            "dim1ElementName": "PT-Portugal",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 65.35,
+            "discount": 0.7176
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 78212795,
+            "pricePolicyId": 1589689,
+            "name": "Express Delivery - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.36,
+              "percent": 17.27
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "GGI",
+      "currentTariff": {
+        "usedTariffId": 84285212,
+        "pricePolicyId": 424902,
+        "name": "Premium Service - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Price grid (1D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-1",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.3678,
+              0.7985
+            ],
+            [
+              0.8514,
+              0.1981
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 25.2,
+            "discount": 0.8968
+          },
+          {
+            "dim1ElementName": "CY-Cyprus",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 43.61,
+            "discount": 0.3805
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 36155779,
+            "pricePolicyId": 2039840,
+            "name": "PRE-DELIVERY INFORMATION (PDI) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.12,
+              "percent": 24.39
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0139,
+    "domesticPallets": 0.1422,
+    "internationalParcels": 195.3157,
+    "internationalPallets": 0.1711
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2021-10-28T00:00:00",
+  "rerating_quote": true
+}

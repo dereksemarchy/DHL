@@ -1,0 +1,202 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 5287335,
+  "currency": "EUR",
+  "contractName": "Trumpf GmbH - Volume Discount Agreement",
+  "startDate": "2022-10-29T00:00:00",
+  "endDate": "2028-09-10T00:00:00",
+  "sendDate": "2029-06-06T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": true,
+  "multiParcel": true,
+  "sapAccountId": "6141629444",
+  "customer": {
+    "number": "6141629444",
+    "internalId": 123026,
+    "name": "Trumpf GmbH",
+    "adress": "Johann-Maus-Strasse",
+    "houseNumber": "219",
+    "postalCode": "85-716",
+    "city": "Frankfurt",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "SM",
+      "currentTariff": {
+        "usedTariffId": 77677099,
+        "pricePolicyId": 5887954,
+        "name": "FUEL AND ROAD SURCHARGE - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-6",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.7898,
+          "price": 13.41
+        },
+        "prices": [
+          {
+            "dim1ElementName": "FI-Finland",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 29.99,
+            "discount": 0.7168
+          },
+          {
+            "dim1ElementName": "RO-Romania",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 123.9,
+            "discount": 0.5123
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 79434899,
+            "pricePolicyId": 1708650,
+            "name": "THIRD PARTY PAYER - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.21,
+              "percent": 24.31
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "QI",
+      "currentTariff": {
+        "usedTariffId": 80386719,
+        "pricePolicyId": 9291432,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-1",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.6781,
+          "price": 44.87
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LU-Luxembourg",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 72.1,
+            "discount": 0.7848
+          },
+          {
+            "dim1ElementName": "DE-Germany",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 108.65,
+            "discount": 0.5361
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 5875606,
+            "pricePolicyId": 877250,
+            "name": "Premium Service - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.03,
+              "percent": 17.33
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0455,
+    "domesticPallets": 0.1227,
+    "internationalParcels": 238.9558,
+    "internationalPallets": 0.1853
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2024-06-27T00:00:00",
+  "rerating_quote": false
+}

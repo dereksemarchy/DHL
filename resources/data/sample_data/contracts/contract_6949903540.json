@@ -1,0 +1,210 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 7533280,
+  "currency": "EUR",
+  "contractName": "Bertelsmann SE - Freight Services Contract",
+  "startDate": "2024-10-09T00:00:00",
+  "endDate": "2022-04-30T00:00:00",
+  "sendDate": "2021-01-12T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "6949903540",
+  "customer": {
+    "number": "6949903540",
+    "internalId": 16813,
+    "name": "Bertelsmann SE",
+    "adress": "Carl-Bertelsmann-Strasse",
+    "houseNumber": "646",
+    "postalCode": "32-889",
+    "city": "München",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "YNN",
+      "currentTariff": {
+        "usedTariffId": 1011733,
+        "pricePolicyId": 8337985,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-1",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.2633,
+          "price": 46.14
+        },
+        "prices": [
+          {
+            "dim1ElementName": "CY-Cyprus",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 26.83,
+            "discount": 0.3583
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 111.91,
+            "discount": 0.5865
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 53947746,
+            "pricePolicyId": 2871531,
+            "name": "Editable - SHIPMENT INSURANCE for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.3,
+              "percent": 16.88
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "XX",
+      "currentTariff": {
+        "usedTariffId": 34305290,
+        "pricePolicyId": 212529,
+        "name": "CREDIT CARD PAYMENT FOR COD AMOUNT DUE - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.3912,
+              0.4285
+            ],
+            [
+              0.2328,
+              0.7623
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "BE-Belgium",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 89.32,
+            "discount": 0.1594
+          },
+          {
+            "dim1ElementName": "IE-Ireland",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 28.34,
+            "discount": 0.5863
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 93162398,
+            "pricePolicyId": 3995963,
+            "name": "Premium Service - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.04,
+              "percent": 12.57
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1635,
+    "domesticPallets": 0.1821,
+    "internationalParcels": 248.9676,
+    "internationalPallets": 0.0087
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2029-01-20T00:00:00",
+  "rerating_quote": false
+}

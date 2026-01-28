@@ -1,0 +1,204 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 7121238,
+  "currency": "EUR",
+  "contractName": "Voith GmbH - Parcel Shipping Agreement",
+  "startDate": "2027-02-06T00:00:00",
+  "endDate": "2024-02-21T00:00:00",
+  "sendDate": "2030-11-04T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": true,
+  "sapAccountId": "3486837051",
+  "customer": {
+    "number": "3486837051",
+    "internalId": 226926,
+    "name": "Voith GmbH",
+    "adress": "Sankt Pöltener Strasse",
+    "houseNumber": "202",
+    "postalCode": "90-981",
+    "city": "Essen",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "PQ",
+      "currentTariff": {
+        "usedTariffId": 58363846,
+        "pricePolicyId": 2002411,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-3",
+        "dim2Code": "DE-W-1",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.26,
+          "percent": 0.008,
+          "price": 12.55,
+          "breakpoint": 50000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 122.11,
+            "discount": 0.7383
+          },
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 29.68,
+            "discount": 0.203
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 38358057,
+            "pricePolicyId": 1752473,
+            "name": "FUEL AND ROAD SURCHARGE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.27,
+              "percent": 13.59
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "PNK",
+      "currentTariff": {
+        "usedTariffId": 66555537,
+        "pricePolicyId": 6966097,
+        "name": "Premium Service - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-1",
+        "dim2Code": "DE-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.11,
+          "percent": 22.59
+        },
+        "prices": [
+          {
+            "dim1ElementName": "BG-Bulgaria",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 15.21,
+            "discount": 0.3424
+          },
+          {
+            "dim1ElementName": "BE-Belgium",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 74.56,
+            "discount": 0.4994
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 82888552,
+            "pricePolicyId": 8690924,
+            "name": "Editable - SHIPMENT INSURANCE for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.14,
+              "percent": 12.82
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1985,
+    "domesticPallets": 0.1905,
+    "internationalParcels": 207.011,
+    "internationalPallets": 0.0412
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": true,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": true,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2027-10-07T00:00:00",
+  "rerating_quote": true
+}

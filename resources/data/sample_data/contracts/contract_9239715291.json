@@ -1,0 +1,210 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 4663858,
+  "currency": "EUR",
+  "contractName": "Swarovski AG - Volume Discount Agreement",
+  "startDate": "2023-08-17T00:00:00",
+  "endDate": "2024-02-10T00:00:00",
+  "sendDate": "2024-03-30T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "9239715291",
+  "customer": {
+    "number": "9239715291",
+    "internalId": 402315,
+    "name": "Swarovski AG",
+    "adress": "Dröschistrasse",
+    "houseNumber": "207",
+    "postalCode": "93-256",
+    "city": "Dortmund",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "AA",
+      "currentTariff": {
+        "usedTariffId": 13915776,
+        "pricePolicyId": 213822,
+        "name": "Premium Service - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": "PL-W-5",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.3408,
+          "price": 36.36
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LT-Lithuania",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 38.01,
+            "discount": 0.0277
+          },
+          {
+            "dim1ElementName": "EE-Estonia",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 123.0,
+            "discount": 0.5489
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 13124457,
+            "pricePolicyId": 8288400,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.34,
+              "percent": 22.67
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "HK",
+      "currentTariff": {
+        "usedTariffId": 79503649,
+        "pricePolicyId": 8304528,
+        "name": "Premium Service - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-1",
+        "dim2Code": "PL-D-5",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.0372,
+              0.2634
+            ],
+            [
+              0.2255,
+              0.4709
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "GB-United Kingdom",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 39.34,
+            "discount": 0.0646
+          },
+          {
+            "dim1ElementName": "DK-Denmark",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 133.76,
+            "discount": 0.6438
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 99644565,
+            "pricePolicyId": 5286799,
+            "name": "FUEL AND ROAD SURCHARGE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.22,
+              "percent": 24.94
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1315,
+    "domesticPallets": 0.0322,
+    "internationalParcels": 245.7293,
+    "internationalPallets": 0.0473
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2029-03-17T00:00:00",
+  "rerating_quote": true
+}

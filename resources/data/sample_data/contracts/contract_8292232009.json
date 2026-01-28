@@ -1,0 +1,204 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 9201053,
+  "currency": "EUR",
+  "contractName": "Brenntag SE - E-commerce Fulfillment Agreement",
+  "startDate": "2030-10-03T00:00:00",
+  "endDate": "2022-03-24T00:00:00",
+  "sendDate": "2023-04-06T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": true,
+  "multiParcel": false,
+  "sapAccountId": "8292232009",
+  "customer": {
+    "number": "8292232009",
+    "internalId": 357956,
+    "name": "Brenntag SE",
+    "adress": "Messeallee",
+    "houseNumber": "611",
+    "postalCode": "19-233",
+    "city": "Köln",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "WR",
+      "currentTariff": {
+        "usedTariffId": 4933977,
+        "pricePolicyId": 9033856,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-6",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.36,
+          "percent": 20.3
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 15.09,
+            "discount": 0.0126
+          },
+          {
+            "dim1ElementName": "CZ-Czech Republic",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 41.03,
+            "discount": 0.2433
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 13506103,
+            "pricePolicyId": 7041130,
+            "name": "CASH ON DELIVERY (COD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.16,
+              "percent": 24.18
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "PX",
+      "currentTariff": {
+        "usedTariffId": 86351807,
+        "pricePolicyId": 4801794,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": "PL-W-5",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.18,
+          "percent": 0.007,
+          "price": 7.26,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "RO-Romania",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 110.13,
+            "discount": 0.3036
+          },
+          {
+            "dim1ElementName": "CY-Cyprus",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 16.88,
+            "discount": 0.4175
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 34920632,
+            "pricePolicyId": 8699807,
+            "name": "CASH ON DELIVERY (COD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.49,
+              "percent": 21.42
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1894,
+    "domesticPallets": 0.0202,
+    "internationalParcels": 219.4244,
+    "internationalPallets": 0.0752
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2023-10-22T00:00:00",
+  "rerating_quote": true
+}

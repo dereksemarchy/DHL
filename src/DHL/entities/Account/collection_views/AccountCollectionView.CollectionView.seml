@@ -1,0 +1,267 @@
+_package: DHL.entities.Account.collection_views
+_type: CollectionView
+_name: AccountCollectionView
+entity: DHL.entities.Account.Account
+default: true
+displayCard: DHL.entities.Account.display_cards.AccountDisplayCard
+gridAllowed: false
+gridColumns: 4
+gridTextPosition: BOTTOM
+gridTileHeight: 1:1
+gridTileLines: 1
+listAllowed: true
+listItemLines: 1
+listShowDisplayCardAvatar: false
+listShowDivider: true
+tableAllowed: true
+tableDisplayCardColumnLabel: Account
+tableRowLines: 1
+tableShowDisplayCard: false
+tableColumns:
+  - _type: IdColumn
+    _name: MDMID
+    value: MDMID
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: mdmAccountId
+    value: mdmAccountId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: sfAccountId
+    value: sfAccountId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: sapAccountId
+    value: sapAccountId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: industrySector
+    value: industrySector
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: businessRoles
+    value: businessRoles
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: legalForm
+    value: legalForm
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: name1
+    value: name1
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: name2
+    value: name2
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: searchTerm
+    value: searchTerm
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: language
+    value: language
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: currency
+    value: currency
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: paymentTerms
+    value: paymentTerms
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: accountStatement
+    value: accountStatement
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: creditLimit
+    value: creditLimit
+    useCustomLabel: false
+    dataType: DECIMAL
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: creditCurrency
+    value: creditCurrency
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: isNaturalPerson
+    value: isNaturalPerson
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: primaryContactPersonId
+    value: primaryContactPersonId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: primaryAddressId
+    value: primaryAddressId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: parentAccountId
+    value: parentAccountId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: hasOrderBlock
+    value: hasOrderBlock
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: hasBillingBlock
+    value: hasBillingBlock
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: isTsaApproved
+    value: isTsaApproved
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: customerType
+    value: customerType
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: salesPic
+    value: salesPic
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: salesManager
+    value: salesManager
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: segmentGroup
+    value: segmentGroup
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: segmentGroup2
+    value: segmentGroup2
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: isTrustedCustomer
+    value: isTrustedCustomer
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: ppdProfile
+    value: ppdProfile
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: avgPpdProfile
+    value: avgPpdProfile
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: CheckboxColumn
+    _name: isFirstTimeBuyer
+    value: isFirstTimeBuyer
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: firstTimeBuyerDate
+    value: firstTimeBuyerDate
+    useCustomLabel: false
+    dataType: DATE
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: MastersCount
+    value: MastersCount
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: MasterIDs
+    value: LOOKUP STRING_AGG(SourceID) SEPARATED BY ', ' FROM MasterRecords END
+    useCustomLabel: true
+    label: SourceIDs
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+

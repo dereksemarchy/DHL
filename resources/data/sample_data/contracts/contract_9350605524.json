@@ -1,0 +1,205 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 6218538,
+  "currency": "EUR",
+  "contractName": "Brenntag SE - E-commerce Fulfillment Agreement",
+  "startDate": "2024-03-15T00:00:00",
+  "endDate": "2023-10-04T00:00:00",
+  "sendDate": "2026-04-11T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": false,
+  "sapAccountId": "9350605524",
+  "customer": {
+    "number": "9350605524",
+    "internalId": 404355,
+    "name": "Brenntag SE",
+    "adress": "Messeallee",
+    "houseNumber": "449",
+    "postalCode": "89-792",
+    "city": "Berlin",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "ING",
+      "currentTariff": {
+        "usedTariffId": 80020167,
+        "pricePolicyId": 5745970,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": "PL-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.32,
+          "percent": 0.01,
+          "price": 12.11,
+          "breakpoint": 100000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "PT-Portugal",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 103.13,
+            "discount": 0.0832
+          },
+          {
+            "dim1ElementName": "CY-Cyprus",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 21.43,
+            "discount": 0.2752
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 76759963,
+            "pricePolicyId": 9793644,
+            "name": "Express Delivery - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.09,
+              "percent": 24.19
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "UG",
+      "currentTariff": {
+        "usedTariffId": 48431396,
+        "pricePolicyId": 4004175,
+        "name": "THIRD PARTY PAYER - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.01,
+          "MinPrice": 1.13,
+          "price": 0.04
+        },
+        "prices": [
+          {
+            "dim1ElementName": "IT-Italy",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 61.18,
+            "discount": 0.2526
+          },
+          {
+            "dim1ElementName": "EE-Estonia",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 131.36,
+            "discount": 0.2407
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 41805141,
+            "pricePolicyId": 6383692,
+            "name": "FUEL AND ROAD SURCHARGE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.07,
+              "percent": 17.9
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1041,
+    "domesticPallets": 0.1639,
+    "internationalParcels": 227.2364,
+    "internationalPallets": 0.0109
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": true,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2028-05-26T00:00:00",
+  "rerating_quote": false
+}

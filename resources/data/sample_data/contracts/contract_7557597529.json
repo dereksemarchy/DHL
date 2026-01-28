@@ -1,0 +1,204 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 5111216,
+  "currency": "EUR",
+  "contractName": "Otto Group - Freight Services Contract",
+  "startDate": "2030-09-18T00:00:00",
+  "endDate": "2024-02-16T00:00:00",
+  "sendDate": "2022-04-04T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": true,
+  "sapAccountId": "7557597529",
+  "customer": {
+    "number": "7557597529",
+    "internalId": 539670,
+    "name": "Otto Group",
+    "adress": "Werner-Otto-Strasse",
+    "houseNumber": "867",
+    "postalCode": "15-709",
+    "city": "Frankfurt",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "LVM",
+      "currentTariff": {
+        "usedTariffId": 55400709,
+        "pricePolicyId": 4617902,
+        "name": "Editable - SHIPMENT INSURANCE for Pallets",
+        "tariffType": "Custom",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-6",
+        "dim2Code": "PL-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.42,
+          "MinPrice": 9.42,
+          "price": 0.047
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 18.94,
+            "discount": 0.1978
+          },
+          {
+            "dim1ElementName": "IE-Ireland",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 149.84,
+            "discount": 0.1288
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 5102716,
+            "pricePolicyId": 344689,
+            "name": "CREDIT CARD PAYMENT FOR COD AMOUNT DUE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.12,
+              "percent": 23.9
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "IN",
+      "currentTariff": {
+        "usedTariffId": 8441848,
+        "pricePolicyId": 1301527,
+        "name": "Editable - NON-STANDARD for Pallets",
+        "tariffType": "List Price",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": "DE-W-2",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.53,
+          "MinPrice": 5.08,
+          "price": 0.038
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LT-Lithuania",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 11.46,
+            "discount": 0.5054
+          },
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 130.35,
+            "discount": 0.0271
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 36666441,
+            "pricePolicyId": 7888172,
+            "name": "Express Delivery - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.47,
+              "percent": 24.16
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1926,
+    "domesticPallets": 0.1733,
+    "internationalParcels": 78.798,
+    "internationalPallets": 0.1148
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2028-11-21T00:00:00",
+  "rerating_quote": true
+}

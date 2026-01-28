@@ -1,0 +1,203 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 7629197,
+  "currency": "EUR",
+  "contractName": "Bertelsmann SE - Freight Services Contract",
+  "startDate": "2028-08-20T00:00:00",
+  "endDate": "2025-09-24T00:00:00",
+  "sendDate": "2028-10-22T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "7736480043",
+  "customer": {
+    "number": "7736480043",
+    "internalId": 148261,
+    "name": "Bertelsmann SE",
+    "adress": "Carl-Bertelsmann-Strasse",
+    "houseNumber": "667",
+    "postalCode": "60-766",
+    "city": "Essen",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "SF",
+      "currentTariff": {
+        "usedTariffId": 7230338,
+        "pricePolicyId": 9683434,
+        "name": "CREDIT CARD PAYMENT FOR COD AMOUNT DUE - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-4",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.12,
+          "percent": 24.92
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 95.42,
+            "discount": 0.2861
+          },
+          {
+            "dim1ElementName": "EE-Estonia",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 118.83,
+            "discount": 0.8601
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 93264501,
+            "pricePolicyId": 4571958,
+            "name": "CASH ON DELIVERY (COD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.48,
+              "percent": 23.07
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "KF",
+      "currentTariff": {
+        "usedTariffId": 30396165,
+        "pricePolicyId": 9026558,
+        "name": "PRE-DELIVERY INFORMATION (PDI) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-3",
+        "dim2Code": "DE-D-2",
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.04,
+          "MinPrice": 3.27,
+          "price": 0.023
+        },
+        "prices": [
+          {
+            "dim1ElementName": "LV-Latvia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 87.63,
+            "discount": 0.5596
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 112.09,
+            "discount": 0.1673
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 76409178,
+            "pricePolicyId": 5986147,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.18,
+              "percent": 10.39
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0366,
+    "domesticPallets": 0.1729,
+    "internationalParcels": 173.7857,
+    "internationalPallets": 0.0304
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2020-06-05T00:00:00",
+  "rerating_quote": true
+}

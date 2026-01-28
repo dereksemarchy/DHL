@@ -1,0 +1,202 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 8999710,
+  "currency": "EUR",
+  "contractName": "Swarovski AG - White Glove Service Agreement",
+  "startDate": "2024-03-28T00:00:00",
+  "endDate": "2023-07-30T00:00:00",
+  "sendDate": "2020-09-24T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": true,
+  "multiParcel": true,
+  "sapAccountId": "5976323412",
+  "customer": {
+    "number": "5976323412",
+    "internalId": 15619,
+    "name": "Swarovski AG",
+    "adress": "Dröschistrasse",
+    "houseNumber": "959",
+    "postalCode": "35-292",
+    "city": "Essen",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "QVG",
+      "currentTariff": {
+        "usedTariffId": 97114544,
+        "pricePolicyId": 4645539,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-4",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.0819,
+          "price": 13.36
+        },
+        "prices": [
+          {
+            "dim1ElementName": "IE-Ireland",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 81.21,
+            "discount": 0.7477
+          },
+          {
+            "dim1ElementName": "BG-Bulgaria",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 60.11,
+            "discount": 0.0624
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 86205885,
+            "pricePolicyId": 5064745,
+            "name": "CASH ON DELIVERY (COD) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.01,
+              "percent": 24.47
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "FC",
+      "currentTariff": {
+        "usedTariffId": 52450642,
+        "pricePolicyId": 4711770,
+        "name": "Editable - SHIPMENT INSURANCE for Pallets",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.8619,
+          "price": 12.72
+        },
+        "prices": [
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 69.63,
+            "discount": 0.2169
+          },
+          {
+            "dim1ElementName": "HU-Hungary",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 148.89,
+            "discount": 0.5712
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 61128894,
+            "pricePolicyId": 1801925,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.09,
+              "percent": 13.42
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.136,
+    "domesticPallets": 0.065,
+    "internationalParcels": 141.8092,
+    "internationalPallets": 0.0911
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": true,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": false,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2025-06-06T00:00:00",
+  "rerating_quote": true
+}

@@ -1,0 +1,180 @@
+_package: DHL.entities.Account.forms
+_type: Form
+_name: AccountForm
+entity: DHL.entities.Account.Account
+default: true
+formTabs:
+  - _type: FormTab
+    _name: Account
+    label: Account
+    documentationInterpreter: LITERAL
+    visibleValue: "1"
+    visibleValueInterpreter: LITERAL
+    displayFormTabAs: LABEL
+    labelWidth: "150"
+    content:
+      - _type: IdField
+        _name: MDMID
+        value: MDMID
+        useCustomLabel: false
+        dataType: LONG_INTEGER
+      - _type: TextField
+        _name: mdmAccountId
+        value: mdmAccountId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: sfAccountId
+        value: sfAccountId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: sapAccountId
+        value: sapAccountId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: industrySector
+        value: industrySector
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: businessRoles
+        value: businessRoles
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: legalForm
+        value: legalForm
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: name1
+        value: name1
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: name2
+        value: name2
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: searchTerm
+        value: searchTerm
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: language
+        value: language
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: currency
+        value: currency
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: paymentTerms
+        value: paymentTerms
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: accountStatement
+        value: accountStatement
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: creditLimit
+        value: creditLimit
+        useCustomLabel: false
+        dataType: DECIMAL
+      - _type: TextField
+        _name: creditCurrency
+        value: creditCurrency
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: isNaturalPerson
+        value: isNaturalPerson
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: primaryContactPersonId
+        value: primaryContactPersonId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: primaryAddressId
+        value: primaryAddressId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: parentAccountId
+        value: parentAccountId
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: hasOrderBlock
+        value: hasOrderBlock
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: CheckboxField
+        _name: hasBillingBlock
+        value: hasBillingBlock
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: CheckboxField
+        _name: isTsaApproved
+        value: isTsaApproved
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: customerType
+        value: customerType
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: salesPic
+        value: salesPic
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: salesManager
+        value: salesManager
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: segmentGroup
+        value: segmentGroup
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: segmentGroup2
+        value: segmentGroup2
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: isTrustedCustomer
+        value: isTrustedCustomer
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: ppdProfile
+        value: ppdProfile
+        useCustomLabel: false
+        dataType: STRING
+      - _type: TextField
+        _name: avgPpdProfile
+        value: avgPpdProfile
+        useCustomLabel: false
+        dataType: STRING
+      - _type: CheckboxField
+        _name: isFirstTimeBuyer
+        value: isFirstTimeBuyer
+        useCustomLabel: false
+        dataType: BOOLEAN
+      - _type: TextField
+        _name: firstTimeBuyerDate
+        value: firstTimeBuyerDate
+        useCustomLabel: false
+        dataType: DATE

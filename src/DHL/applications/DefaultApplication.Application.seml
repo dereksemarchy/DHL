@@ -100,6 +100,13 @@ rootFolder:
         imageMode: FIT
         label: Customer
       - _type: BrowseBusinessViewAction
+        _name: Account
+        businessView: DHL.entities.Account.business_views.AccountBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Account
+      - _type: BrowseBusinessViewAction
         _name: Contract
         businessView: DHL.entities.Contract.business_views.ContractBusinessView
         nbRecordsBadgeVisible: false

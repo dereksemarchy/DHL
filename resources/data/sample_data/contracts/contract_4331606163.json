@@ -1,0 +1,210 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 2652729,
+  "currency": "EUR",
+  "contractName": "Metro AG - Last Mile Delivery Contract",
+  "startDate": "2020-10-11T00:00:00",
+  "endDate": "2024-11-03T00:00:00",
+  "sendDate": "2026-12-01T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "4331606163",
+  "customer": {
+    "number": "4331606163",
+    "internalId": 627235,
+    "name": "Metro AG",
+    "adress": "Metro-Strasse",
+    "houseNumber": "281",
+    "postalCode": "60-514",
+    "city": "Berlin",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "LM",
+      "currentTariff": {
+        "usedTariffId": 56352479,
+        "pricePolicyId": 5379601,
+        "name": "Premium Service - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-4",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.8392,
+              0.3952
+            ],
+            [
+              0.3028,
+              0.2556
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "IT-Italy",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 137.58,
+            "discount": 0.176
+          },
+          {
+            "dim1ElementName": "LU-Luxembourg",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 93.98,
+            "discount": 0.1496
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 91933827,
+            "pricePolicyId": 9389160,
+            "name": "Standard (existing) - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.14,
+              "percent": 18.47
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "YJ",
+      "currentTariff": {
+        "usedTariffId": 96661060,
+        "pricePolicyId": 2007166,
+        "name": "Standard (existing) - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-1",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.5522,
+          "price": 14.73
+        },
+        "prices": [
+          {
+            "dim1ElementName": "BG-Bulgaria",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 39.76,
+            "discount": 0.1847
+          },
+          {
+            "dim1ElementName": "LT-Lithuania",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 100.74,
+            "discount": 0.3217
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 19117264,
+            "pricePolicyId": 1010765,
+            "name": "FUEL AND ROAD SURCHARGE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.06,
+              "percent": 15.64
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1977,
+    "domesticPallets": 0.0861,
+    "internationalParcels": 66.5149,
+    "internationalPallets": 0.1658
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2027-07-09T00:00:00",
+  "rerating_quote": true
+}

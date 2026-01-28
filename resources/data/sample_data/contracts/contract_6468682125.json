@@ -1,0 +1,218 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 3565846,
+  "currency": "EUR",
+  "contractName": "Linde plc - Master Service Agreement",
+  "startDate": "2026-05-30T00:00:00",
+  "endDate": "2026-03-12T00:00:00",
+  "sendDate": "2030-12-23T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": true,
+  "multiParcel": false,
+  "sapAccountId": "6468682125",
+  "customer": {
+    "number": "6468682125",
+    "internalId": 529649,
+    "name": "Linde plc",
+    "adress": "Klosterhofstrasse",
+    "houseNumber": "598",
+    "postalCode": "56-234",
+    "city": "Hamburg",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "NA",
+      "currentTariff": {
+        "usedTariffId": 95345305,
+        "pricePolicyId": 6409340,
+        "name": "THIRD PARTY PAYER - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-3",
+        "dim2Code": "DE-D-1",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.6722,
+              0.6802
+            ],
+            [
+              0.5682,
+              0.1719
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 147.74,
+            "discount": 0.2644
+          },
+          {
+            "dim1ElementName": "SI-Slovenia",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 50.19,
+            "discount": 0.7398
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 63974832,
+            "pricePolicyId": 3600412,
+            "name": "THIRD PARTY PAYER - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.16,
+              "percent": 22.35
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "RT",
+      "currentTariff": {
+        "usedTariffId": 38084680,
+        "pricePolicyId": 5951567,
+        "name": "Premium Service - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Price grid (1D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-4",
+        "dim2Code": "DE-W-1",
+        "dim2Detail": [
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.8093,
+              0.4384
+            ],
+            [
+              0.2605,
+              0.2246
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "GB-United Kingdom",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 131.27,
+            "discount": 0.1105
+          },
+          {
+            "dim1ElementName": "FI-Finland",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 41.16,
+            "discount": 0.8711
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 18153680,
+            "pricePolicyId": 3165897,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.17,
+              "percent": 17.39
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0952,
+    "domesticPallets": 0.1734,
+    "internationalParcels": 94.179,
+    "internationalPallets": 0.1727
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": true,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": true,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2028-01-28T00:00:00",
+  "rerating_quote": false
+}

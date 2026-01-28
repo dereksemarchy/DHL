@@ -15,6 +15,15 @@ modelTasks:
     sourceDataEnrichmentEnabled: true
     sourceValidationEnabled: true
   - _type: ModelJobTask
+    entity: DHL.entities.Account.Account
+    _name: Account
+    consolidatedDataEnrichmentEnabled: true
+    consolidationEnabled: true
+    matchEnabled: true
+    postConsoValidationEnabled: true
+    sourceDataEnrichmentEnabled: true
+    sourceValidationEnabled: true
+  - _type: ModelJobTask
     entity: DHL.entities.Customer.Customer
     _name: Customer
     consolidatedDataEnrichmentEnabled: true

@@ -1,0 +1,10 @@
+_package: DHL.entities.Account.survivorship_rules
+_type: IDSurvivorshipRule
+_name: IdSurvivorshipRule
+entity: DHL.entities.Account.Account
+label: Id Survivorship Rule
+description: ""
+documentation: ""
+consolidationStrategy: CUSTOM_RANKING
+consolidationOrderByExpression: ""
+consolidationSkipNulls: false

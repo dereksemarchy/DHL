@@ -1,0 +1,205 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 1914749,
+  "currency": "EUR",
+  "contractName": "Bertelsmann SE - E-commerce Fulfillment Agreement",
+  "startDate": "2023-02-13T00:00:00",
+  "endDate": "2030-12-06T00:00:00",
+  "sendDate": "2027-08-30T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "14 dni",
+  "flatFeeProducts": false,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "4392850573",
+  "customer": {
+    "number": "4392850573",
+    "internalId": 611967,
+    "name": "Bertelsmann SE",
+    "adress": "Carl-Bertelsmann-Strasse",
+    "houseNumber": "147",
+    "postalCode": "93-751",
+    "city": "Köln",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "RM",
+      "currentTariff": {
+        "usedTariffId": 20839963,
+        "pricePolicyId": 3979357,
+        "name": "Standard (existing) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-5",
+        "dim2Code": "PL-W-5",
+        "dim2Detail": [
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.26,
+          "MinPrice": 3.75,
+          "price": 0.028
+        },
+        "prices": [
+          {
+            "dim1ElementName": "GB-United Kingdom",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 124.96,
+            "discount": 0.3596
+          },
+          {
+            "dim1ElementName": "CZ-Czech Republic",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 48.15,
+            "discount": 0.8839
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 36310077,
+            "pricePolicyId": 7286139,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.17,
+              "percent": 11.44
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "DJ",
+      "currentTariff": {
+        "usedTariffId": 91955877,
+        "pricePolicyId": 8128928,
+        "name": "Express Delivery - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.72,
+          "percent": 0.001,
+          "price": 19.1,
+          "breakpoint": 10000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "FI-Finland",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 111.92,
+            "discount": 0.6275
+          },
+          {
+            "dim1ElementName": "ES-Spain",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 107.82,
+            "discount": 0.0943
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 4924274,
+            "pricePolicyId": 266718,
+            "name": "PROOF OF DELIVERY (POD)",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.03,
+              "percent": 15.97
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1587,
+    "domesticPallets": 0.1853,
+    "internationalParcels": 139.5335,
+    "internationalPallets": 0.0876
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": false,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": false,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": true,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": false,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": true,
+    "discountStabilityDomParcel": false,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": false,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2023-12-18T00:00:00",
+  "rerating_quote": false
+}

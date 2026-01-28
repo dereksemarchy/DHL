@@ -1,0 +1,210 @@
+{
+  "isAnnex": false,
+  "annexStartDate": null,
+  "contractId": 2369895,
+  "currency": "EUR",
+  "contractName": "Mondelez International - International Shipping Contract",
+  "startDate": "2021-05-29T00:00:00",
+  "endDate": "2021-01-15T00:00:00",
+  "sendDate": "2024-04-09T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "9889515723",
+  "customer": {
+    "number": "9889515723",
+    "internalId": 573532,
+    "name": "Mondelez International",
+    "adress": "Langemarckstrasse",
+    "houseNumber": "867",
+    "postalCode": "33-248",
+    "city": "Dortmund",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "VJ",
+      "currentTariff": {
+        "usedTariffId": 80788134,
+        "pricePolicyId": 5031284,
+        "name": "Premium Service - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-1",
+        "dim2Code": "DE-D-2",
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "3.0-5.0",
+            "segments": "3.0-3.5,3.5-4.0,4.0-4.5,4.5-5.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.17,
+          "percent": 10.74
+        },
+        "prices": [
+          {
+            "dim1ElementName": "DK-Denmark",
+            "dim2ElementName": "20.0-31.5",
+            "unitPrice": 70.14,
+            "discount": 0.6576
+          },
+          {
+            "dim1ElementName": "AT-Austria",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 74.73,
+            "discount": 0.4048
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 10611701,
+            "pricePolicyId": 1686215,
+            "name": "Editable - SHIPMENT INSURANCE for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.15,
+              "percent": 19.54
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "GY",
+      "currentTariff": {
+        "usedTariffId": 71355667,
+        "pricePolicyId": 3689887,
+        "name": "CASH ON DELIVERY (COD) - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Price grid (1D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-D-4",
+        "dim2Code": "PL-W-3",
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "10.0-20.0",
+            "segments": "10.0-12.5,12.5-15.0,15.0-17.5,17.5-20.0"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.1518,
+              0.6271
+            ],
+            [
+              0.8941,
+              0.3588
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "BG-Bulgaria",
+            "dim2ElementName": "1.0-3.0",
+            "unitPrice": 32.34,
+            "discount": 0.5319
+          },
+          {
+            "dim1ElementName": "HR-Croatia",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 91.25,
+            "discount": 0.1824
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 98265400,
+            "pricePolicyId": 3995000,
+            "name": "CREDIT CARD PAYMENT FOR COD AMOUNT DUE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.04,
+              "percent": 21.74
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.116,
+    "domesticPallets": 0.103,
+    "internationalParcels": 225.1384,
+    "internationalPallets": 0.0374
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": false,
+    "discountStartDomPallet": true,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": true,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": false,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": false,
+    "discountMarketing": false
+  },
+  "lastEsignatureDate": "2021-09-27T00:00:00",
+  "rerating_quote": false
+}

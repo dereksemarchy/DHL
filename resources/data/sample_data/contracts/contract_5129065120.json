@@ -1,0 +1,210 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 4813999,
+  "currency": "EUR",
+  "contractName": "Lufthansa AG - Standard Shipping Terms",
+  "startDate": "2021-12-09T00:00:00",
+  "endDate": "2026-05-16T00:00:00",
+  "sendDate": "2028-07-05T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": false,
+  "sapAccountId": "5129065120",
+  "customer": {
+    "number": "5129065120",
+    "internalId": 268324,
+    "name": "Lufthansa AG",
+    "adress": "Airportring",
+    "houseNumber": "914",
+    "postalCode": "22-775",
+    "city": "Hamburg",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "BXE",
+      "currentTariff": {
+        "usedTariffId": 10921541,
+        "pricePolicyId": 1242602,
+        "name": "FUEL AND ROAD SURCHARGE - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Price grid (2D)",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "PL-W-6",
+        "dim2Code": "PL-D-1",
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "20.0-31.5",
+            "segments": "20.0-22.875,22.875-25.75,25.75-28.625,28.625-31.5"
+          }
+        ],
+        "tariffParameters": {
+          "discountGrid": [
+            [
+              0.6738,
+              0.2702
+            ],
+            [
+              0.762,
+              0.0789
+            ]
+          ]
+        },
+        "prices": [
+          {
+            "dim1ElementName": "DK-Denmark",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 82.51,
+            "discount": 0.7446
+          },
+          {
+            "dim1ElementName": "HR-Croatia",
+            "dim2ElementName": "MIN-1.0",
+            "unitPrice": 59.56,
+            "discount": 0.3043
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 47874171,
+            "pricePolicyId": 1515892,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.3,
+              "percent": 12.68
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "WS",
+      "currentTariff": {
+        "usedTariffId": 57077018,
+        "pricePolicyId": 6515765,
+        "name": "Premium Service - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Fuel",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "1.0-3.0",
+            "segments": "1.0-1.5,1.5-2.0,2.0-2.5,2.5-3.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.01,
+          "percent": 10.09
+        },
+        "prices": [
+          {
+            "dim1ElementName": "CZ-Czech Republic",
+            "dim2ElementName": "10.0-20.0",
+            "unitPrice": 27.85,
+            "discount": 0.5736
+          },
+          {
+            "dim1ElementName": "LT-Lithuania",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 109.19,
+            "discount": 0.2039
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 97991095,
+            "pricePolicyId": 4518837,
+            "name": "Editable - NON-STANDARD for Pallets",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.13,
+              "percent": 23.72
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.0414,
+    "domesticPallets": 0.0073,
+    "internationalParcels": 98.1631,
+    "internationalPallets": 0.0871
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": true,
+    "discountStartIntPallet": false,
+    "discountStartFuel": false,
+    "discountStartFuelParcel": false,
+    "discountStartFuelPallet": false,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": true,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": false,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": true,
+    "discountStability": false,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": false,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": false,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": false,
+    "discountGrowthIntParcel": true,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2022-05-10T00:00:00",
+  "rerating_quote": false
+}

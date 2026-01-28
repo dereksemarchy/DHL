@@ -2,7 +2,7 @@ _package: DHL.references
 _name: pricesToContractProduct
 _type: Reference
 label: prices to ContractProduct
-deletePropagation: RESTRICT
+deletePropagation: CASCADE
 fromEntity: DHL.entities.prices.prices
 fromRoleLabel: price
 fromRoleName: price

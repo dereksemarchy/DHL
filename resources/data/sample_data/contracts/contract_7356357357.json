@@ -1,0 +1,205 @@
+{
+  "isAnnex": true,
+  "annexStartDate": null,
+  "contractId": 1731888,
+  "currency": "EUR",
+  "contractName": "DM-Drogerie Markt - E-commerce Fulfillment Agreement",
+  "startDate": "2021-12-17T00:00:00",
+  "endDate": "2027-01-30T00:00:00",
+  "sendDate": "2024-01-02T00:00:00",
+  "salesDepot": "",
+  "billingFrequency": "Monthly",
+  "paymentTerms": "30 dni",
+  "flatFeeProducts": true,
+  "flatFeeOptions": false,
+  "multiParcel": true,
+  "sapAccountId": "7356357357",
+  "customer": {
+    "number": "7356357357",
+    "internalId": 669631,
+    "name": "DM-Drogerie Markt",
+    "adress": "Carl-Metz-Strasse",
+    "houseNumber": "893",
+    "postalCode": "16-838",
+    "city": "Düsseldorf",
+    "country": "DE",
+    "marketingAgreement": null
+  },
+  "contractProducts": [
+    {
+      "productCode": "OD",
+      "currentTariff": {
+        "usedTariffId": 44656267,
+        "pricePolicyId": 7912766,
+        "name": "THIRD PARTY PAYER - D",
+        "tariffType": "Custom",
+        "basePricingMethod": "Percent",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-W-2",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.11,
+          "MinPrice": 6.35,
+          "price": 0.011
+        },
+        "prices": [
+          {
+            "dim1ElementName": "IT-Italy",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 34.53,
+            "discount": 0.8686
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 87.06,
+            "discount": 0.2848
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 80520970,
+            "pricePolicyId": 5430892,
+            "name": "Express Delivery - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.06,
+              "percent": 12.63
+            },
+            "prices": []
+          }
+        }
+      ]
+    },
+    {
+      "productCode": "AP",
+      "currentTariff": {
+        "usedTariffId": 56805047,
+        "pricePolicyId": 783094,
+        "name": "Economy Shipping - D",
+        "tariffType": "List Price",
+        "basePricingMethod": "Simple price and UOM percent after breakpoint",
+        "currency": "EUR",
+        "uom": "Items",
+        "dim1Code": "DE-D-3",
+        "dim2Code": null,
+        "dim2Detail": [
+          {
+            "dim2Element": "MIN-1.0",
+            "segments": "MIN-0.25,0.25-0.5,0.5-0.75,0.75-1.0"
+          },
+          {
+            "dim2Element": "5.0-10.0",
+            "segments": "5.0-6.25,6.25-7.5,7.5-8.75,8.75-10.0"
+          }
+        ],
+        "tariffParameters": {
+          "Tdiscount": 0.35,
+          "percent": 0.008,
+          "price": 19.39,
+          "breakpoint": 10000
+        },
+        "prices": [
+          {
+            "dim1ElementName": "FR-France",
+            "dim2ElementName": "5.0-10.0",
+            "unitPrice": 34.75,
+            "discount": 0.6237
+          },
+          {
+            "dim1ElementName": "SE-Sweden",
+            "dim2ElementName": "3.0-5.0",
+            "unitPrice": 117.93,
+            "discount": 0.7024
+          }
+        ]
+      },
+      "optionServices": [
+        {
+          "productCode": "ZFER",
+          "currentTariff": {
+            "usedTariffId": 86123318,
+            "pricePolicyId": 6169524,
+            "name": "FUEL AND ROAD SURCHARGE - D",
+            "tariffType": "List Price",
+            "basePricingMethod": "Fuel",
+            "currency": "EUR",
+            "uom": "",
+            "dim1Code": null,
+            "dim2Code": null,
+            "dim2Detail": [],
+            "tariffParameters": {
+              "Tdiscount": 0.1,
+              "percent": 17.6
+            },
+            "prices": []
+          }
+        }
+      ]
+    }
+  ],
+  "contractDiscounts": [],
+  "shippingToProfile": {
+    "domesticParcels": 0.1191,
+    "domesticPallets": 0.0917,
+    "internationalParcels": 289.3083,
+    "internationalPallets": 0.1187
+  },
+  "contractFrameworkDiscount": {
+    "discountStart": true,
+    "discountStartDomParcel": true,
+    "discountStartDomPallet": false,
+    "discountStartIntParcel": false,
+    "discountStartIntPallet": false,
+    "discountStartFuel": true,
+    "discountStartFuelParcel": true,
+    "discountStartFuelPallet": true,
+    "discountSeasonal": true,
+    "discountSeasonalDomParcel": false,
+    "discountSeasonalDomParcelVolume": null,
+    "discountSeasonalDomParcelMonths": null,
+    "discountSeasonalDomPallet": false,
+    "discountSeasonalDomPalletVolume": null,
+    "discountSeasonalDomPalletMonths": null,
+    "discountSeasonalIntParcel": true,
+    "discountSeasonalIntParcelVolume": null,
+    "discountSeasonalIntParcelMonths": null,
+    "discountSeasonalIntPallet": true,
+    "discountSeasonalIntPalletVolume": null,
+    "discountSeasonalIntPalletMonths": null,
+    "discountInt": false,
+    "discountStability": true,
+    "discountStabilityDomParcel": true,
+    "discountStabilityDomPallet": true,
+    "discountStabilityIntParcel": true,
+    "discountStabilityIntPallet": true,
+    "discountGrowth": false,
+    "discountGrowthDomParcel": true,
+    "discountGrowthDomPallet": true,
+    "discountGrowthIntParcel": false,
+    "discountGrowthIntPallet": true,
+    "discountMarketing": true
+  },
+  "lastEsignatureDate": "2021-02-18T00:00:00",
+  "rerating_quote": true
+}
