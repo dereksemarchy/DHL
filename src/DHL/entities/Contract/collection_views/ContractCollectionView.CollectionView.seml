@@ -151,3 +151,10 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  - _type: TextColumn
+    _name: Account
+    value: FDN_Account
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true

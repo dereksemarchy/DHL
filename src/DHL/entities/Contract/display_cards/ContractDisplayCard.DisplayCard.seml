@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: ContractDisplayCard
 entity: DHL.entities.Contract.Contract
 default: true
-primaryTextExpression: SEM_NUMBER_TO_CHAR(ContractID)
+primaryTextExpression: ContractName
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

@@ -289,6 +289,18 @@
                         "fontTitleColor": "255,255,255"
                     },
                     {
+                        "qualifiedName": "DHL.model_diagrams.Contract.Account",
+                        "entity": "DHL.entities.Account.Account",
+                        "position": {
+                            "x": 100,
+                            "y": 300
+                        },
+                        "width": 100,
+                        "height": 500,
+                        "borderColor": "255,0,0",
+                        "fontTitleColor": "255,255,255"
+                    },
+                    {
                         "qualifiedName": "DHL.model_diagrams.Contract.Contract",
                         "entity": "DHL.entities.Contract.Contract",
                         "position": {
@@ -396,6 +408,12 @@
                         "fromEntityShape": "DHL.model_diagrams.Contract.prices",
                         "toEntityShape": "DHL.model_diagrams.Contract.dim1Element",
                         "reference": "DHL.references.pricesTodim1Element",
+                        "bendPoints": []
+                    },
+                    {
+                        "fromEntityShape": "DHL.model_diagrams.Contract.Contract",
+                        "toEntityShape": "DHL.model_diagrams.Contract.Account",
+                        "reference": "DHL.references.ContractBelongsToAccount",
                         "bendPoints": []
                     }
                 ],
@@ -513,6 +531,31 @@
             }
         ],
         "referenceRels": [
+            {
+                "qualifiedName": "DHL.references.ContractBelongsToAccount",
+                "brokenValidationLabel": "",
+                "deletePropagation": "RESTRICT",
+                "fromEntity": "DHL.entities.Contract.Contract",
+                "fromRoleName": "Contract",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "CONTRACT_ACCOUNT",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "DHL.entities.Account.Account",
+                "toRoleName": "Account",
+                "toRolePhysicalName": "ACCOUNT",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Contract",
+                "fromRolePluralLabel": "Contracts",
+                "label": "Contract Belongs To Account",
+                "toRoleLabel": "Account",
+                "foreignAttribute": {
+                    "qualifiedName": "DHL.references.ContractBelongsToAccount.Account",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "ACCOUNT",
+                    "label": "Account"
+                }
+            },
             {
                 "qualifiedName": "DHL.references.ContractBelongsToCustomer",
                 "brokenValidationLabel": "",
@@ -693,8 +736,7 @@
                         "valueSeparator": "",
                         "fuzzyMatchedEntityGoldenIdGenerationType": "SEQUENCE",
                         "fuzzyMatchedEntityGoldenIdSequenceStartsWith": 1,
-                        "idGenerationType": "SEQUENCE",
-                        "idSequenceStartsWith": 1,
+                        "idGenerationType": "MANUAL",
                         "label": "MDMID",
                         "precision": 38,
                         "searchable": true
@@ -1352,16 +1394,6 @@
                                 "waitDialogEnabled": false
                             },
                             {
-                                "qualifiedName": "DHL.entities.Account.action_sets.AccountActionSet.CopyAuthorAccounts",
-                                "_type": "CopyAction",
-                                "description": "",
-                                "label": "Copy",
-                                "useCustomLabel": true,
-                                "waitDialogEnabled": false,
-                                "multipleSelectionAllowed": true,
-                                "stepper": "DHL.entities.Account.steppers.AuthorAccounts"
-                            },
-                            {
                                 "qualifiedName": "DHL.entities.Account.action_sets.AccountActionSet.DirectConfirmDuplicates",
                                 "_type": "DirectConfirmDupsAction",
                                 "description": "",
@@ -1419,7 +1451,7 @@
                     {
                         "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView",
                         "displayRootNodeAs": "ICON_LABEL",
-                        "enableHierarchyView": false,
+                        "enableHierarchyView": true,
                         "filter": "1 = 1",
                         "rootBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account",
                         "rootDescription": "",
@@ -1427,6 +1459,7 @@
                         "rootPluralLabel": "Accounts",
                         "useHierarchyOnOpen": false,
                         "visible": true,
+                        "label": "Account",
                         "boViewEntities": [
                             {
                                 "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account",
@@ -1471,6 +1504,17 @@
                                 "displayCard": "DHL.entities.Account.display_cards.AccountDisplayCard",
                                 "transitions": [
                                     {
+                                        "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract",
+                                        "transitionPath": "Contract",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "1",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    },
+                                    {
                                         "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.MasterRecords",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -1482,6 +1526,103 @@
                                         "transitionType": "FULLY_QUALIFIED"
                                     }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract",
+                                "collection": "DHL.entities.Contract.collection_views.ContractCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.Contract.Contract",
+                                "form": "DHL.entities.Contract.forms.ContractForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.Contract.action_sets.ContractActionSet",
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct",
+                                        "transitionPath": "ContractProduct",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "1",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct",
+                                "collection": "DHL.entities.ContractProduct.collection_views.ContractProductCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.ContractProduct.ContractProduct",
+                                "form": "DHL.entities.ContractProduct.forms.ContractProductForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.ContractProduct.action_sets.ContractProductActionSet",
+                                "transitions": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.dim2Detail",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.dim2Detail.dim2Detail",
+                                        "transitionPath": "dim2Detail",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "1",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.prices",
+                                        "enableHierarchyInterpreter": "LITERAL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.prices.prices",
+                                        "transitionPath": "price",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "1",
+                                        "transitionType": "FULLY_QUALIFIED"
+                                    }
+                                ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.dim2Detail.dim2Detail",
+                                "collection": "DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.dim2Detail.dim2Detail",
+                                "form": "DHL.entities.dim2Detail.forms.dim2DetailForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.dim2Detail.action_sets.dim2DetailActionSet"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract.ContractProduct.ContractProduct.prices.prices",
+                                "collection": "DHL.entities.prices.collection_views.pricesCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.prices.prices",
+                                "form": "DHL.entities.prices.forms.pricesForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.prices.action_sets.pricesActionSet"
                             },
                             {
                                 "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.MasterRecords.AccountMasterRecords",
@@ -1994,7 +2135,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "SEM_TO_CHAR2(MDMID)"
+                        "primaryTextExpression": "name1"
                     }
                 ],
                 "dupsManagers": [
@@ -2520,7 +2661,7 @@
                                 "displayListAllowed": true,
                                 "displayTableAllowed": true,
                                 "enableChildCopyOnParentCreate": false,
-                                "enableChildCopyOnParentEdit": true,
+                                "enableChildCopyOnParentEdit": false,
                                 "enableChildCreationOnParentCreate": false,
                                 "enableChildCreationOnParentEdit": false,
                                 "enableChildDeleteOnParentEdit": false,
@@ -3437,6 +3578,19 @@
                                 "visibleByDefault": true,
                                 "valueDataType": "STRING",
                                 "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Contract.collection_views.ContractCollectionView.Account",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 19,
+                                "useCustomLabel": false,
+                                "value": "FDN_Account",
+                                "visibleByDefault": true,
+                                "valueDataType": "STRING",
+                                "componentProperties": []
                             }
                         ]
                     }
@@ -3455,7 +3609,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "SEM_NUMBER_TO_CHAR(ContractID)"
+                        "primaryTextExpression": "ContractName"
                     }
                 ],
                 "dupsManagers": [],
@@ -3510,11 +3664,25 @@
                                 "componentProperties": []
                             },
                             {
+                                "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.FDN_Account",
+                                "_type": "FormField",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 2,
+                                "useCustomLabel": false,
+                                "value": "FDN_Account",
+                                "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
                                 "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.IsAnnex",
                                 "_type": "FormField",
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 2,
+                                "posInParent": 3,
                                 "useCustomLabel": false,
                                 "value": "IsAnnex",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3528,7 +3696,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 3,
+                                "posInParent": 4,
                                 "useCustomLabel": false,
                                 "value": "AnnexStartDate",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3542,7 +3710,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 4,
+                                "posInParent": 5,
                                 "useCustomLabel": false,
                                 "value": "ContractIdNumber",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3556,7 +3724,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 5,
+                                "posInParent": 6,
                                 "useCustomLabel": false,
                                 "value": "Currency",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3570,7 +3738,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 6,
+                                "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "ContractName",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3584,7 +3752,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 7,
+                                "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "StartDate",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3598,7 +3766,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 8,
+                                "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "EndDate",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3612,7 +3780,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 9,
+                                "posInParent": 10,
                                 "useCustomLabel": false,
                                 "value": "SendDate",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3626,7 +3794,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 10,
+                                "posInParent": 11,
                                 "useCustomLabel": false,
                                 "value": "SalesDepot",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3640,7 +3808,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 11,
+                                "posInParent": 12,
                                 "useCustomLabel": false,
                                 "value": "BillingFrequency",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3654,7 +3822,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 12,
+                                "posInParent": 13,
                                 "useCustomLabel": false,
                                 "value": "PaymentTerms",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3668,7 +3836,7 @@
                                 "_type": "FormField",
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 13,
+                                "posInParent": 14,
                                 "useCustomLabel": false,
                                 "value": "FlatFeeProducts",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3682,7 +3850,7 @@
                                 "_type": "FormField",
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 14,
+                                "posInParent": 15,
                                 "useCustomLabel": false,
                                 "value": "FlatFeeOptions",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3696,7 +3864,7 @@
                                 "_type": "FormField",
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 15,
+                                "posInParent": 16,
                                 "useCustomLabel": false,
                                 "value": "MultiParcel",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3710,7 +3878,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 16,
+                                "posInParent": 17,
                                 "useCustomLabel": false,
                                 "value": "SapAccountId",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3724,7 +3892,7 @@
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 17,
+                                "posInParent": 18,
                                 "useCustomLabel": false,
                                 "value": "LastEsignatureDate",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -3738,7 +3906,7 @@
                                 "_type": "FormField",
                                 "componentName": "semCheckboxField",
                                 "documentationInterpreter": "LITERAL",
-                                "posInParent": 18,
+                                "posInParent": 19,
                                 "useCustomLabel": false,
                                 "value": "ReratingQuote",
                                 "parentFormContainer": "DHL.entities.Contract.forms.ContractForm.Contract",
@@ -4394,7 +4562,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "FDN_Contract||FDN_Product"
+                        "primaryTextExpression": "FDN_Contract||'-'||FDN_Product"
                     }
                 ],
                 "dupsManagers": [],
@@ -5388,6 +5556,33 @@
                                 "visibleByDefault": true,
                                 "valueDataType": "STRING",
                                 "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.collection_views.CustomerCollectionView.MastersCount",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 10,
+                                "useCustomLabel": false,
+                                "value": "MastersCount",
+                                "visibleByDefault": true,
+                                "valueDataType": "LONG_INTEGER",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.collection_views.CustomerCollectionView.MasterIDs",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 11,
+                                "useCustomLabel": true,
+                                "value": "LOOKUP STRING_AGG(SourceID) SEPARATED BY ', ' FROM MasterRecords END",
+                                "visibleByDefault": true,
+                                "label": "SourceIDs",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
                             }
                         ]
                     }
@@ -6036,7 +6231,7 @@
                         "multiValued": false,
                         "physicalColName": "DIM2DETAIL_ID",
                         "valueSeparator": "",
-                        "idExpression": "CONCAT(FID_ContractProduct, '_', dim2Element)",
+                        "idExpression": "CONCAT(FID_ContractProduct, '-', dim2Element)",
                         "idGenerationType": "SEMQL",
                         "label": "dim2Detail ID",
                         "length": 128,
@@ -6488,7 +6683,7 @@
                         "multiValued": false,
                         "physicalColName": "PRICES_ID",
                         "valueSeparator": "",
-                        "idExpression": "CONCAT(FID_ContractProduct, '_', FID_dim1Element, '_', dim2ElementName)",
+                        "idExpression": "CONCAT(FID_ContractProduct, '-', FID_dim1Element, '-', dim2ElementName)",
                         "idGenerationType": "SEMQL",
                         "label": "prices ID",
                         "length": 128,
@@ -6838,7 +7033,7 @@
                         "primaryImageFallbackSourceType": "URL",
                         "primaryImageMode": "FIT",
                         "primaryImageSourceType": "URL",
-                        "primaryTextExpression": "pricesID"
+                        "primaryTextExpression": "FDN_dim1Element||'-'||dim2ElementName"
                     }
                 ],
                 "dupsManagers": [],

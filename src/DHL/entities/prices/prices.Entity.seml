@@ -48,5 +48,5 @@ attributes:
     searchable: true
 sourceIdGeneration:
   mode: SEMQL
-  idExpression: "CONCAT(FID_ContractProduct, '_', FID_dim1Element, '_', dim2ElementName)"
+  idExpression: "CONCAT(FID_ContractProduct, '-', FID_dim1Element, '-', dim2ElementName)"
 primaryKey: DHL.entities.prices.prices.pricesID

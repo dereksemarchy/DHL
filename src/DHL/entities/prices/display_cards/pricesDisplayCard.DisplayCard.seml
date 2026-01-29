@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: pricesDisplayCard
 entity: DHL.entities.prices.prices
 default: true
-primaryTextExpression: pricesID
+primaryTextExpression: FDN_dim1Element||'-'||dim2ElementName 
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

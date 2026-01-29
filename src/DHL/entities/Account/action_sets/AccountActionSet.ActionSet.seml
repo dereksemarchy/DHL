@@ -61,13 +61,6 @@ actions:
     label: Browse Graph
     useCustomLabel: true
     waitDialogEnabled: false
-  - _type: CopyAction
-    _name: CopyAuthorAccounts
-    label: Copy
-    useCustomLabel: true
-    stepper: DHL.entities.Account.steppers.AuthorAccounts
-    multipleSelectionAllowed: true
-    waitDialogEnabled: false
   - _type: DirectConfirmDupsAction
     _name: DirectConfirmDuplicates
     label: Direct Confirm Duplicates

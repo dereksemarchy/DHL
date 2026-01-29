@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: AccountDisplayCard
 entity: DHL.entities.Account.Account
 default: true
-primaryTextExpression: SEM_TO_CHAR2(MDMID)
+primaryTextExpression: name1
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

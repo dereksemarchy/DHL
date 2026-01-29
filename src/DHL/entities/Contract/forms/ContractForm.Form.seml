@@ -23,6 +23,11 @@ formTabs:
         value: FDN_Customer
         useCustomLabel: false
         dataType: STRING
+      - _type: TextField
+        _name: FDN_Account
+        value: FDN_Account
+        useCustomLabel: false
+        dataType: STRING
       - _type: CheckboxField
         _name: IsAnnex
         value: IsAnnex

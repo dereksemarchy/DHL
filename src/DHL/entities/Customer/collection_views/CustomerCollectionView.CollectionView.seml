@@ -88,3 +88,18 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  - _type: TextColumn
+    _name: MastersCount
+    value: MastersCount
+    useCustomLabel: false
+    dataType: LONG_INTEGER
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: MasterIDs
+    value: LOOKUP STRING_AGG(SourceID) SEPARATED BY ', ' FROM MasterRecords END
+    useCustomLabel: true
+    label: SourceIDs
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
