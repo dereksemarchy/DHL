@@ -1,0 +1,17 @@
+_package: DHL.entities.Account.validations
+_type: PluginValidation
+_name: InvalidSalesPicEmail
+label: Invalid SalesPic Email
+entity: DHL.entities.Account.Account
+numberOfRetry: 0
+onErrorBehavior: FAIL_JOB
+pluginId: com.semarchy.engine.plugins.convergence.email
+threadPoolSize: 1
+validationLabel: This email from the source system is invalid. Check it for errors.
+validationScope: PRE_CONSO
+pluginParams:
+  - paramName: VALIDATOR_ACCEPTED_DOMAINS
+    value: VALID_DOMAINS
+pluginInputs:
+  - expression: salesPic
+    inputName: EMAIL_ADDRESS

@@ -47,6 +47,8 @@ attributes:
     description: Customer name
     documentation: Full legal or business name of the customer
     searchable: true
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
   - _name: Address
     _type: EntityAttribute
     label: Address

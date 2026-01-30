@@ -74,7 +74,8 @@ attributes:
     physicalName: NAME_1
     dataType: String
     length: 255
-    mandatory: false
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
     searchable: true
   - _type: EntityAttribute
     _name: name2

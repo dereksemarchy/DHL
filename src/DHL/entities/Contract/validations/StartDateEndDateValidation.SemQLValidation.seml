@@ -1,0 +1,8 @@
+_package: DHL.entities.Contract.validations
+_name: StartDateEndDateValidation
+_type: SemQLValidation
+entity: DHL.entities.Contract.Contract
+label: Start Date End Date Validation
+condition: StartDate <= EndDate
+validationScope: PRE_CONSO
+validationLabel: Start Date must be earlier than or equal to End Date!

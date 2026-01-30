@@ -7,5 +7,6 @@ description: ""
 documentation: ""
 defaultRule: true
 consolidationStrategy: CUSTOM_RANKING
+consolidationOrderByExpression: sapAccountId DESC
 consolidationSkipNulls: false
-overrideStrategy: NO_OVERRIDE
+overrideStrategy: UNTIL_NEXT_USER_CHANGE

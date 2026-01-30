@@ -169,6 +169,20 @@
                         "lineageEnabled": true
                     },
                     {
+                        "_type": "OpenDashboardAction",
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.TopActions.DataQualityDashboards",
+                        "useCustomLabel": true,
+                        "image": "images://idh/dq-dashboard.png",
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Data Quality Dashboard",
+                        "dashboard": "DataQuality",
+                        "dashboardApplication": "DataQuality",
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.TopActions",
+                        "posInFolder": 3,
+                        "parameters": []
+                    },
+                    {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Customer",
                         "posInFolder": 0,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
@@ -193,8 +207,21 @@
                         "label": "Account"
                     },
                     {
-                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Contract",
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountError",
                         "posInFolder": 2,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Account with Error",
+                        "viewType": "SDWE"
+                    },
+                    {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Contract",
+                        "posInFolder": 3,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
@@ -205,8 +232,21 @@
                         "label": "Contract"
                     },
                     {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractError",
+                        "posInFolder": 4,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
+                        "nbRecordsBadgeVisible": true,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Contract with Error",
+                        "viewType": "SAWE"
+                    },
+                    {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Product",
-                        "posInFolder": 3,
+                        "posInFolder": 5,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Product.business_views.ProductBusinessView",
@@ -218,7 +258,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractProduct",
-                        "posInFolder": 4,
+                        "posInFolder": 6,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView",
@@ -230,7 +270,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.dim2Detail",
-                        "posInFolder": 5,
+                        "posInFolder": 7,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.dim2Detail.business_views.dim2DetailBusinessView",
@@ -242,7 +282,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.dim1Element",
-                        "posInFolder": 6,
+                        "posInFolder": 8,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView",
@@ -254,7 +294,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.prices",
-                        "posInFolder": 7,
+                        "posInFolder": 9,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.prices.business_views.pricesBusinessView",
@@ -534,7 +574,7 @@
             {
                 "qualifiedName": "DHL.references.ContractBelongsToAccount",
                 "brokenValidationLabel": "",
-                "deletePropagation": "RESTRICT",
+                "deletePropagation": "NULLIFY",
                 "fromEntity": "DHL.entities.Contract.Contract",
                 "fromRoleName": "Contract",
                 "mandatoryValidationLabel": "",
@@ -852,9 +892,9 @@
                         "goldenAttribute": true,
                         "i18ned": false,
                         "lovValidationScope": "NONE",
-                        "mandatory": false,
+                        "mandatory": true,
                         "mandatoryValidationLabel": "",
-                        "mandatoryValidationScope": "NONE",
+                        "mandatoryValidationScope": "PRE_CONSO",
                         "multiValued": false,
                         "physicalColName": "NAME_1",
                         "valueSeparator": "",
@@ -1308,7 +1348,33 @@
                         }
                     ]
                 },
-                "abstractRowCheckConstraints": [],
+                "abstractRowCheckConstraints": [
+                    {
+                        "qualifiedName": "DHL.entities.Account.validations.InvalidSalesPicEmail",
+                        "_type": "PluginValidator",
+                        "numberOfRetry": 0,
+                        "onErrorBehavior": "FAIL_JOB",
+                        "pluginId": "com.semarchy.engine.plugins.convergence.email",
+                        "threadPoolSize": 1,
+                        "validationLabel": "This email from the source system is invalid. Check it for errors.",
+                        "validationScope": "PRE_CONSO",
+                        "label": "Invalid SalesPic Email",
+                        "pluginInputs": [
+                            {
+                                "_type": "PluginValidatorInput",
+                                "expression": "salesPic",
+                                "inputName": "EMAIL_ADDRESS"
+                            }
+                        ],
+                        "pluginParams": [
+                            {
+                                "_type": "PluginValidatorParam",
+                                "paramName": "VALIDATOR_ACCEPTED_DOMAINS",
+                                "value": "VALID_DOMAINS"
+                            }
+                        ]
+                    }
+                ],
                 "actionSets": [
                     {
                         "qualifiedName": "DHL.entities.Account.action_sets.AccountActionSet",
@@ -2709,11 +2775,12 @@
                         "_type": "StandardSurvivorshipRule",
                         "consolidationSkipNulls": false,
                         "label": "Default Rule",
+                        "consolidationOrderByExpression": "sapAccountId DESC",
                         "consolidationStrategy": "CUSTOM_RANKING",
                         "description": "",
                         "documentation": "",
                         "defaultRule": true,
-                        "overrideStrategy": "NO_OVERRIDE"
+                        "overrideStrategy": "UNTIL_NEXT_USER_CHANGE"
                     },
                     {
                         "qualifiedName": "DHL.entities.Account.survivorship_rules.IdSurvivorshipRule",
@@ -2841,9 +2908,9 @@
                         "goldenAttribute": true,
                         "i18ned": false,
                         "lovValidationScope": "NONE",
-                        "mandatory": false,
+                        "mandatory": true,
                         "mandatoryValidationLabel": "",
-                        "mandatoryValidationScope": "NONE",
+                        "mandatoryValidationScope": "PRE_CONSO",
                         "multiValued": false,
                         "physicalColName": "CONTRACT_NAME",
                         "valueSeparator": "",
@@ -3075,7 +3142,16 @@
                     }
                 ],
                 "complexAttributes": [],
-                "abstractRowCheckConstraints": [],
+                "abstractRowCheckConstraints": [
+                    {
+                        "qualifiedName": "DHL.entities.Contract.validations.StartDateEndDateValidation",
+                        "_type": "CheckConstraint",
+                        "condition": "StartDate <= EndDate",
+                        "validationLabel": "Start Date must be earlier than or equal to End Date!",
+                        "validationScope": "PRE_CONSO",
+                        "label": "Start Date End Date Validation"
+                    }
+                ],
                 "actionSets": [
                     {
                         "qualifiedName": "DHL.entities.Contract.action_sets.ContractActionSet",
@@ -4948,9 +5024,9 @@
                         "goldenAttribute": true,
                         "i18ned": false,
                         "lovValidationScope": "NONE",
-                        "mandatory": false,
+                        "mandatory": true,
                         "mandatoryValidationLabel": "",
-                        "mandatoryValidationScope": "NONE",
+                        "mandatoryValidationScope": "PRE_CONSO",
                         "multiValued": false,
                         "physicalColName": "NAME",
                         "valueSeparator": "",
@@ -5637,149 +5713,237 @@
                                 "label": "Customer",
                                 "labelWidth": "150",
                                 "visibleValue": "1"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main",
+                                "_type": "FormContainer",
+                                "layoutDirection": "ROW",
+                                "posInParent": 0,
+                                "labelWidth": "100%",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
+                                "_type": "FormContainer",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 0,
+                                "labelWidth": "150",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main"
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2",
+                                "_type": "FormContainer",
+                                "layoutDirection": "COLUMN",
+                                "posInParent": 1,
+                                "labelWidth": "100",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main"
                             }
                         ],
                         "formDashboards": [],
                         "formFields": [
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.CustomerID",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.CustomerID",
                                 "_type": "FormField",
                                 "componentName": "semIdField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 0,
                                 "useCustomLabel": false,
                                 "value": "CustomerID",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "LONG_INTEGER",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.CustomerNumber",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.CustomerNumber",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 1,
                                 "useCustomLabel": false,
                                 "value": "CustomerNumber",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.InternalId",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.InternalId",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 2,
                                 "useCustomLabel": false,
                                 "value": "InternalId",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "LONG_INTEGER",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Name",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.Name",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 3,
                                 "useCustomLabel": false,
                                 "value": "Name",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Address",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.Address",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
                                 "value": "Address",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.HouseNumber",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.HouseNumber",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
                                 "useCustomLabel": false,
                                 "value": "HouseNumber",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.PostalCode",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.PostalCode",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 6,
                                 "useCustomLabel": false,
                                 "value": "PostalCode",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.City",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.City",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 7,
                                 "useCustomLabel": false,
                                 "value": "City",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Country",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.Country",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 8,
                                 "useCustomLabel": false,
                                 "value": "Country",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
                             },
                             {
-                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.MarketingAgreement",
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1.MarketingAgreement",
                                 "_type": "FormField",
                                 "componentName": "semTextField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 9,
                                 "useCustomLabel": false,
                                 "value": "MarketingAgreement",
-                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col1",
                                 "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps",
+                                "_type": "FormField",
+                                "componentName": "semObjectField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 0,
+                                "useCustomLabel": true,
+                                "value": "'<html>\n<head>\n<meta charset=\"utf-8\">\n<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDJevXXr8ngYdGNjPWoths7XVhcvX6E-P4&sensor=false\"></script>\n<script>\nvar address = \"'||SEM_CONCAT(' ', HouseNumber, ' ', Address, ' ', City, ' ', PostalCode) ||'\";\nvar zoom = 18;\nvar mapType = google.maps.MapTypeId.ROADMAP;\nvar useMarker = true;\nvar map;\nfunction initialize() {\n    var geocoder = new google.maps.Geocoder();\n    geocoder.geocode({\"address\": address}, function(results, status){\n        if(status==google.maps.GeocoderStatus.OK){ displayMap(results[0].geometry.location); }\n    });\n    window.onresize = resize;\n}\nfunction displayMap(latlng){\n    var mapOptions = {zoom: zoom, center: latlng, mapTypeId: mapType};\n    map = new google.maps.Map(document.getElementById(\"map_canvas\"), mapOptions);\n    if(useMarker){ var marker = new google.maps.Marker({map: map, position: latlng}); }\n    resize(\"\");\n}\nfunction resize(e){\n    var center = map.getCenter();\n    map.getDiv().style.height = window.innerHeight + \"px\";\n    map.getDiv().style.width = window.innerWidth + \"px\";\n    google.maps.event.trigger(map, \"resize\");\n    map.setCenter(center);\n}\ngoogle.maps.event.addDomListener(window, \"load\", initialize);\n</script>\n</head>\n<body style=\"margin:0px;\">\n<div id=\"map_canvas\" style=\"margin:0px;\"></div>\n</body>\n</html>'\n",
+                                "label": "Google Maps View",
+                                "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2",
+                                "valueDataType": "STRING",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": [
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.authoringMode",
+                                        "dataType": "STRING",
+                                        "value": "auto",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.textTypography",
+                                        "dataType": "STRING",
+                                        "value": "body-1",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.objectHeight",
+                                        "dataType": "STRING",
+                                        "value": "600",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.sourceType",
+                                        "dataType": "STRING",
+                                        "value": "content",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.labelPosition",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.labelTextAlign",
+                                        "dataType": "STRING",
+                                        "value": "left",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.labelTypography",
+                                        "dataType": "STRING",
+                                        "value": "caption",
+                                        "valueInterpreter": "LITERAL"
+                                    },
+                                    {
+                                        "qualifiedName": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2.GoogleMaps.isLabelVisible",
+                                        "dataType": "BOOLEAN",
+                                        "value": "0",
+                                        "valueInterpreter": "LITERAL"
+                                    }
+                                ]
                             }
                         ]
                     }

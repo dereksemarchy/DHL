@@ -2,7 +2,7 @@ _package: DHL.references
 _name: ContractBelongsToAccount
 _type: Reference
 label: Contract Belongs To Account
-deletePropagation: RESTRICT
+deletePropagation: NULLIFY
 fromEntity: DHL.entities.Contract.Contract
 fromRoleLabel: Contract
 fromRoleName: Contract

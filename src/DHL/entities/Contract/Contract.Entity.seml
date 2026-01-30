@@ -63,6 +63,8 @@ attributes:
     description: Name of the contract
     documentation: Descriptive name or title of the contract, typically includes customer name
     searchable: true
+    mandatory: true
+    mandatoryValidationScope: PRE_CONSO
   - _name: StartDate
     _type: EntityAttribute
     label: Start Date

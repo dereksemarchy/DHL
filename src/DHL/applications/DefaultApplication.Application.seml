@@ -85,6 +85,15 @@ rootFolder:
         lineageEnabled: true
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
+      - _name: DataQualityDashboards
+        image: images://idh/dq-dashboard.png
+        label: Data Quality Dashboard
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        _type: OpenDashboardAction
+        dashboard: DataQuality
+        dashboardApplication: DataQuality
+        parameters: []
     - _type : FolderAction
       _name: MasterData
       label: Master Data
@@ -107,12 +116,28 @@ rootFolder:
         imageMode: FIT
         label: Account
       - _type: BrowseBusinessViewAction
+        _name: AccountError
+        businessView: DHL.entities.Account.business_views.AccountBusinessView
+        nbRecordsBadgeVisible: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Account with Error
+        viewType: SDWE
+      - _type: BrowseBusinessViewAction
         _name: Contract
         businessView: DHL.entities.Contract.business_views.ContractBusinessView
         nbRecordsBadgeVisible: false
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Contract
+      - _type: BrowseBusinessViewAction
+        _name: ContractError
+        businessView: DHL.entities.Contract.business_views.ContractBusinessView
+        nbRecordsBadgeVisible: true
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Contract with Error
+        viewType: SAWE
       - _type: BrowseBusinessViewAction
         _name: Product
         businessView: DHL.entities.Product.business_views.ProductBusinessView
