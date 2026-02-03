@@ -92,7 +92,7 @@ formTabs:
                 '<html>
                 <head>
                 <meta charset="utf-8">
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJevXXr8ngYdGNjPWoths7XVhcvX6E-P4&sensor=false"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false"></script>
                 <script>
                 var address = "'||SEM_CONCAT(' ', HouseNumber, ' ', Address, ' ', City, ' ', PostalCode) ||'";
                 var zoom = 18;
