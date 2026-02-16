@@ -1,0 +1,22 @@
+_package: DHL.references
+_name: AccountToParentAccount
+_type: Reference
+label: Account To Parent Account
+deletePropagation: CASCADE
+fromEntity: DHL.entities.Account.Account
+fromRoleLabel: Child Account
+fromRoleName: ChildAccount
+fromRolePluralLabel: Child Accounts
+physicalName: CHILD_PARENT_ACCOUNT
+toEntity: DHL.entities.Account.Account
+toRoleLabel: Parent Account
+toRoleName: ParentAccount
+toRolePhysicalName: PARENT_ACCOUNT
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: ParentAccount
+  label: Parent Account
+  physicalName: PARENT_ACCOUNT
+  searchable: true
+  entity: DHL.entities.Account.Account

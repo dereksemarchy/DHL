@@ -264,4 +264,13 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  - _type: TextColumn
+    _name: ParentAccount
+    value: FDN_ParentAccount
+    useCustomLabel: true
+    label: Parent Account
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+
 

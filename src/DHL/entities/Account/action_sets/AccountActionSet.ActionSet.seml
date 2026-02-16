@@ -38,10 +38,10 @@ actions:
     label: Delete
     useCustomLabel: true
     multipleSelectionAllowed: true
-    deleteType: HARD_DELETE
+    deleteType: SOFT_DELETE
     waitDialogEnabled: false
     availableForGoldenData: true
-    availableForMasterData: false
+    availableForMasterData: true
   - _type: ExportAction
     _name: Export
     label: Export

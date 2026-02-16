@@ -13,3 +13,17 @@ sourceDataUnit: DAY
 sourceErrorsDuration: 0
 sourceErrorsType: FOREVER
 sourceErrorsUnit: DAY
+entityRetentions:
+  - entity: DHL.entities.Account.Account
+    deletionsType: DEFAULT
+    deletionsDuration: 0
+    deletionsUnit: DAY
+    historyType: FOREVER
+    historyDuration: 0
+    historyUnit: DAY
+    sourceDataType: PERIOD
+    sourceDataDuration: 1
+    sourceDataUnit: MONTH
+    sourceErrorsType: PERIOD
+    sourceErrorsDuration: 1
+    sourceErrorsUnit: HOUR

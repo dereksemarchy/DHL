@@ -18,7 +18,24 @@
             "sourceDataUnit": "DAY",
             "sourceErrorsDuration": 0,
             "sourceErrorsType": "FOREVER",
-            "sourceErrorsUnit": "DAY"
+            "sourceErrorsUnit": "DAY",
+            "entityRetentions": [
+                {
+                    "entity": "DHL.entities.Account.Account",
+                    "deletionsType": "DEFAULT",
+                    "deletionsDuration": 0,
+                    "deletionsUnit": "DAY",
+                    "historyType": "FOREVER",
+                    "historyDuration": 0,
+                    "historyUnit": "DAY",
+                    "sourceDataType": "PERIOD",
+                    "sourceDataDuration": 1,
+                    "sourceDataUnit": "MONTH",
+                    "sourceErrorsType": "PERIOD",
+                    "sourceErrorsDuration": 1,
+                    "sourceErrorsUnit": "HOUR"
+                }
+            ]
         },
         "applications": [
             {
@@ -59,12 +76,21 @@
                     "sortBoViewsAlphabetically": true,
                     "globalSearchBoViews": [
                         {
+                            "qualifiedName": "DHL.applications.DefaultApplication.Account",
+                            "viewType": "GD",
+                            "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
+                            "label": "Account",
+                            "maxResults": 100,
+                            "position": 0,
+                            "searchTypeConfig": "DHL.entities.Account.business_views.AccountBusinessView.Account.TextConfig"
+                        },
+                        {
                             "qualifiedName": "DHL.applications.DefaultApplication.Contract",
                             "viewType": "GD",
                             "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
                             "label": "Contract",
                             "maxResults": 100,
-                            "position": 0,
+                            "position": 1,
                             "searchTypeConfig": "DHL.entities.Contract.business_views.ContractBusinessView.Contract.TextConfig"
                         },
                         {
@@ -73,7 +99,7 @@
                             "businessObjectView": "DHL.entities.Customer.business_views.CustomerBusinessView",
                             "label": "Customer",
                             "maxResults": 100,
-                            "position": 1,
+                            "position": 2,
                             "searchTypeConfig": "DHL.entities.Customer.business_views.CustomerBusinessView.Customer.TextConfig"
                         },
                         {
@@ -82,7 +108,7 @@
                             "businessObjectView": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView",
                             "label": "Contract Product",
                             "maxResults": 100,
-                            "position": 2,
+                            "position": 3,
                             "searchTypeConfig": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView.ContractProduct.TextConfig"
                         }
                     ]
@@ -207,8 +233,21 @@
                         "label": "Account"
                     },
                     {
-                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountError",
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountSD",
                         "posInFolder": 2,
+                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
+                        "_type": "BrowseBusinessViewAction",
+                        "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
+                        "nbRecordsBadgeVisible": false,
+                        "useCustomLabel": true,
+                        "imageAlign": "MIDDLE_CENTER",
+                        "imageMode": "FIT",
+                        "label": "Account Source Data",
+                        "viewType": "SD"
+                    },
+                    {
+                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountError",
+                        "posInFolder": 3,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
@@ -221,7 +260,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Contract",
-                        "posInFolder": 3,
+                        "posInFolder": 4,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
@@ -233,7 +272,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractError",
-                        "posInFolder": 4,
+                        "posInFolder": 5,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
@@ -246,7 +285,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Product",
-                        "posInFolder": 5,
+                        "posInFolder": 6,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Product.business_views.ProductBusinessView",
@@ -258,7 +297,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractProduct",
-                        "posInFolder": 6,
+                        "posInFolder": 7,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.ContractProduct.business_views.ContractProductBusinessView",
@@ -270,7 +309,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.dim2Detail",
-                        "posInFolder": 7,
+                        "posInFolder": 8,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.dim2Detail.business_views.dim2DetailBusinessView",
@@ -282,7 +321,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.dim1Element",
-                        "posInFolder": 8,
+                        "posInFolder": 9,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.dim1Element.business_views.dim1ElementBusinessView",
@@ -294,7 +333,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.prices",
-                        "posInFolder": 9,
+                        "posInFolder": 10,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.prices.business_views.pricesBusinessView",
@@ -455,6 +494,21 @@
                         "toEntityShape": "DHL.model_diagrams.Contract.Account",
                         "reference": "DHL.references.ContractBelongsToAccount",
                         "bendPoints": []
+                    },
+                    {
+                        "fromEntityShape": "DHL.model_diagrams.Contract.Account",
+                        "toEntityShape": "DHL.model_diagrams.Contract.Account",
+                        "reference": "DHL.references.AccountToParentAccount",
+                        "bendPoints": [
+                            {
+                                "x": 200,
+                                "y": 300
+                            },
+                            {
+                                "x": 200,
+                                "y": 350
+                            }
+                        ]
                     }
                 ],
                 "label": "Contract"
@@ -571,6 +625,33 @@
             }
         ],
         "referenceRels": [
+            {
+                "qualifiedName": "DHL.references.AccountToParentAccount",
+                "brokenValidationLabel": "",
+                "deletePropagation": "CASCADE",
+                "fromEntity": "DHL.entities.Account.Account",
+                "fromRoleName": "ChildAccount",
+                "mandatoryValidationLabel": "",
+                "oneToMany": false,
+                "physicalName": "CHILD_PARENT_ACCOUNT",
+                "splitDuplicatePropagation": "NONE",
+                "toEntity": "DHL.entities.Account.Account",
+                "toRoleName": "ParentAccount",
+                "toRolePhysicalName": "PARENT_ACCOUNT",
+                "validationScope": "PRE_CONSO",
+                "fromRoleLabel": "Child Account",
+                "fromRolePluralLabel": "Child Accounts",
+                "label": "Account To Parent Account",
+                "toRoleLabel": "Parent Account",
+                "foreignAttribute": {
+                    "qualifiedName": "DHL.references.AccountToParentAccount.ParentAccount",
+                    "_type": "ForeignAttribute",
+                    "physicalName": "PARENT_ACCOUNT",
+                    "entity": "DHL.entities.Account.Account",
+                    "label": "Parent Account",
+                    "searchable": true
+                }
+            },
             {
                 "qualifiedName": "DHL.references.ContractBelongsToAccount",
                 "brokenValidationLabel": "",
@@ -1426,10 +1507,10 @@
                                 "label": "Delete",
                                 "useCustomLabel": true,
                                 "waitDialogEnabled": false,
-                                "deleteType": "HARD_DELETE",
+                                "deleteType": "SOFT_DELETE",
                                 "multipleSelectionAllowed": true,
                                 "availableForGoldenData": true,
-                                "availableForMasterData": false
+                                "availableForMasterData": true
                             },
                             {
                                 "qualifiedName": "DHL.entities.Account.action_sets.AccountActionSet.Export",
@@ -1570,6 +1651,18 @@
                                 "displayCard": "DHL.entities.Account.display_cards.AccountDisplayCard",
                                 "transitions": [
                                     {
+                                        "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.ChildAccounts",
+                                        "enableHierarchyInterpreter": "SEMQL",
+                                        "expandHierarchyByDefault": false,
+                                        "filter": "1 = 1",
+                                        "targetBoViewEntity": "DHL.entities.Account.business_views.AccountBusinessView.Account.ChildAccounts.ChildAccount",
+                                        "transitionPath": "ChildAccount",
+                                        "useCustomLabel": false,
+                                        "enableHierarchy": "LOOKUP COUNT(sapAccountId) FROM ChildAccount END > 0",
+                                        "transitionType": "FULLY_QUALIFIED",
+                                        "visibleInFormTabCondition": "LOOKUP COUNT(sapAccountId) FROM ChildAccount END > 0"
+                                    },
+                                    {
                                         "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract",
                                         "enableHierarchyInterpreter": "LITERAL",
                                         "expandHierarchyByDefault": false,
@@ -1592,6 +1685,22 @@
                                         "transitionType": "FULLY_QUALIFIED"
                                     }
                                 ]
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.ChildAccounts.ChildAccount",
+                                "collection": "DHL.entities.Account.collection_views.AccountCollectionView",
+                                "displayRecordCount": "ALWAYS",
+                                "enableUserDefinedSort": true,
+                                "entity": "DHL.entities.Account.Account",
+                                "form": "DHL.entities.Account.forms.AccountForm",
+                                "gridAllowed": true,
+                                "listAllowed": true,
+                                "outlineVisible": false,
+                                "overrideDefaultSort": false,
+                                "sortExpression": "",
+                                "tableAllowed": true,
+                                "actionSet": "DHL.entities.Account.action_sets.AccountActionSet",
+                                "displayCard": "DHL.entities.Account.display_cards.AccountDisplayCard"
                             },
                             {
                                 "qualifiedName": "DHL.entities.Account.business_views.AccountBusinessView.Account.Contract.Contract",
@@ -2183,6 +2292,20 @@
                                 "label": "SourceIDs",
                                 "valueDataType": "STRING",
                                 "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.collection_views.AccountCollectionView.ParentAccount",
+                                "_type": "TableColumn",
+                                "columnAlign": "LEFT",
+                                "componentName": "semTextField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 35,
+                                "useCustomLabel": true,
+                                "value": "FDN_ParentAccount",
+                                "visibleByDefault": true,
+                                "label": "Parent Account",
+                                "valueDataType": "STRING",
+                                "componentProperties": []
                             }
                         ]
                     }
@@ -2699,6 +2822,22 @@
                                 "value": "firstTimeBuyerDate",
                                 "parentFormContainer": "DHL.entities.Account.forms.AccountForm.Account",
                                 "valueDataType": "DATE",
+                                "visibleValue": "1",
+                                "visibleValueInterpreter": "LITERAL",
+                                "componentProperties": []
+                            },
+                            {
+                                "qualifiedName": "DHL.entities.Account.forms.AccountForm.Account.ParentAccount",
+                                "_type": "FormField",
+                                "componentName": "semReferenceField",
+                                "documentationInterpreter": "LITERAL",
+                                "posInParent": 33,
+                                "useCustomLabel": true,
+                                "value": "FDN_ParentAccount",
+                                "label": "Parent Account",
+                                "parentFormContainer": "DHL.entities.Account.forms.AccountForm.Account",
+                                "referencedEntity": "DHL.entities.Account.Account",
+                                "valueDataType": "STRING",
                                 "visibleValue": "1",
                                 "visibleValueInterpreter": "LITERAL",
                                 "componentProperties": []
@@ -5888,7 +6027,7 @@
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 0,
                                 "useCustomLabel": true,
-                                "value": "'<html>\n<head>\n<meta charset=\"utf-8\">\n<script src=\"https://maps.googleapis.com/maps/api/js?key=AIzaSyDJevXXr8ngYdGNjPWoths7XVhcvX6E-P4&sensor=false\"></script>\n<script>\nvar address = \"'||SEM_CONCAT(' ', HouseNumber, ' ', Address, ' ', City, ' ', PostalCode) ||'\";\nvar zoom = 18;\nvar mapType = google.maps.MapTypeId.ROADMAP;\nvar useMarker = true;\nvar map;\nfunction initialize() {\n    var geocoder = new google.maps.Geocoder();\n    geocoder.geocode({\"address\": address}, function(results, status){\n        if(status==google.maps.GeocoderStatus.OK){ displayMap(results[0].geometry.location); }\n    });\n    window.onresize = resize;\n}\nfunction displayMap(latlng){\n    var mapOptions = {zoom: zoom, center: latlng, mapTypeId: mapType};\n    map = new google.maps.Map(document.getElementById(\"map_canvas\"), mapOptions);\n    if(useMarker){ var marker = new google.maps.Marker({map: map, position: latlng}); }\n    resize(\"\");\n}\nfunction resize(e){\n    var center = map.getCenter();\n    map.getDiv().style.height = window.innerHeight + \"px\";\n    map.getDiv().style.width = window.innerWidth + \"px\";\n    google.maps.event.trigger(map, \"resize\");\n    map.setCenter(center);\n}\ngoogle.maps.event.addDomListener(window, \"load\", initialize);\n</script>\n</head>\n<body style=\"margin:0px;\">\n<div id=\"map_canvas\" style=\"margin:0px;\"></div>\n</body>\n</html>'\n",
+                                "value": "'<html>\n<head>\n<meta charset=\"utf-8\">\n<script src=\"https://maps.googleapis.com/maps/api/js?key=&sensor=false\"></script>\n<script>\nvar address = \"'||SEM_CONCAT(' ', HouseNumber, ' ', Address, ' ', City, ' ', PostalCode) ||'\";\nvar zoom = 18;\nvar mapType = google.maps.MapTypeId.ROADMAP;\nvar useMarker = true;\nvar map;\nfunction initialize() {\n    var geocoder = new google.maps.Geocoder();\n    geocoder.geocode({\"address\": address}, function(results, status){\n        if(status==google.maps.GeocoderStatus.OK){ displayMap(results[0].geometry.location); }\n    });\n    window.onresize = resize;\n}\nfunction displayMap(latlng){\n    var mapOptions = {zoom: zoom, center: latlng, mapTypeId: mapType};\n    map = new google.maps.Map(document.getElementById(\"map_canvas\"), mapOptions);\n    if(useMarker){ var marker = new google.maps.Marker({map: map, position: latlng}); }\n    resize(\"\");\n}\nfunction resize(e){\n    var center = map.getCenter();\n    map.getDiv().style.height = window.innerHeight + \"px\";\n    map.getDiv().style.width = window.innerWidth + \"px\";\n    google.maps.event.trigger(map, \"resize\");\n    map.setCenter(center);\n}\ngoogle.maps.event.addDomListener(window, \"load\", initialize);\n</script>\n</head>\n<body style=\"margin:0px;\">\n<div id=\"map_canvas\" style=\"margin:0px;\"></div>\n</body>\n</html>'\n",
                                 "label": "Google Maps View",
                                 "parentFormContainer": "DHL.entities.Customer.forms.CustomerForm.Customer.Main.col2",
                                 "valueDataType": "STRING",

@@ -25,6 +25,13 @@ globalSearchConfig:
   sortBusinessViewsAlphabetically: true
   globalSearchBusinessViews:
   - _type: GlobalSearchBoView
+    _name: Account
+    label: Account
+    businessView: DHL.entities.Account.business_views.AccountBusinessView
+    maxResults: 100
+    viewType: "GD"
+    searchTypeConfig: DHL.entities.Account.business_views.AccountBusinessView.Account.TextConfig
+  - _type: GlobalSearchBoView
     _name: Contract
     label: Contract
     businessView: DHL.entities.Contract.business_views.ContractBusinessView
@@ -115,6 +122,14 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Account
+      - _type: BrowseBusinessViewAction
+        _name: AccountSD
+        businessView: DHL.entities.Account.business_views.AccountBusinessView
+        nbRecordsBadgeVisible: false
+        imageAlign: MIDDLE_CENTER
+        imageMode: FIT
+        label: Account Source Data
+        viewType: SD
       - _type: BrowseBusinessViewAction
         _name: AccountError
         businessView: DHL.entities.Account.business_views.AccountBusinessView

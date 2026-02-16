@@ -178,3 +178,10 @@ formTabs:
         value: firstTimeBuyerDate
         useCustomLabel: false
         dataType: DATE
+      - _type: ReferenceField
+        _name: ParentAccount
+        value: FDN_ParentAccount
+        useCustomLabel: true
+        label: Parent Account
+        dataType: STRING
+        referencedEntity: DHL.entities.Account.Account

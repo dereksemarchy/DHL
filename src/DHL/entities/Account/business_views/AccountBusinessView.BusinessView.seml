@@ -6,6 +6,7 @@ rootLabel: Accounts
 rootPluralLabel: Accounts
 label: Account
 displayRootNodeAs: ICON_LABEL
+#rootFilter: FDN_ParentAccount IS NULL
 rootBusinessViewEntity:
   _type: BusinessViewEntity
   _name: Account
@@ -35,6 +36,29 @@ rootBusinessViewEntity:
   gridAllowed: true
   displayCard: DHL.entities.Account.display_cards.AccountDisplayCard
   transitions:
+    - useCustomLabel: false
+      _type: BusinessViewTransition
+      _name: ChildAccounts
+      transitionType: FULLY_QUALIFIED
+      transitionPath: ChildAccount
+      enableHierarchy: LOOKUP COUNT(sapAccountId) FROM ChildAccount END > 0
+      enableHierarchyInterpreter: SEMQL
+      visibleInFormTabCondition: LOOKUP COUNT(sapAccountId) FROM ChildAccount END > 0
+      businessViewEntity: 
+        _type: BusinessViewEntity
+        _name: ChildAccount
+        entity: DHL.entities.Account.Account
+        actionSet: DHL.entities.Account.action_sets.AccountActionSet
+        collection: DHL.entities.Account.collection_views.AccountCollectionView
+        form: DHL.entities.Account.forms.AccountForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        enableUserDefinedSort: true
+        overrideDefaultSort: false
+        displayCard: DHL.entities.Account.display_cards.AccountDisplayCard
     - useCustomLabel: false
       _type: BusinessViewTransition
       _name: Contract
