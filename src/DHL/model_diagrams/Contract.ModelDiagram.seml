@@ -120,3 +120,11 @@ referenceLinks:
         y: 300
       - x: 200
         y: 350
+  - fromEntityShape: DHL.model_diagrams.Contract.Customer
+    toEntityShape: DHL.model_diagrams.Contract.Customer
+    reference: DHL.references.CustomerToParentCustomer
+    bendPoints:
+      - x: 200
+        y: 300
+      - x: 200
+        y: 350

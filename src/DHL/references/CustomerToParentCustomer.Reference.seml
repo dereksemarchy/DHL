@@ -1,0 +1,22 @@
+_package: DHL.references
+_name: CustomerToParentCustomer
+_type: Reference
+label: Customer To Parent Customer
+deletePropagation: CASCADE
+fromEntity: DHL.entities.Customer.Customer
+fromRoleLabel: Child Customer
+fromRoleName: ChildCustomer
+fromRolePluralLabel: Child Customers
+physicalName: CHILD_PARENT_CUSTOMER
+toEntity: DHL.entities.Customer.Customer
+toRoleLabel: Parent Customer
+toRoleName: ParentCustomer
+toRolePhysicalName: PARENT_CUSTOMER
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: ParentCustomer
+  label: Parent Customer
+  physicalName: PARENT_CUSTOMER
+  searchable: true
+  entity: DHL.entities.Customer.Customer

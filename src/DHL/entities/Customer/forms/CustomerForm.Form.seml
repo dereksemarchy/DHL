@@ -33,44 +33,139 @@ formTabs:
             value: CustomerNumber
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: InternalId
             value: InternalId
             useCustomLabel: false
             dataType: LONG_INTEGER
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: Name
             value: Name
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: Address
             value: Address
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: HouseNumber
             value: HouseNumber
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: PostalCode
             value: PostalCode
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: City
             value: City
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: Country
             value: Country
             useCustomLabel: false
             dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
           - _type: TextField
             _name: MarketingAgreement
             value: MarketingAgreement
+            useCustomLabel: false
+            dataType: STRING
+            visibleValue: "0"
+            visibleValueInterpreter: LITERAL
+          - _type: TextField
+            _name: mdmCustomerId
+            value: mdmCustomerId
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: taxId
+            value: taxId
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: officialName
+            value: officialName
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: customerLevel
+            value: customerLevel
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: countryOfRegistration
+            value: countryOfRegistration
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: parentMdmCustomerId
+            value: parentMdmCustomerId
+            useCustomLabel: false
+            dataType: STRING
+          - _type: ReferenceField
+            _name: ParentCustomer
+            value: FDN_ParentCustomer
+            useCustomLabel: true
+            label: Parent Customer
+            dataType: STRING
+            referencedEntity: DHL.entities.Customer.Customer
+          - _type: TextField
+            _name: tradingName
+            value: tradingName
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: globalGroupCode
+            value: globalGroupCode
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: industrySector
+            value: industrySector
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: websiteDomain
+            value: websiteDomain
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: eori
+            value: eori
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: duns
+            value: duns
+            useCustomLabel: false
+            dataType: STRING
+          - _type: TextField
+            _name: isDeleted
+            value: isDeleted
+            useCustomLabel: false
+            dataType: BOOLEAN
+          - _type: TextField
+            _name: lastChangeDateTime
+            value: lastChangeDateTime
             useCustomLabel: false
             dataType: STRING
       - _type: FormContainer

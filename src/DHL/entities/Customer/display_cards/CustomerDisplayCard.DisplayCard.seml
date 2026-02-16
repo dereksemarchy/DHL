@@ -3,7 +3,7 @@ _type: DisplayCard
 _name: CustomerDisplayCard
 entity: DHL.entities.Customer.Customer
 default: true
-primaryTextExpression: Name
+primaryTextExpression: officialName
 primaryImageValueInterpreter: LITERAL
 avatarImageSourceType: URL
 primaryImageAlign: MIDDLE_CENTER

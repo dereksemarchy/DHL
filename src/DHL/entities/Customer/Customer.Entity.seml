@@ -47,8 +47,7 @@ attributes:
     description: Customer name
     documentation: Full legal or business name of the customer
     searchable: true
-    mandatory: true
-    mandatoryValidationScope: PRE_CONSO
+    mandatory: false
   - _name: Address
     _type: EntityAttribute
     label: Address
@@ -103,6 +102,131 @@ attributes:
     description: Marketing agreement status
     documentation: Marketing agreement or consent status for the customer
     searchable: true
+  - _name: mdmCustomerId
+    _type: EntityAttribute
+    label: MDM Customer ID
+    physicalName: MDM_CUSTOMER_ID
+    dataType: String
+    length: 50
+    description: Master Data Management Customer ID
+    documentation: Unique customer identifier from MDM system
+    searchable: true
+  - _name: taxId
+    _type: EntityAttribute
+    label: Tax ID
+    physicalName: TAX_ID
+    dataType: String
+    length: 50
+    description: Tax identification number
+    documentation: Customer's tax identification number
+    searchable: true
+  - _name: officialName
+    _type: EntityAttribute
+    label: Official Name
+    physicalName: OFFICIAL_NAME
+    dataType: String
+    length: 500
+    description: Official registered name
+    documentation: Official legal name of the customer
+    searchable: true
+  - _name: customerLevel
+    _type: EntityAttribute
+    label: Customer Level
+    physicalName: CUSTOMER_LEVEL
+    dataType: String
+    length: 50
+    description: Customer level (e.g., legal entity)
+    documentation: Level of the customer in the organization hierarchy
+    searchable: true
+  - _name: countryOfRegistration
+    _type: EntityAttribute
+    label: Country of Registration
+    physicalName: COUNTRY_OF_REGISTRATION
+    dataType: String
+    length: 10
+    description: Country where the customer is registered
+    documentation: ISO country code of registration
+    searchable: true
+  - _name: parentMdmCustomerId
+    _type: EntityAttribute
+    label: Parent MDM Customer ID
+    physicalName: PARENT_MDM_CUSTOMER_ID
+    dataType: String
+    length: 50
+    description: Parent MDM customer ID
+    documentation: Parent customer identifier in MDM system
+    searchable: true
+  - _name: tradingName
+    _type: EntityAttribute
+    label: Trading Name
+    physicalName: TRADING_NAME
+    dataType: String
+    length: 500
+    description: Trading name or DBA
+    documentation: Customer's trading name or DBA (if any)
+    searchable: true
+  - _name: globalGroupCode
+    _type: EntityAttribute
+    label: Global Group Code
+    physicalName: GLOBAL_GROUP_CODE
+    dataType: String
+    length: 50
+    description: Global group code
+    documentation: Code for the global group the customer belongs to
+    searchable: true
+  - _name: industrySector
+    _type: EntityAttribute
+    label: Industry Sector
+    physicalName: INDUSTRY_SECTOR
+    dataType: String
+    length: 100
+    description: Industry sector
+    documentation: Industry sector of the customer
+    searchable: true
+  - _name: websiteDomain
+    _type: EntityAttribute
+    label: Website Domain
+    physicalName: WEBSITE_DOMAIN
+    dataType: String
+    length: 200
+    description: Website domain
+    documentation: Customer's website domain
+    searchable: true
+  - _name: eori
+    _type: EntityAttribute
+    label: EORI
+    physicalName: EORI
+    dataType: String
+    length: 50
+    description: Economic Operators Registration and Identification number
+    documentation: EORI number for customs
+    searchable: true
+  - _name: duns
+    _type: EntityAttribute
+    label: DUNS
+    physicalName: DUNS
+    dataType: String
+    length: 50
+    description: D-U-N-S number
+    documentation: Dun & Bradstreet D-U-N-S number
+    searchable: true
+  - _name: isDeleted
+    _type: EntityAttribute
+    label: Is Deleted
+    physicalName: IS_DELETED
+    dataType: Boolean
+    description: Deletion status
+    documentation: Indicates if the customer is deleted
+    searchable: false
+  - _name: lastChangeDateTime
+    _type: EntityAttribute
+    label: Last Change DateTime
+    physicalName: LAST_CHANGE_DATETIME
+    dataType: String
+    length: 50
+    description: Last change timestamp
+    documentation: Date and time of the last change to the customer record
+    searchable: false
 sourceIdGeneration:
   mode: MANUAL
 primaryKey: DHL.entities.Customer.Customer.CustomerID
@@ -115,9 +239,9 @@ matcher:
   description: CustomerSemQLMatcher
   matchRules:
     - _type: SemQLMatchRule
-      _name: ExactNameMatch
-      label: Exact Name Match
-      condition: Record1.Name = Record2.Name
+      _name: ExactOfficialNameMatch
+      label: Exact Official Name Match
+      condition: Record1.officialName = Record2.officialName
       matchScore: 100
       usingMatchOn: false
   useTransitiveMatchScore: true

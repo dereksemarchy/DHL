@@ -36,6 +36,29 @@ rootBusinessViewEntity:
   transitions:
     - useCustomLabel: false
       _type: BusinessViewTransition
+      _name: ChildAccounts
+      transitionType: FULLY_QUALIFIED
+      transitionPath: ChildCustomer
+      enableHierarchy: LOOKUP COUNT(mdmCustomerId) FROM ChildCustomer END > 0
+      enableHierarchyInterpreter: SEMQL
+      visibleInFormTabCondition: LOOKUP COUNT(mdmCustomerId) FROM ChildCustomer END > 0
+      businessViewEntity: 
+        _type: BusinessViewEntity
+        _name: ChildCustomer
+        entity: DHL.entities.Customer.Customer
+        actionSet: DHL.entities.Customer.action_sets.CustomerActionSet
+        collection: DHL.entities.Customer.collection_views.CustomerCollectionView
+        form: DHL.entities.Customer.forms.CustomerForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        enableUserDefinedSort: true
+        overrideDefaultSort: false
+        displayCard: DHL.entities.Customer.display_cards.CustomerDisplayCard
+    - useCustomLabel: false
+      _type: BusinessViewTransition
       _name: Contract
       transitionType: FULLY_QUALIFIED
       transitionPath: Contract
@@ -116,5 +139,26 @@ rootBusinessViewEntity:
                     gridAllowed: true
                     enableUserDefinedSort: true
                     overrideDefaultSort: false
+    - useCustomLabel: false
+      _type: BusinessViewTransition
+      _name: MasterRecords
+      transitionType: FULLY_QUALIFIED
+      transitionPath: MasterRecords
+      enableHierarchy: "1"
+      businessViewEntity: 
+        _type: BusinessViewEntity
+        _name: CustomerMasterRecords
+        entity: DHL.entities.Customer.Customer
+        actionSet: DHL.entities.Customer.action_sets.CustomerActionSet
+        collection: DHL.entities.Customer.collection_views.CustomerCollectionView
+        form: DHL.entities.Customer.forms.CustomerForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        enableUserDefinedSort: true
+        overrideDefaultSort: false
+        displayCard: DHL.entities.Customer.display_cards.CustomerDisplayCard
 enableHierarchyView: true
 useHierarchyOnOpen: false

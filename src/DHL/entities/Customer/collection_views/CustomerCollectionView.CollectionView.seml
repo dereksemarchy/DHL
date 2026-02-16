@@ -31,60 +31,166 @@ tableColumns:
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: InternalId
     value: InternalId
     useCustomLabel: false
     dataType: LONG_INTEGER
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: Name
     value: Name
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: Address
     value: Address
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: HouseNumber
     value: HouseNumber
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: PostalCode
     value: PostalCode
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: City
     value: City
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: Country
     value: Country
     useCustomLabel: false
     dataType: STRING
     columnAlign: LEFT
-    visibleByDefault: true
+    visibleByDefault: false
   - _type: TextColumn
     _name: MarketingAgreement
     value: MarketingAgreement
     useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: false
+  - _type: TextColumn
+    _name: mdmCustomerId
+    value: mdmCustomerId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: taxId
+    value: taxId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: officialName
+    value: officialName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: customerLevel
+    value: customerLevel
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: countryOfRegistration
+    value: countryOfRegistration
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: parentMdmCustomerId
+    value: parentMdmCustomerId
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: tradingName
+    value: tradingName
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: globalGroupCode
+    value: globalGroupCode
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: industrySector
+    value: industrySector
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: websiteDomain
+    value: websiteDomain
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: eori
+    value: eori
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: duns
+    value: duns
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: isDeleted
+    value: isDeleted
+    useCustomLabel: false
+    dataType: BOOLEAN
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: lastChangeDateTime
+    value: lastChangeDateTime
+    useCustomLabel: false
+    dataType: STRING
+    columnAlign: LEFT
+    visibleByDefault: true
+  - _type: TextColumn
+    _name: ParentCustomer
+    value: FDN_ParentCustomer
+    useCustomLabel: true
+    label: Parent Customer
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
@@ -103,3 +209,4 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
+  
