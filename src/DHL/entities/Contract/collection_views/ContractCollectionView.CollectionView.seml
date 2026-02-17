@@ -145,13 +145,6 @@ tableColumns:
     columnAlign: LEFT
     visibleByDefault: true
   - _type: TextColumn
-    _name: Customer
-    value: FDN_Customer
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
     _name: Account
     value: FDN_Account
     useCustomLabel: false

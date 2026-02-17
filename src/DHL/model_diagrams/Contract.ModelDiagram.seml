@@ -84,10 +84,6 @@ entityShapes:
       y: 500
     width: 100
 referenceLinks:
-  - fromEntityShape: DHL.model_diagrams.Contract.Contract
-    toEntityShape: DHL.model_diagrams.Contract.Customer
-    reference: DHL.references.ContractBelongsToCustomer
-    bendPoints: []
   - fromEntityShape: DHL.model_diagrams.Contract.ContractProduct
     toEntityShape: DHL.model_diagrams.Contract.Product
     reference: DHL.references.ContractProductToProduct
@@ -128,3 +124,7 @@ referenceLinks:
         y: 300
       - x: 200
         y: 350
+  - fromEntityShape: DHL.model_diagrams.Contract.Account
+    toEntityShape: DHL.model_diagrams.Contract.Customer
+    reference: DHL.references.AccountBelongsToCustomer
+    bendPoints: []

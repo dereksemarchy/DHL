@@ -19,11 +19,6 @@ formTabs:
         useCustomLabel: false
         dataType: LONG_INTEGER
       - _type: TextField
-        _name: FDN_Customer
-        value: FDN_Customer
-        useCustomLabel: false
-        dataType: STRING
-      - _type: TextField
         _name: FDN_Account
         value: FDN_Account
         useCustomLabel: false

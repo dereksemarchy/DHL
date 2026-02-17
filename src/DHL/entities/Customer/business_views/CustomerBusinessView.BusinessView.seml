@@ -36,7 +36,7 @@ rootBusinessViewEntity:
   transitions:
     - useCustomLabel: false
       _type: BusinessViewTransition
-      _name: ChildAccounts
+      _name: ChildCustomers
       transitionType: FULLY_QUALIFIED
       transitionPath: ChildCustomer
       enableHierarchy: LOOKUP COUNT(mdmCustomerId) FROM ChildCustomer END > 0
@@ -57,88 +57,6 @@ rootBusinessViewEntity:
         enableUserDefinedSort: true
         overrideDefaultSort: false
         displayCard: DHL.entities.Customer.display_cards.CustomerDisplayCard
-    - useCustomLabel: false
-      _type: BusinessViewTransition
-      _name: Contract
-      transitionType: FULLY_QUALIFIED
-      transitionPath: Contract
-      enableHierarchy: "1"
-      businessViewEntity: 
-        _type: BusinessViewEntity
-        _name: Contract
-        entity: DHL.entities.Contract.Contract
-        actionSet: DHL.entities.Contract.action_sets.ContractActionSet
-        collection: DHL.entities.Contract.collection_views.ContractCollectionView
-        form: DHL.entities.Contract.forms.ContractForm
-        outlineVisible: false
-        displayRecordCount: ALWAYS
-        listAllowed: true
-        tableAllowed: true
-        gridAllowed: true
-        enableUserDefinedSort: true
-        overrideDefaultSort: false
-        transitions:
-          - useCustomLabel: false
-            _type: BusinessViewTransition
-            _name: ContractProduct
-            transitionType: FULLY_QUALIFIED
-            transitionPath: ContractProduct
-            enableHierarchy: "1"
-            businessViewEntity: 
-              _type: BusinessViewEntity
-              _name: ContractProduct
-              entity: DHL.entities.ContractProduct.ContractProduct
-              actionSet: DHL.entities.ContractProduct.action_sets.ContractProductActionSet
-              collection: DHL.entities.ContractProduct.collection_views.ContractProductCollectionView
-              form: DHL.entities.ContractProduct.forms.ContractProductForm
-              outlineVisible: false
-              displayRecordCount: ALWAYS
-              listAllowed: true
-              tableAllowed: true
-              gridAllowed: true
-              enableUserDefinedSort: true
-              overrideDefaultSort: false
-              transitions:
-                - useCustomLabel: false
-                  _type: BusinessViewTransition
-                  _name: dim2Detail
-                  transitionType: FULLY_QUALIFIED
-                  transitionPath: dim2Detail
-                  enableHierarchy: "1"
-                  businessViewEntity: 
-                    _type: BusinessViewEntity
-                    _name: dim2Detail
-                    entity: DHL.entities.dim2Detail.dim2Detail
-                    actionSet: DHL.entities.dim2Detail.action_sets.dim2DetailActionSet
-                    collection: DHL.entities.dim2Detail.collection_views.dim2DetailCollectionView
-                    form: DHL.entities.dim2Detail.forms.dim2DetailForm
-                    outlineVisible: false
-                    displayRecordCount: ALWAYS
-                    listAllowed: true
-                    tableAllowed: true
-                    gridAllowed: true
-                    enableUserDefinedSort: true
-                    overrideDefaultSort: false
-                - useCustomLabel: false
-                  _type: BusinessViewTransition
-                  _name: prices
-                  transitionType: FULLY_QUALIFIED
-                  transitionPath: price
-                  enableHierarchy: "1"
-                  businessViewEntity: 
-                    _type: BusinessViewEntity
-                    _name: prices
-                    entity: DHL.entities.prices.prices
-                    actionSet: DHL.entities.prices.action_sets.pricesActionSet
-                    collection: DHL.entities.prices.collection_views.pricesCollectionView
-                    form: DHL.entities.prices.forms.pricesForm
-                    outlineVisible: false
-                    displayRecordCount: ALWAYS
-                    listAllowed: true
-                    tableAllowed: true
-                    gridAllowed: true
-                    enableUserDefinedSort: true
-                    overrideDefaultSort: false
     - useCustomLabel: false
       _type: BusinessViewTransition
       _name: MasterRecords

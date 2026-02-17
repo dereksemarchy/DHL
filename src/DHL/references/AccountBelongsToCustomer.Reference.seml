@@ -1,0 +1,22 @@
+_package: DHL.references
+_name: AccountBelongsToCustomer
+_type: Reference
+label: Account Belongs To Customer
+deletePropagation: CASCADE
+fromEntity: DHL.entities.Account.Account
+fromRoleLabel: Account
+fromRoleName: Account
+fromRolePluralLabel: Account
+physicalName: ACCOUNT
+toEntity: DHL.entities.Customer.Customer
+toRoleLabel: Customer
+toRoleName: Customer
+toRolePhysicalName: CUSTOMER
+validationScope: PRE_CONSO
+foreignAttribute:
+  _type: ForeignAttribute
+  _name: Customer
+  label: Customer
+  physicalName: CUSTOMER
+  searchable: true
+  entity: DHL.entities.Customer.Customer
