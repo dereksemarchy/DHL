@@ -21,8 +21,8 @@ actions:
     stepper: DHL.entities.Account.steppers.AuthorAccounts
     multipleSelectionAllowed: true
     availableForGoldenData: true
-    availableForMasterData: false
-    availableForErrorData: false
+    availableForMasterData: true
+    availableForErrorData: true
     waitDialogEnabled: false
   - _type: MassUpdateAction
     _name: MassUpdateAuthorAccounts

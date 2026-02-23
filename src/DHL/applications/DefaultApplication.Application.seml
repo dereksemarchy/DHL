@@ -122,14 +122,14 @@ rootFolder:
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Account
-      - _type: BrowseBusinessViewAction
-        _name: AccountSD
-        businessView: DHL.entities.Account.business_views.AccountBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: Account Source Data
-        viewType: SD
+#      - _type: BrowseBusinessViewAction
+#        _name: AccountSD
+#        businessView: DHL.entities.Account.business_views.AccountBusinessView
+#        nbRecordsBadgeVisible: false
+#       imageAlign: MIDDLE_CENTER
+#        imageMode: FIT
+#        label: Account Source Data
+#        viewType: SD
       - _type: BrowseBusinessViewAction
         _name: AccountError
         businessView: DHL.entities.Account.business_views.AccountBusinessView

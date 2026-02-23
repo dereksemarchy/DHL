@@ -233,21 +233,8 @@
                         "label": "Account"
                     },
                     {
-                        "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountSD",
-                        "posInFolder": 2,
-                        "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
-                        "_type": "BrowseBusinessViewAction",
-                        "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
-                        "nbRecordsBadgeVisible": false,
-                        "useCustomLabel": true,
-                        "imageAlign": "MIDDLE_CENTER",
-                        "imageMode": "FIT",
-                        "label": "Account Source Data",
-                        "viewType": "SD"
-                    },
-                    {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.AccountError",
-                        "posInFolder": 3,
+                        "posInFolder": 2,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Account.business_views.AccountBusinessView",
@@ -261,7 +248,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.Contract",
-                        "posInFolder": 4,
+                        "posInFolder": 3,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
@@ -273,7 +260,7 @@
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.MasterData.ContractError",
-                        "posInFolder": 5,
+                        "posInFolder": 4,
                         "parentFolder": "DHL.applications.DefaultApplication.Root.MasterData",
                         "_type": "BrowseBusinessViewAction",
                         "businessObjectView": "DHL.entities.Contract.business_views.ContractBusinessView",
@@ -1468,9 +1455,9 @@
                                 "useCustomLabel": true,
                                 "waitDialogEnabled": false,
                                 "multipleSelectionAllowed": true,
-                                "availableForErrorData": false,
+                                "availableForErrorData": true,
                                 "availableForGoldenData": true,
-                                "availableForMasterData": false,
+                                "availableForMasterData": true,
                                 "stepper": "DHL.entities.Account.steppers.AuthorAccounts"
                             },
                             {
