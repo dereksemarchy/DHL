@@ -165,6 +165,15 @@ attributes:
     description: Rerating quote flag
     documentation: Indicates if the contract requires rerating quote or price recalculation
     searchable: true
+  - _name: contractDetail
+    _type: EntityAttribute
+    label: Contract Detail
+    physicalName: CONTRACT_DETAIL
+    dataType: LongText
+    length: 6000
+    description: Contract detail information
+    documentation: Detailed information about the contract, including terms, conditions, and other relevant data
+    searchable: true
 sourceIdGeneration:
   mode: SEQUENCE
   startWith: 1

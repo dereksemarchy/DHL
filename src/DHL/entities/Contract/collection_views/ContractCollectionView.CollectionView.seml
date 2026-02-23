@@ -25,27 +25,27 @@ tableColumns:
     dataType: LONG_INTEGER
     columnAlign: LEFT
     visibleByDefault: true
-  - _type: CheckboxColumn
-    _name: IsAnnex
-    value: IsAnnex
-    useCustomLabel: false
-    dataType: BOOLEAN
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
-    _name: AnnexStartDate
-    value: AnnexStartDate
-    useCustomLabel: false
-    dataType: DATE
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: TextColumn
-    _name: ContractIdNumber
-    value: ContractIdNumber
-    useCustomLabel: false
-    dataType: LONG_INTEGER
-    columnAlign: LEFT
-    visibleByDefault: true
+#  - _type: CheckboxColumn
+#    _name: IsAnnex
+#    value: IsAnnex
+#    useCustomLabel: false
+#    dataType: BOOLEAN
+#    columnAlign: LEFT
+#    visibleByDefault: true
+#  - _type: TextColumn
+#    _name: AnnexStartDate
+#    value: AnnexStartDate
+#    useCustomLabel: false
+#    dataType: DATE
+#    columnAlign: LEFT
+#    visibleByDefault: true
+#  - _type: TextColumn
+#    _name: ContractIdNumber
+#    value: ContractIdNumber
+#    useCustomLabel: false
+#    dataType: LONG_INTEGER
+#    columnAlign: LEFT
+#    visibleByDefault: true
   - _type: TextColumn
     _name: Currency
     value: Currency
@@ -81,13 +81,13 @@ tableColumns:
     dataType: DATE
     columnAlign: LEFT
     visibleByDefault: true
-  - _type: TextColumn
-    _name: SalesDepot
-    value: SalesDepot
-    useCustomLabel: false
-    dataType: STRING
-    columnAlign: LEFT
-    visibleByDefault: true
+  # - _type: TextColumn
+  #   _name: SalesDepot
+  #   value: SalesDepot
+  #   useCustomLabel: false
+  #   dataType: STRING
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
   - _type: TextColumn
     _name: BillingFrequency
     value: BillingFrequency
@@ -102,27 +102,27 @@ tableColumns:
     dataType: STRING
     columnAlign: LEFT
     visibleByDefault: true
-  - _type: CheckboxColumn
-    _name: FlatFeeProducts
-    value: FlatFeeProducts
-    useCustomLabel: false
-    dataType: BOOLEAN
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: CheckboxColumn
-    _name: FlatFeeOptions
-    value: FlatFeeOptions
-    useCustomLabel: false
-    dataType: BOOLEAN
-    columnAlign: LEFT
-    visibleByDefault: true
-  - _type: CheckboxColumn
-    _name: MultiParcel
-    value: MultiParcel
-    useCustomLabel: false
-    dataType: BOOLEAN
-    columnAlign: LEFT
-    visibleByDefault: true
+  # - _type: CheckboxColumn
+  #   _name: FlatFeeProducts
+  #   value: FlatFeeProducts
+  #   useCustomLabel: false
+  #   dataType: BOOLEAN
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
+  # - _type: CheckboxColumn
+  #   _name: FlatFeeOptions
+  #   value: FlatFeeOptions
+  #   useCustomLabel: false
+  #   dataType: BOOLEAN
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
+  # - _type: CheckboxColumn
+  #   _name: MultiParcel
+  #   value: MultiParcel
+  #   useCustomLabel: false
+  #   dataType: BOOLEAN
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
   - _type: TextColumn
     _name: SapAccountId
     value: SapAccountId
@@ -137,13 +137,13 @@ tableColumns:
     dataType: DATE
     columnAlign: LEFT
     visibleByDefault: true
-  - _type: CheckboxColumn
-    _name: ReratingQuote
-    value: ReratingQuote
-    useCustomLabel: false
-    dataType: BOOLEAN
-    columnAlign: LEFT
-    visibleByDefault: true
+  # - _type: CheckboxColumn
+  #   _name: ReratingQuote
+  #   value: ReratingQuote
+  #   useCustomLabel: false
+  #   dataType: BOOLEAN
+  #   columnAlign: LEFT
+  #   visibleByDefault: true
   - _type: TextColumn
     _name: Account
     value: FDN_Account

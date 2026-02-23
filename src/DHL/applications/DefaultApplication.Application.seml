@@ -153,38 +153,38 @@ rootFolder:
         imageMode: FIT
         label: Contract with Error
         viewType: SAWE
-      - _type: BrowseBusinessViewAction
-        _name: Product
-        businessView: DHL.entities.Product.business_views.ProductBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: Product
-      - _type: BrowseBusinessViewAction
-        _name: ContractProduct
-        businessView: DHL.entities.ContractProduct.business_views.ContractProductBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: Contract Product
-      - _type: BrowseBusinessViewAction
-        _name: dim2Detail
-        businessView: DHL.entities.dim2Detail.business_views.dim2DetailBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: dim2Detail
-      - _type: BrowseBusinessViewAction
-        _name: dim1Element
-        businessView: DHL.entities.dim1Element.business_views.dim1ElementBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: dim1Element        
-      - _type: BrowseBusinessViewAction
-        _name: prices
-        businessView: DHL.entities.prices.business_views.pricesBusinessView
-        nbRecordsBadgeVisible: false
-        imageAlign: MIDDLE_CENTER
-        imageMode: FIT
-        label: prices   
+      # - _type: BrowseBusinessViewAction
+      #   _name: Product
+      #   businessView: DHL.entities.Product.business_views.ProductBusinessView
+      #   nbRecordsBadgeVisible: false
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   label: Product
+      # - _type: BrowseBusinessViewAction
+      #   _name: ContractProduct
+      #   businessView: DHL.entities.ContractProduct.business_views.ContractProductBusinessView
+      #   nbRecordsBadgeVisible: false
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   label: Contract Product
+      # - _type: BrowseBusinessViewAction
+      #   _name: dim2Detail
+      #   businessView: DHL.entities.dim2Detail.business_views.dim2DetailBusinessView
+      #   nbRecordsBadgeVisible: false
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   label: dim2Detail
+      # - _type: BrowseBusinessViewAction
+      #   _name: dim1Element
+      #   businessView: DHL.entities.dim1Element.business_views.dim1ElementBusinessView
+      #   nbRecordsBadgeVisible: false
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   label: dim1Element        
+      # - _type: BrowseBusinessViewAction
+      #   _name: prices
+      #   businessView: DHL.entities.prices.business_views.pricesBusinessView
+      #   nbRecordsBadgeVisible: false
+      #   imageAlign: MIDDLE_CENTER
+      #   imageMode: FIT
+      #   label: prices

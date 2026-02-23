@@ -59,6 +59,50 @@ rootBusinessViewEntity:
         displayCard: DHL.entities.Customer.display_cards.CustomerDisplayCard
     - useCustomLabel: false
       _type: BusinessViewTransition
+      _name: Accounts
+      transitionType: FULLY_QUALIFIED
+      transitionPath: Account
+      enableHierarchy: LOOKUP COUNT(sapAccountId) FROM Account END > 0
+      enableHierarchyInterpreter: SEMQL
+      visibleInFormTabCondition: LOOKUP COUNT(sapAccountId) FROM Account END > 0
+      businessViewEntity: 
+        _type: BusinessViewEntity
+        _name: Account
+        entity: DHL.entities.Account.Account
+        actionSet: DHL.entities.Account.action_sets.AccountActionSet
+        collection: DHL.entities.Account.collection_views.AccountCollectionView
+        form: DHL.entities.Account.forms.AccountForm
+        outlineVisible: false
+        displayRecordCount: ALWAYS
+        listAllowed: true
+        tableAllowed: true
+        gridAllowed: true
+        enableUserDefinedSort: true
+        overrideDefaultSort: false
+        displayCard: DHL.entities.Account.display_cards.AccountDisplayCard
+        transitions:
+          - useCustomLabel: false
+            _type: BusinessViewTransition
+            _name: Contract
+            transitionType: FULLY_QUALIFIED
+            transitionPath: Contract
+            enableHierarchy: "1"
+            businessViewEntity: 
+              _type: BusinessViewEntity
+              _name: Contract
+              entity: DHL.entities.Contract.Contract
+              actionSet: DHL.entities.Contract.action_sets.ContractActionSet
+              collection: DHL.entities.Contract.collection_views.ContractCollectionView
+              form: DHL.entities.Contract.forms.ContractForm
+              outlineVisible: false
+              displayRecordCount: ALWAYS
+              listAllowed: true
+              tableAllowed: true
+              gridAllowed: true
+              enableUserDefinedSort: true
+              overrideDefaultSort: false
+    - useCustomLabel: false
+      _type: BusinessViewTransition
       _name: MasterRecords
       transitionType: FULLY_QUALIFIED
       transitionPath: MasterRecords

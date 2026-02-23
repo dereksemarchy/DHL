@@ -23,21 +23,21 @@ formTabs:
         value: FDN_Account
         useCustomLabel: false
         dataType: STRING
-      - _type: CheckboxField
-        _name: IsAnnex
-        value: IsAnnex
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: TextField
-        _name: AnnexStartDate
-        value: AnnexStartDate
-        useCustomLabel: false
-        dataType: DATE
-      - _type: TextField
-        _name: ContractIdNumber
-        value: ContractIdNumber
-        useCustomLabel: false
-        dataType: LONG_INTEGER
+      # - _type: CheckboxField
+      #   _name: IsAnnex
+      #   value: IsAnnex
+      #   useCustomLabel: false
+      #   dataType: BOOLEAN
+      # - _type: TextField
+      #   _name: AnnexStartDate
+      #   value: AnnexStartDate
+      #   useCustomLabel: false
+      #   dataType: DATE
+      # - _type: TextField
+      #   _name: ContractIdNumber
+      #   value: ContractIdNumber
+      #   useCustomLabel: false
+      #   dataType: LONG_INTEGER
       - _type: TextField
         _name: Currency
         value: Currency
@@ -63,11 +63,11 @@ formTabs:
         value: SendDate
         useCustomLabel: false
         dataType: DATE
-      - _type: TextField
-        _name: SalesDepot
-        value: SalesDepot
-        useCustomLabel: false
-        dataType: STRING
+      # - _type: TextField
+      #   _name: SalesDepot
+      #   value: SalesDepot
+      #   useCustomLabel: false
+      #   dataType: STRING
       - _type: TextField
         _name: BillingFrequency
         value: BillingFrequency
@@ -78,21 +78,21 @@ formTabs:
         value: PaymentTerms
         useCustomLabel: false
         dataType: STRING
-      - _type: CheckboxField
-        _name: FlatFeeProducts
-        value: FlatFeeProducts
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: CheckboxField
-        _name: FlatFeeOptions
-        value: FlatFeeOptions
-        useCustomLabel: false
-        dataType: BOOLEAN
-      - _type: CheckboxField
-        _name: MultiParcel
-        value: MultiParcel
-        useCustomLabel: false
-        dataType: BOOLEAN
+      # - _type: CheckboxField
+      #   _name: FlatFeeProducts
+      #   value: FlatFeeProducts
+      #   useCustomLabel: false
+      #   dataType: BOOLEAN
+      # - _type: CheckboxField
+      #   _name: FlatFeeOptions
+      #   value: FlatFeeOptions
+      #   useCustomLabel: false
+      #   dataType: BOOLEAN
+      # - _type: CheckboxField
+      #   _name: MultiParcel
+      #   value: MultiParcel
+      #   useCustomLabel: false
+      #   dataType: BOOLEAN
       - _type: TextField
         _name: SapAccountId
         value: SapAccountId
@@ -103,8 +103,21 @@ formTabs:
         value: LastEsignatureDate
         useCustomLabel: false
         dataType: DATE
-      - _type: CheckboxField
-        _name: ReratingQuote
-        value: ReratingQuote
-        useCustomLabel: false
-        dataType: BOOLEAN
+      # - _type: CheckboxField
+      #   _name: ReratingQuote
+      #   value: ReratingQuote
+      #   useCustomLabel: false
+      #   dataType: BOOLEAN
+      - _type: TextField
+        _name: contractDetail
+        value: SEM_CAST_STRING(contractDetail)
+        label: Contract Details
+        useCustomLabel: true
+        dataType: STRING
+        relativeWidth: 66
+        componentProperties:
+          isMultiline: '1'
+          multilineMaxLines: '30'
+          multilineMinLines: '1'
+        
+
