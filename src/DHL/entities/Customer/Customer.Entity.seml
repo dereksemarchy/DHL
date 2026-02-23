@@ -244,14 +244,20 @@ matcher:
       condition: Record1.officialName = Record2.officialName
       matchScore: 100
       usingMatchOn: false
+    - _type: SemQLMatchRule
+      _name: SimilarNameMatch
+      label: Similar Name Match
+      condition:  SEM_EDIT_DISTANCE_SIMILARITY( Record1.officialName, Record2.officialName ) > 60 
+      matchScore: 80
+      usingMatchOn: false
   useTransitiveMatchScore: true
   useMultiIterationGrouping: true
-  mergeThresholdNewGroup: 0
-  mergeThresholdMergingUnconfirmed: 0
-  mergeThresholdMergingConfirmed: 0
-  mergeThresholdMergingConfirmedWithUnconfirmed: 0
-  mergeThresholdMergingUnconfirmedWithNewMasters: 0
-  mergeThresholdMergingConfirmedWithNewMasters: 0
+  mergeThresholdNewGroup: 75
+  mergeThresholdMergingUnconfirmed: 75
+  mergeThresholdMergingConfirmed: 75
+  mergeThresholdMergingConfirmedWithUnconfirmed: 75
+  mergeThresholdMergingUnconfirmedWithNewMasters: 75
+  mergeThresholdMergingConfirmedWithNewMasters: 75
   mergeThresholdRemergingPreviouslySplit: 100
   autoConfirmGoldenThreshold: 99
   autoConfirmSingletons: false

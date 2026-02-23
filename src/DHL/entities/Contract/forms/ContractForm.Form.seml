@@ -115,6 +115,7 @@ formTabs:
         useCustomLabel: true
         dataType: STRING
         relativeWidth: 66
+        visibleValue: 
         componentProperties:
           isMultiline: '1'
           multilineMaxLines: '30'

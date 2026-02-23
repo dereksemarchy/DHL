@@ -134,6 +134,7 @@ rootFolder:
         _name: AccountError
         businessView: DHL.entities.Account.business_views.AccountBusinessView
         nbRecordsBadgeVisible: true
+        nbRecordsBadgeBackgroundColor: md:red
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
         label: Account with Error

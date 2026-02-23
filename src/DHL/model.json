@@ -256,6 +256,7 @@
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
                         "label": "Account with Error",
+                        "nbRecordsBadgeBackgroundColor": "md:red",
                         "viewType": "SDWE"
                     },
                     {
@@ -5356,12 +5357,12 @@
                     "qualifiedName": "DHL.entities.Customer.Customer.Matcher",
                     "autoConfirmGoldenThreshold": 99,
                     "autoConfirmSingletons": false,
-                    "mergeThresholdMergingConfirmed": 0,
-                    "mergeThresholdMergingConfirmedWithNewMasters": 0,
-                    "mergeThresholdMergingConfirmedWithUnconfirmed": 0,
-                    "mergeThresholdMergingUnconfirmed": 0,
-                    "mergeThresholdMergingUnconfirmedWithNewMasters": 0,
-                    "mergeThresholdNewGroup": 0,
+                    "mergeThresholdMergingConfirmed": 75,
+                    "mergeThresholdMergingConfirmedWithNewMasters": 75,
+                    "mergeThresholdMergingConfirmedWithUnconfirmed": 75,
+                    "mergeThresholdMergingUnconfirmed": 75,
+                    "mergeThresholdMergingUnconfirmedWithNewMasters": 75,
+                    "mergeThresholdNewGroup": 75,
                     "mergeThresholdRemergingPreviouslySplit": 100,
                     "useMultiIterationGrouping": true,
                     "useTransitiveMatchScore": true,
@@ -5372,6 +5373,13 @@
                             "condition": "Record1.officialName = Record2.officialName",
                             "matchScore": 100,
                             "label": "Exact Official Name Match",
+                            "usingMatchOn": false
+                        },
+                        {
+                            "qualifiedName": "DHL.entities.Customer.Customer.Matcher.SimilarNameMatch",
+                            "condition": "SEM_EDIT_DISTANCE_SIMILARITY( Record1.officialName, Record2.officialName ) > 60",
+                            "matchScore": 80,
+                            "label": "Similar Name Match",
                             "usingMatchOn": false
                         }
                     ]
