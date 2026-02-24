@@ -86,7 +86,7 @@ rootFolder:
         _name: MyTasks
         imageAlign: MIDDLE_CENTER
         imageMode: FIT
-        badgeVisible: false
+        badgeVisible: true
       - _type: BrowseEntitiesFolderAction
         _name: Entities
         lineageEnabled: true

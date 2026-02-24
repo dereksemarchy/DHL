@@ -48,17 +48,17 @@ formTabs:
         value: ContractName
         useCustomLabel: false
         dataType: STRING
-      - _type: TextField
+      - _type: DateField
         _name: StartDate
         value: StartDate
         useCustomLabel: false
         dataType: DATE
-      - _type: TextField
+      - _type: DateField
         _name: EndDate
         value: EndDate
         useCustomLabel: false
         dataType: DATE
-      - _type: TextField
+      - _type: DateField
         _name: SendDate
         value: SendDate
         useCustomLabel: false
@@ -98,7 +98,7 @@ formTabs:
         value: SapAccountId
         useCustomLabel: false
         dataType: STRING
-      - _type: TextField
+      - _type: DateField
         _name: LastEsignatureDate
         value: LastEsignatureDate
         useCustomLabel: false

@@ -31,3 +31,18 @@ rootStep:
       formFieldsMode: AUTO
       enableMasterValuePicking: false
       formTab: DHL.entities.Contract.forms.ContractForm.Contract
+      formStepValidations:
+        - executedOnDataChange: true
+          executedOnFormOpen: true
+          validationType: CHECK
+          attribute: DHL.entities.Contract.Contract.StartDate
+          validator: DHL.entities.Contract.validations.StartDateEndDateValidation
+        - executedOnDataChange: true
+          executedOnFormOpen: true
+          validationType: CHECK
+          attribute: DHL.entities.Contract.Contract.EndDate
+          validator: DHL.entities.Contract.validations.StartDateEndDateValidation
+      stepTransitionValidations:
+        - onStepExit: BLOCK
+          validationType: CHECK
+          validator: DHL.entities.Contract.validations.StartDateEndDateValidation

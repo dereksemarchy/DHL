@@ -1,0 +1,115 @@
+_package: DHL.workflows
+_name: ReviewContractError
+_type: Workflow
+label: Review Contract Error
+dataScope:
+  - _type: RootEntity
+    cardinality: MULTI_RECORD
+    _name: Contract
+    entity: DHL.entities.Contract.Contract
+generalProperties:
+  attachmentMaxFileCount: 5
+  attachmentMaxFileSize: 9999
+notifications:
+  workflowAdminOnDueDate: false
+retentionPolicy:
+  retentionTimeUnit: WEEKS
+  retentionType: FOREVER
+  retentionDuration: 1
+steps:
+  - _type: StartFromCompleteBatchEvent
+    _name: Start
+    label: Start
+    integrationJob: DHL.model_jobs.JOB_ALL
+    initiatedAs: derek.leung@semarchy.com
+    defaultPriority: NORMAL
+    dataRecordOutputs:
+      - _type: DataRecordOutput
+        _name: ContractOutput
+        dataRecordSourceType: AUTHORING_DATA_WITH_ERRORS
+        rootEntity: DHL.workflows.ReviewContractError.Contract
+    position:
+      x: 100
+      y: 100
+    transition:
+      _type: StartEventTransition
+      _name: outgoing
+      toStep: DHL.workflows.ReviewContractError.ReviewContractError
+  - _type: UserTask
+    _name: ReviewContractError
+    label: Review Contract Error
+    application: DHL.applications.DefaultApplication
+    assigneeCanRelease: true
+    assigneeRequiredRole: DataSteward
+    notificationsOnTaskAssignment:
+      toCandidates: true
+      toAssignee: true
+    position:
+      x: 200
+      y: 100
+    taskType: DATA_AUTHORING
+    stepper: DHL.entities.Contract.steppers.AuthorContracts
+    notificationsOnTaskExpiration:
+      taskMaxDuration: 120
+      toRole: semarchyAdmin
+      toAdmin: true
+      toCandidatesOrAssignee: false
+    transitions:
+      - showWaitDialog: true
+        userTaskCompletionRequired: true
+        _type: UserTaskTransition
+        _name: Submit
+        label: Submit
+        behaviorOnTransition: KEEP_DATA
+        toStep: DHL.workflows.ReviewContractError.Submit
+        transitionParameters:
+          attachmentParamSupported: false
+          attachmentParamRequired: false
+          commentParamRequired: true
+          commentParamSupported: true
+          descriptionParamSupported: false
+          dueDateParamRequired: false
+          dueDateParamSupported: false
+          nextTaskAssigneeRequired: false
+          nextTaskAssigneeSupported: false
+          priorityParamSupported: false
+      - showWaitDialog: true
+        userTaskCompletionRequired: true
+        _type: UserTaskTransition
+        _name: Discard
+        label: Discard
+        behaviorOnTransition: REVERT_DATA
+        toStep: DHL.workflows.ReviewContractError.End
+        transitionParameters:
+          attachmentParamSupported: false
+          attachmentParamRequired: false
+          commentParamRequired: true
+          commentParamSupported: true
+          descriptionParamSupported: false
+          dueDateParamRequired: false
+          dueDateParamSupported: false
+          nextTaskAssigneeRequired: false
+          nextTaskAssigneeSupported: false
+          priorityParamSupported: false
+    myTasksConfiguration:
+      collection: DHL.entities.Contract.collection_views.ContractCollectionView
+    notificationsOnWorkflowDueDate:
+      toCandidatesOrAssignee: false
+    entity: DHL.entities.Contract.Contract
+  - _type: SubmitAutomation
+    _name: Submit
+    label: Submit
+    position:
+      x: 700
+      y: 300
+    submitUserExpression: "'semadmin'"
+    transition:
+      _type: AutomationTransition
+      _name: ToEnd
+      toStep: DHL.workflows.ReviewContractError.End
+  - _type: EndEvent
+    _name: End
+    position:
+      x: 900
+      y: 100
+

@@ -182,7 +182,7 @@
                         "useCustomLabel": false,
                         "imageAlign": "MIDDLE_CENTER",
                         "imageMode": "FIT",
-                        "badgeVisible": false
+                        "badgeVisible": true
                     },
                     {
                         "qualifiedName": "DHL.applications.DefaultApplication.Root.TopActions.Entities",
@@ -801,7 +801,161 @@
             }
         ],
         "userDefinedTypes": [],
-        "workflows": [],
+        "workflows": [
+            {
+                "qualifiedName": "DHL.workflows.ReviewContractError",
+                "generalProperties": {
+                    "attachmentMaxFileCount": 5,
+                    "attachmentMaxFileSize": 9999
+                },
+                "label": "Review Contract Error",
+                "retentionPolicy": {
+                    "retentionTimeUnit": "WEEKS",
+                    "retentionType": "FOREVER",
+                    "retentionDuration": 1
+                },
+                "rootEntities": [
+                    {
+                        "qualifiedName": "DHL.workflows.ReviewContractError.Contract",
+                        "cardinality": "MULTI_RECORD",
+                        "entity": "DHL.entities.Contract.Contract",
+                        "semQLAlias": "Contract",
+                        "childEntities": []
+                    }
+                ],
+                "notifications": {
+                    "workflowAdminOnDueDate": false
+                },
+                "steps": [
+                    {
+                        "qualifiedName": "DHL.workflows.ReviewContractError.Start",
+                        "_type": "StartEvent",
+                        "defaultPriority": "NORMAL",
+                        "position": {
+                            "x": 100,
+                            "y": 100
+                        },
+                        "label": "Start",
+                        "transition": {
+                            "qualifiedName": "DHL.workflows.ReviewContractError.Start.outgoing",
+                            "_type": "StartEventTransition",
+                            "toStep": "DHL.workflows.ReviewContractError.ReviewContractError"
+                        },
+                        "startupContext": {
+                            "contextType": "START_ON_JOB_COMPLETION",
+                            "initiatedAs": "derek.leung@semarchy.com",
+                            "integrationJob": "DHL.model_jobs.JOB_ALL",
+                            "dataRecordOutputs": [
+                                {
+                                    "qualifiedName": "DHL.workflows.ReviewContractError.Start.ContractOutput",
+                                    "dataRecordSourceType": "AUTHORING_DATA_WITH_ERRORS",
+                                    "rootEntity": "DHL.workflows.ReviewContractError.Contract"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "qualifiedName": "DHL.workflows.ReviewContractError.ReviewContractError",
+                        "_type": "UserTask",
+                        "assigneeCanRelease": true,
+                        "notificationsOnTaskAssignment": {
+                            "toCandidates": true,
+                            "toAssignee": true
+                        },
+                        "notificationsOnTaskExpiration": {
+                            "taskMaxDuration": 120,
+                            "toRole": "semarchyAdmin",
+                            "toAdmin": true,
+                            "toCandidatesOrAssignee": false
+                        },
+                        "notificationsOnWorkflowDueDate": {
+                            "toCandidatesOrAssignee": false
+                        },
+                        "label": "Review Contract Error",
+                        "myTasksConfiguration": {
+                            "collection": "DHL.entities.Contract.collection_views.ContractCollectionView"
+                        },
+                        "position": {
+                            "x": 200,
+                            "y": 100
+                        },
+                        "taskType": "DATA_AUTHORING",
+                        "application": "DHL.applications.DefaultApplication",
+                        "assigneeRequiredRole": "DataSteward",
+                        "entity": "DHL.entities.Contract.Contract",
+                        "stepper": "DHL.entities.Contract.steppers.AuthorContracts",
+                        "transitions": [
+                            {
+                                "qualifiedName": "DHL.workflows.ReviewContractError.ReviewContractError.Submit",
+                                "_type": "UserTaskTransition",
+                                "behaviorOnTransition": "KEEP_DATA",
+                                "label": "Submit",
+                                "showWaitDialog": true,
+                                "transitionParameters": {
+                                    "attachmentParamSupported": false,
+                                    "attachmentParamRequired": false,
+                                    "commentParamRequired": true,
+                                    "commentParamSupported": true,
+                                    "descriptionParamSupported": false,
+                                    "dueDateParamRequired": false,
+                                    "dueDateParamSupported": false,
+                                    "nextTaskAssigneeRequired": false,
+                                    "nextTaskAssigneeSupported": false,
+                                    "priorityParamSupported": false
+                                },
+                                "userTaskCompletionRequired": true,
+                                "toStep": "DHL.workflows.ReviewContractError.Submit"
+                            },
+                            {
+                                "qualifiedName": "DHL.workflows.ReviewContractError.ReviewContractError.Discard",
+                                "_type": "UserTaskTransition",
+                                "behaviorOnTransition": "REVERT_DATA",
+                                "label": "Discard",
+                                "showWaitDialog": true,
+                                "transitionParameters": {
+                                    "attachmentParamSupported": false,
+                                    "attachmentParamRequired": false,
+                                    "commentParamRequired": true,
+                                    "commentParamSupported": true,
+                                    "descriptionParamSupported": false,
+                                    "dueDateParamRequired": false,
+                                    "dueDateParamSupported": false,
+                                    "nextTaskAssigneeRequired": false,
+                                    "nextTaskAssigneeSupported": false,
+                                    "priorityParamSupported": false
+                                },
+                                "userTaskCompletionRequired": true,
+                                "toStep": "DHL.workflows.ReviewContractError.End"
+                            }
+                        ]
+                    },
+                    {
+                        "qualifiedName": "DHL.workflows.ReviewContractError.Submit",
+                        "_type": "Automation",
+                        "label": "Submit",
+                        "position": {
+                            "x": 700,
+                            "y": 300
+                        },
+                        "transition": {
+                            "qualifiedName": "DHL.workflows.ReviewContractError.Submit.ToEnd",
+                            "_type": "AutomationTransition",
+                            "toStep": "DHL.workflows.ReviewContractError.End"
+                        },
+                        "submitUserExpression": "'semadmin'",
+                        "type": "SUBMIT"
+                    },
+                    {
+                        "qualifiedName": "DHL.workflows.ReviewContractError.End",
+                        "_type": "EndEvent",
+                        "position": {
+                            "x": 900,
+                            "y": 100
+                        }
+                    }
+                ]
+            }
+        ],
         "entities": [
             {
                 "qualifiedName": "DHL.entities.Account.Account",
@@ -3783,7 +3937,7 @@
                             {
                                 "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.StartDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDateField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 4,
                                 "useCustomLabel": false,
@@ -3797,7 +3951,7 @@
                             {
                                 "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.EndDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDateField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 5,
                                 "useCustomLabel": false,
@@ -3811,7 +3965,7 @@
                             {
                                 "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.SendDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDateField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 6,
                                 "useCustomLabel": false,
@@ -3867,7 +4021,7 @@
                             {
                                 "qualifiedName": "DHL.entities.Contract.forms.ContractForm.Contract.LastEsignatureDate",
                                 "_type": "FormField",
-                                "componentName": "semTextField",
+                                "componentName": "semDateField",
                                 "documentationInterpreter": "LITERAL",
                                 "posInParent": 10,
                                 "useCustomLabel": false,
@@ -3972,9 +4126,35 @@
                                 "enabledOnParentEdit": true,
                                 "enableMasterValuePicking": false,
                                 "formFieldsMode": "AUTO",
+                                "formStepValidations": [
+                                    {
+                                        "_type": "FormStepValidation",
+                                        "type": "CHECK",
+                                        "attribute": "DHL.entities.Contract.Contract.StartDate",
+                                        "executedOnDataChange": true,
+                                        "executedOnFormOpen": true,
+                                        "validator": "DHL.entities.Contract.validations.StartDateEndDateValidation"
+                                    },
+                                    {
+                                        "_type": "FormStepValidation",
+                                        "type": "CHECK",
+                                        "attribute": "DHL.entities.Contract.Contract.EndDate",
+                                        "executedOnDataChange": true,
+                                        "executedOnFormOpen": true,
+                                        "validator": "DHL.entities.Contract.validations.StartDateEndDateValidation"
+                                    }
+                                ],
                                 "formTab": "DHL.entities.Contract.forms.ContractForm.Contract",
                                 "label": "Contract",
-                                "parentCollectionStep": "DHL.entities.Contract.steppers.AuthorContracts.Contracts"
+                                "parentCollectionStep": "DHL.entities.Contract.steppers.AuthorContracts.Contracts",
+                                "stepTransitionValidations": [
+                                    {
+                                        "_type": "StepTransitionValidation",
+                                        "onStepExit": "BLOCK",
+                                        "type": "CHECK",
+                                        "validator": "DHL.entities.Contract.validations.StartDateEndDateValidation"
+                                    }
+                                ]
                             }
                         ]
                     }
