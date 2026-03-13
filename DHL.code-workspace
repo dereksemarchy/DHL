@@ -8,9 +8,9 @@
 		"semarchy.dxp.experimental": true,
 		"semarchy.dxp.enforceStrictSemqlValidationOnFunction": false,
 		"semarchy.dxp.experimentalSemqlValidation": true,
-		"semarchy.dm.apiKey": "asFlKhX.znXdY1WIteObTiHQP_qA79e9j0WD1ZWQ6vd",
-		"semarchy.dm.datasource": "datasource0",
-		"semarchy.dm.dataLocation": "DHLMDM",
-		"semarchy.dm.instanceUrl": "https://dhl-group-poc.eu.semarchy.net/dm"
+		"semarchy.dm.apiKey": "32Ypwn3.2AhnvMWoyDJy7zktn7Vmem2lH24YNSswtQz",
+		"semarchy.dm.datasource": "datasource44",
+		"semarchy.dm.dataLocation": "DHLMDM_Derek",
+		"semarchy.dm.instanceUrl": "https://semarchy-presales-sandbox.eu.semarchy.net/dm"
 	}
 }
